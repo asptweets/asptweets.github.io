@@ -11,22 +11,57 @@
 <style>
   body {
     padding-bottom: 6px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedbe9+0,aac5de+17,6199c7+50,419ad6+59,3a84c3+67,3a84c3+67,4bb8f0+71,3a8bc2+84,26558b+100 */
+    background: #cedbe9;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b', GradientType=0);
+    /* IE6-9 */
   }
+
+  .jumbotron {
+
+    background-color: rgba(255, 255, 255, 0.0);
+  }
+  
+  .jumbotron.jumbotron-title {
+    margin-bottom: 0px!important;
+  }
+
+  .jumbotron-heading {
+    font-weight: 300
+  }
+
+  .lead.date {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
   .container {
     padding-top: 10px;
+  }
+
+  .nav-pills {
+    font-size: large;
   }
 </style>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Top Tweets For: Oct 06, 2017</a>
+    <a class="navbar-brand" href="#">[ asptweets ]</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -44,11 +79,17 @@
           </div>
         </li>
       </ul>
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About This Site</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
   <div class="container">
-    <ul class="nav nav-pills mb-3" id="myTab" role="tablist">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="asp-tab" data-toggle="tab" href="#antimicrobialstewardship" role="tab"
           aria-controls="profile">#antimicrobialstewardship</a>
@@ -67,10 +108,9 @@
     <div class="tab-content" id="myTabContent">
       
       <div class="tab-pane fade show" id="infectiousdiseases" role="tabpanel" aria-labelledby="home-tab">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Tweeted Links</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Tweeted Links</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
         
         <div class="row">
@@ -237,133 +277,79 @@ not...</p>
           </div>
         </div>
         
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Retweets</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Retweets</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
-        
         <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 10</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916325974798749696" target="_blank">Antibiotic-treated kids have an increased risk of infectious diseases, allergies and obesity in adulthood. https://t.co/HR5CbNqrWt</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 5</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916158616914284544" target="_blank">Antibiotic-treated kids have an increased risk of infectious diseases, allergies and obesity in adulthood. https://t.co/19AjhHtmoP</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 3</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916437292935467008" target="_blank">@JerryBrownGov This is a big deal! #HIV should be treated like all other serious infectious diseases &amp;amp; that’s what #SB239 does.</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 2</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916282275259486208" target="_blank">@EjHirschberger #Quarantine 💯 Call #CDC they like infectious diseases have them play with this infestation lol 😂 But True and Truer 🤷🏼‍♀️‼️
-CORRECT?
-#MAGA</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 2</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916421586437238784" target="_blank">Relationship satisfaction reduces the risk of infectious diseases during pregnancy. Happy marriages = healthy lives https://t.co/rdmW8K7ERw</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 2</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916420302283849728" target="_blank">@BrowofJustice @SezClom @ketaminh I&#39;m no medic. Just a girl, looking at her vaginal flora and asking it to lover her.... 😂 (Okay, the PhD in infectious diseases does help)</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 2</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916439222197915648" target="_blank">NEJM Journal Watch Infectious Diseases at #IDWeek2017! Stop by booth 719 to learn more. Get 15% off renewal or subscription https://t.co/saiu6LELEX</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916090734784204802" target="_blank">Parasaurolophus: 0.82 correlation with US deaths from Other infectious diseases (White Adult Females) #dataviz https://t.co/q1cdYRvDGe</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916094432444862464" target="_blank">How to prevent an infectious disease outbreak? #Vaccines. #children #school #health https://t.co/H8zPXTJqN2 https://t.co/IE9qIiH9Aq</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916146666067042304" target="_blank">Exposure to infectious diseases and bodily fluids or whatever you&#39;re wearing nitrile gloves to protect yourself from is NOT A PROBLEM YOU SHOULD DESIRE
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotic-treated kids have an increased risk of infectious diseases, allergies and obesity in adulthood. <a href="https://t.co/HR5CbNqrWt">https://t.co/HR5CbNqrWt</a></p>&mdash; Dr. Joseph Mercola (@mercola) <a href="https://twitter.com/mercola/status/916325974798749696?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
 
-hashtag you take the ring off first you fucking idiot. https://t.co/yLGaGReJwy</a>
-              </p>
-            </div>
           </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotic-treated kids have an increased risk of infectious diseases, allergies and obesity in adulthood. <a href="https://t.co/19AjhHtmoP">https://t.co/19AjhHtmoP</a></p>&mdash; Dr. Joseph Mercola (@mercola) <a href="https://twitter.com/mercola/status/916158616914284544?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is a big deal! <a href="https://twitter.com/hashtag/HIV?src=hash&amp;ref_src=twsrc%5Etfw">#HIV</a> should be treated like all other serious infectious diseases &amp; that’s what <a href="https://twitter.com/hashtag/SB239?src=hash&amp;ref_src=twsrc%5Etfw">#SB239</a> does.</p>&mdash; Lambda Legal (@LambdaLegal) <a href="https://twitter.com/LambdaLegal/status/916437292935467008?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Quarantine?src=hash&amp;ref_src=twsrc%5Etfw">#Quarantine</a> 💯 Call <a href="https://twitter.com/hashtag/CDC?src=hash&amp;ref_src=twsrc%5Etfw">#CDC</a> they like infectious diseases have them play with this infestation lol 😂 But True and Truer 🤷🏼‍♀️‼️<br>CORRECT?<a href="https://twitter.com/hashtag/MAGA?src=hash&amp;ref_src=twsrc%5Etfw">#MAGA</a></p>&mdash; Marilyn Monroe® 💋 (@realNormaJeane1) <a href="https://twitter.com/realNormaJeane1/status/916282275259486208?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Relationship satisfaction reduces the risk of infectious diseases during pregnancy. Happy marriages = healthy lives <a href="https://t.co/rdmW8K7ERw">https://t.co/rdmW8K7ERw</a></p>&mdash; Kathryn Beal (@wokewife) <a href="https://twitter.com/wokewife/status/916421586437238784?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m no medic. Just a girl, looking at her vaginal flora and asking it to lover her.... 😂 (Okay, the PhD in infectious diseases does help)</p>&mdash; Dr Mel Thomson (@DrMel_T) <a href="https://twitter.com/DrMel_T/status/916420302283849728?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">NEJM Journal Watch Infectious Diseases at <a href="https://twitter.com/hashtag/IDWeek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDWeek2017</a>! Stop by booth 719 to learn more. Get 15% off renewal or subscription <a href="https://t.co/saiu6LELEX">pic.twitter.com/saiu6LELEX</a></p>&mdash; NEJM Journal Watch (@JWatch) <a href="https://twitter.com/JWatch/status/916439222197915648?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Parasaurolophus: 0.82 correlation with US deaths from Other infectious diseases (White Adult Females) <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://t.co/q1cdYRvDGe">pic.twitter.com/q1cdYRvDGe</a></p>&mdash; Datasaurs (@Datasaurs) <a href="https://twitter.com/Datasaurs/status/916090734784204802?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How to prevent an infectious disease outbreak? <a href="https://twitter.com/hashtag/Vaccines?src=hash&amp;ref_src=twsrc%5Etfw">#Vaccines</a>. <a href="https://twitter.com/hashtag/children?src=hash&amp;ref_src=twsrc%5Etfw">#children</a> <a href="https://twitter.com/hashtag/school?src=hash&amp;ref_src=twsrc%5Etfw">#school</a> <a href="https://twitter.com/hashtag/health?src=hash&amp;ref_src=twsrc%5Etfw">#health</a> <a href="https://t.co/H8zPXTJqN2">https://t.co/H8zPXTJqN2</a> <a href="https://t.co/IE9qIiH9Aq">pic.twitter.com/IE9qIiH9Aq</a></p>&mdash; Biodefense Study (@BiodefenseStudy) <a href="https://twitter.com/BiodefenseStudy/status/916094432444862464?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Exposure to infectious diseases and bodily fluids or whatever you&#39;re wearing nitrile gloves to protect yourself from is NOT A PROBLEM YOU SHOULD DESIRE<br><br>hashtag you take the ring off first you fucking idiot. <a href="https://t.co/yLGaGReJwy">https://t.co/yLGaGReJwy</a></p>&mdash; Cunthulu 💜🍞 (@BabyGrotesque) <a href="https://twitter.com/BabyGrotesque/status/916146666067042304?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Great explanation by <a href="https://twitter.com/radychildrens?ref_src=twsrc%5Etfw">@radychildrens</a> ID specialist Mark Sawyer, MD on why school children need vaccinations.  <a href="https://t.co/fXM4OrLe9N">https://t.co/fXM4OrLe9N</a></p>&mdash; Dr. Jaime Friedman (@DrJaimeFriedman) <a href="https://twitter.com/DrJaimeFriedman/status/916150161360826368?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr. Sarah Hammond <a href="https://twitter.com/BrighamWomens?ref_src=twsrc%5Etfw">@BrighamWomens</a> <a href="https://twitter.com/DanaFarber?ref_src=twsrc%5Etfw">@DanaFarber</a> discussing challenging cases in infectious diseases in <a href="https://twitter.com/hashtag/IDWeek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDWeek2017</a>! <a href="https://t.co/gTYzzJrKME">pic.twitter.com/gTYzzJrKME</a></p>&mdash; Francisco Marty, MD (@FranciscoMarty_) <a href="https://twitter.com/FranciscoMarty_/status/916359303061159936?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
         </div>
-        
       </div>
       
       <div class="tab-pane fade show" id="antimicrobialstewardship" role="tabpanel" aria-labelledby="home-tab">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Tweeted Links</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Tweeted Links</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
         
         <div class="row">
@@ -527,73 +513,76 @@ hashtag you take the ring off first you fucking idiot. https://t.co/yLGaGReJwy</
           </div>
         </div>
         
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Retweets</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Retweets</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
-        
         <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 4</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916423265706426368" target="_blank">Dr. Baker of @TJCommission at #IDweek2017 👉🏼 &#34;The need for antimicrobial stewardship across different care settings is enormous.&#34; https://t.co/j4MnBiqumG</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr. Baker of <a href="https://twitter.com/TJCommission?ref_src=twsrc%5Etfw">@TJCommission</a> at <a href="https://twitter.com/hashtag/IDweek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDweek2017</a> 👉🏼 &quot;The need for antimicrobial stewardship across different care settings is enormous.&quot; <a href="https://t.co/j4MnBiqumG">pic.twitter.com/j4MnBiqumG</a></p>&mdash; ACCP INFD PRN (@accpinfdprn) <a href="https://twitter.com/accpinfdprn/status/916423265706426368?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916177463843139584" target="_blank">Top 6 #sustainableozbeef - animals, profits, balanced landscapes, antimicrobial stewardship, climate change &amp;amp; people https://t.co/uNHW62fD4m</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Top 6 <a href="https://twitter.com/hashtag/sustainableozbeef?src=hash&amp;ref_src=twsrc%5Etfw">#sustainableozbeef</a> - animals, profits, balanced landscapes, antimicrobial stewardship, climate change &amp; people <a href="https://t.co/uNHW62fD4m">https://t.co/uNHW62fD4m</a></p>&mdash; SustainableOzBeef (@BeefFramework) <a href="https://twitter.com/BeefFramework/status/916177463843139584?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916341879779753984" target="_blank">Antimicrobial stewardship is probably our most effective way of preventing #Cdifficile today -Dr Dubberke @WUSTLmed #IDWeek2017</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antimicrobial stewardship is probably our most effective way of preventing <a href="https://twitter.com/hashtag/Cdifficile?src=hash&amp;ref_src=twsrc%5Etfw">#Cdifficile</a> today -Dr Dubberke <a href="https://twitter.com/WUSTLmed?ref_src=twsrc%5Etfw">@WUSTLmed</a> <a href="https://twitter.com/hashtag/IDWeek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDWeek2017</a></p>&mdash; Contagion (@Contagion_Live) <a href="https://twitter.com/Contagion_Live/status/916341879779753984?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916343620625510401" target="_blank">Come by and see @blandman19 at poster 1571 from 12:30-2pm today on using penicillin skin testing as part of antimicrobial Stewardship #IDPRN</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Come by and see <a href="https://twitter.com/blandman19?ref_src=twsrc%5Etfw">@blandman19</a> at poster 1571 from 12:30-2pm today on using penicillin skin testing as part of antimicrobial Stewardship <a href="https://twitter.com/hashtag/IDPRN?src=hash&amp;ref_src=twsrc%5Etfw">#IDPRN</a></p>&mdash; Bruce Jones (@Bruce_M_Jones) <a href="https://twitter.com/Bruce_M_Jones/status/916343620625510401?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916347345649856512" target="_blank">Can&#39;t miss the expert speakers at SHEA Antimicrobial Stewardship Research Workshop #ASRW https://t.co/O6M9WSkqpU Nov 15-16, 2018 in Chicago</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Can&#39;t miss the expert speakers at SHEA Antimicrobial Stewardship Research Workshop <a href="https://twitter.com/hashtag/ASRW?src=hash&amp;ref_src=twsrc%5Etfw">#ASRW</a> <a href="https://t.co/O6M9WSkqpU">https://t.co/O6M9WSkqpU</a> Nov 15-16, 2018 in Chicago</p>&mdash; SHEA (@SHEA_Epi) <a href="https://twitter.com/SHEA_Epi/status/916347345649856512?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
+          
         </div>
-        
       </div>
       
       <div class="tab-pane fade show" id="antimicrobialresistance" role="tabpanel" aria-labelledby="home-tab">
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Tweeted Links</h1>
+          <p class="lead date">for Oct 06, 2017</p>
+        </div>
+        
         <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Tweeted Links</h3>
+          <div class="card" style="width: 100%">
+            <!-- <img class="card-img-top" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F36250839%2F226058211628%2F1%2Foriginal.jpg?w=1000&amp;amp;rect=0%2C13%2C1200%2C600&amp;amp;s=e270b63064c8287752c2417526391260" alt="Card image cap"> -->
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://www.eventbrite.com/e/antimicrobial-resistance-conference-advocating-a-behaviour-change-tickets-37849231069?aff=Twitter" target="_blank">Antimicrobial Resistance Conference: Advocating a Behaviour Change</a>
+              </h4>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <em>https://www.eventbrite.com/e/antimicrobial-resistance-conference-advocating-a-behaviour-change-tickets-37849231069?aff=Twitter</em>
+              </h6>
+              <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 34</h6>
+              <p class="card-text">&#34;Antibiotic resistance is an increasingly serious threat to global health and human development. It is rising to dangerously high levels in all parts of the world, compromising our ability to treat infectious diseases and putting people everywhere at risk.&#34; ~ World Health Organisation (WHO) 
+Introducing the UK&#39;s first ever mu...</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="card" style="width: 100%">
+            <!-- <img class="card-img-top" src="http://buff.ly" alt="Card image cap"> -->
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://buff.ly/2y40Q7t" target="_blank">MTFB: Positive Results From Second Phase 3 Study of Iclaprim; NDA Filing Anticipated in 1Q18</a>
+              </h4>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <em>https://buff.ly/2y40Q7t</em>
+              </h6>
+              <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 22</h6>
+              <p class="card-text">On October 4, 2017, Motif Bio (MTFB) announced positive topline results from REVIVE-2, the second Phase 3 clinical trial of iclaprim in patients with acute bacterial skin and skin structure infections (ABSSSI).  With positive results from two Phase 3 clinical trials, we anticipate Motif filing a New</p>
+            </div>
           </div>
         </div>
         
@@ -649,23 +638,6 @@ hashtag you take the ring off first you fucking idiot. https://t.co/yLGaGReJwy</
         
         <div class="row">
           <div class="card" style="width: 100%">
-            <!-- <img class="card-img-top" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F36250839%2F226058211628%2F1%2Foriginal.jpg?w=1000&amp;amp;rect=0%2C13%2C1200%2C600&amp;amp;s=e270b63064c8287752c2417526391260" alt="Card image cap"> -->
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="https://www.eventbrite.com/e/antimicrobial-resistance-conference-advocating-a-behaviour-change-tickets-37849231069?aff=Twitter" target="_blank">Antimicrobial Resistance Conference: Advocating a Behaviour Change</a>
-              </h4>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <em>https://www.eventbrite.com/e/antimicrobial-resistance-conference-advocating-a-behaviour-change-tickets-37849231069?aff=Twitter</em>
-              </h6>
-              <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 34</h6>
-              <p class="card-text">&#34;Antibiotic resistance is an increasingly serious threat to global health and human development. It is rising to dangerously high levels in all parts of the world, compromising our ability to treat infectious diseases and putting people everywhere at risk.&#34; ~ World Health Organisation (WHO) 
-Introducing the UK&#39;s first ever mu...</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
             <!-- <img class="card-img-top" src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/eurpub/Issue/27/5/2/m_eurpub_27_5cover.png?Expires=1570824501&amp;amp;Signature=URGH3d1JBkINz0YAOvi1FQsVeOtFu4fDqmUjHR5oMyCE7W~3m6ERIwg0w8QKesvfbuVnXaAbz3sSVlX3exiNB7Z8qbqsY3tKp1TnmY0XlNSYxdmcZtzpUsxB~OSXfbHCTIzxfTplZtskzyY44x7dzFLUv0CUNuDKET-1LHQ~Prm4vTE3cD0x7--48KwDRI1zYMsHgVgwnyeah6UKzxBIOXdPV1zJdXKwUSiPPmM3JaOsKx3TJ7uCWA6~wNVhzR~X8xycACpdJvkoOcFHtytYaxwsdNm6fBY8KIj8uVGwVEmnBMrKXRjIsYlA7Aza1saEgp6AeEtpELLcgvgmQRPBmg__&amp;amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q" alt="Card image cap"> -->
             <div class="card-body">
               <h4 class="card-title">
@@ -692,22 +664,6 @@ Introducing the UK&#39;s first ever mu...</p>
               </h6>
               <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 12</h6>
               <p class="card-text">#AntibioticResistance is a serious threat to global health. It is compromising our ability to treat infectious diseases and undermining many advances in medicine. Take the quiz http://goo.gl/a3x5xQ</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <!-- <img class="card-img-top" src="http://buff.ly" alt="Card image cap"> -->
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="https://buff.ly/2y40Q7t" target="_blank">MTFB: Positive Results From Second Phase 3 Study of Iclaprim; NDA Filing Anticipated in 1Q18</a>
-              </h4>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <em>https://buff.ly/2y40Q7t</em>
-              </h6>
-              <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 22</h6>
-              <p class="card-text">On October 4, 2017, Motif Bio (MTFB) announced positive topline results from REVIVE-2, the second Phase 3 clinical trial of iclaprim in patients with acute bacterial skin and skin structure infections (ABSSSI).  With positive results from two Phase 3 clinical trials, we anticipate Motif filing a New</p>
             </div>
           </div>
         </div>
@@ -760,129 +716,79 @@ Introducing the UK&#39;s first ever mu...</p>
           </div>
         </div>
         
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Retweets</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Retweets</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
-        
         <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 9</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916294500628213760" target="_blank">A New Weapon in the Battle Against Antibiotic Resistance https://t.co/KVQ5sRWCOB $MTFB @davidbautz #biotech https://t.co/UR3LhGs590</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A New Weapon in the Battle Against Antibiotic Resistance <a href="https://t.co/KVQ5sRWCOB">https://t.co/KVQ5sRWCOB</a> <a href="https://twitter.com/search?q=%24MTFB&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$MTFB</a> <a href="https://twitter.com/DavidBautz?ref_src=twsrc%5Etfw">@davidbautz</a> <a href="https://twitter.com/hashtag/biotech?src=hash&amp;ref_src=twsrc%5Etfw">#biotech</a> <a href="https://t.co/UR3LhGs590">pic.twitter.com/UR3LhGs590</a></p>&mdash; ZIA (@ZacksAwareness) <a href="https://twitter.com/ZacksAwareness/status/916294500628213760?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 5</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916258485372882944" target="_blank">Bacteria can spread antibiotic #resistance through #soil https://t.co/DiKjOQjuNr @ncstate</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Bacteria can spread antibiotic <a href="https://twitter.com/hashtag/resistance?src=hash&amp;ref_src=twsrc%5Etfw">#resistance</a> through <a href="https://twitter.com/hashtag/soil?src=hash&amp;ref_src=twsrc%5Etfw">#soil</a> <a href="https://t.co/DiKjOQjuNr">https://t.co/DiKjOQjuNr</a> <a href="https://twitter.com/NCState?ref_src=twsrc%5Etfw">@ncstate</a></p>&mdash; Phys.org (@physorg_com) <a href="https://twitter.com/physorg_com/status/916258485372882944?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 5</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916329750603489286" target="_blank">A New Weapon in the Battle Against Antibiotic Resistance https://t.co/vIPIvIYe4y $MTFB @davidbautz #biotech https://t.co/8w5KPrXvmc</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A New Weapon in the Battle Against Antibiotic Resistance <a href="https://t.co/vIPIvIYe4y">https://t.co/vIPIvIYe4y</a> <a href="https://twitter.com/search?q=%24MTFB&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$MTFB</a> <a href="https://twitter.com/DavidBautz?ref_src=twsrc%5Etfw">@davidbautz</a> <a href="https://twitter.com/hashtag/biotech?src=hash&amp;ref_src=twsrc%5Etfw">#biotech</a> <a href="https://t.co/8w5KPrXvmc">pic.twitter.com/8w5KPrXvmc</a></p>&mdash; Ted Zack, Analyst (@tzack16) <a href="https://twitter.com/tzack16/status/916329750603489286?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 3</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916209838392307713" target="_blank">1st national student AMR conf; on #EAAD. Great to work w/ the students/recent graduates leads https://t.co/VWslIj05yc #AntibioticGuardian https://t.co/eoMvwNzSFs</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1st national student AMR conf; on <a href="https://twitter.com/hashtag/EAAD?src=hash&amp;ref_src=twsrc%5Etfw">#EAAD</a>. Great to work w/ the students/recent graduates leads <a href="https://t.co/VWslIj05yc">https://t.co/VWslIj05yc</a> <a href="https://twitter.com/hashtag/AntibioticGuardian?src=hash&amp;ref_src=twsrc%5Etfw">#AntibioticGuardian</a> <a href="https://t.co/eoMvwNzSFs">pic.twitter.com/eoMvwNzSFs</a></p>&mdash; Diane Ashiru, PhD (@DrDianeAshiru) <a href="https://twitter.com/DrDianeAshiru/status/916209838392307713?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 3</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916264314775965699" target="_blank">Are you a business or researcher involved in #AntimicrobialResistance ? Opportunities for funding and visit to China https://t.co/wPieTF2WlM https://t.co/XKkyN6pZFB</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Are you a business or researcher involved in <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> ? Opportunities for funding and visit to China <a href="https://t.co/wPieTF2WlM">https://t.co/wPieTF2WlM</a> <a href="https://t.co/XKkyN6pZFB">pic.twitter.com/XKkyN6pZFB</a></p>&mdash; KTN UK (@KTNUK) <a href="https://twitter.com/KTNUK/status/916264314775965699?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 2</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916313937808969728" target="_blank">10 million people may die from antibiotic resistance in 2050 #kfideas17</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">10 million people may die from antibiotic resistance in 2050 <a href="https://twitter.com/hashtag/kfideas17?src=hash&amp;ref_src=twsrc%5Etfw">#kfideas17</a></p>&mdash; Aurora (@aurorahealthpr) <a href="https://twitter.com/aurorahealthpr/status/916313937808969728?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916133113645821952" target="_blank">Kristina from @1928diagnostics doing her pitch of SaaS based antibiotic  resistance surveillance against Bay Bridge lights #SVHealth https://t.co/27ogGbxHIT</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Kristina from <a href="https://twitter.com/1928diagnostics?ref_src=twsrc%5Etfw">@1928diagnostics</a> doing her pitch of SaaS based antibiotic  resistance surveillance against Bay Bridge lights <a href="https://twitter.com/hashtag/SVHealth?src=hash&amp;ref_src=twsrc%5Etfw">#SVHealth</a> <a href="https://t.co/27ogGbxHIT">pic.twitter.com/27ogGbxHIT</a></p>&mdash; Matthew Holt (@boltyboy) <a href="https://twitter.com/boltyboy/status/916133113645821952?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916219099394527232" target="_blank">Come to the opening of &#34;In Case of Emergency&#34; the new show @SciGalleryDub with my new Antibiotic Resistance Quilt https://t.co/7UQhpPRkaO https://t.co/XBAUa4bXiX</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Come to the opening of &quot;In Case of Emergency&quot; the new show <a href="https://twitter.com/SciGalleryDub?ref_src=twsrc%5Etfw">@SciGalleryDub</a> with my new Antibiotic Resistance Quilt <a href="https://t.co/7UQhpPRkaO">https://t.co/7UQhpPRkaO</a> <a href="https://t.co/XBAUa4bXiX">pic.twitter.com/XBAUa4bXiX</a></p>&mdash; anna dumitriu (@AnnaDumitriu) <a href="https://twitter.com/AnnaDumitriu/status/916219099394527232?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916241793263570944" target="_blank">Apply to visit China as part of collaboration to tackle Antimicrobial Resistance (AMR) Deadline 10 Oct: https://t.co/Jvc0zK2MvW</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Apply to visit China as part of collaboration to tackle Antimicrobial Resistance (AMR) Deadline 10 Oct: <a href="https://t.co/Jvc0zK2MvW">https://t.co/Jvc0zK2MvW</a></p>&mdash; KTN Health (@KTNUK_Health) <a href="https://twitter.com/KTNUK_Health/status/916241793263570944?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 1</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916305853422211072" target="_blank">Applications open for partnership visit to China to tackle Antimicrobial Resistance (AMR) https://t.co/oyfQV210mA</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Applications open for partnership visit to China to tackle Antimicrobial Resistance (AMR) <a href="https://t.co/oyfQV210mA">https://t.co/oyfQV210mA</a></p>&mdash; UK H2020 Health NCP (@H2020_HealthNCP) <a href="https://twitter.com/H2020_HealthNCP/status/916305853422211072?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ICYMI this short film serves as a great intro to the many challenges posed by antimicrobial resistance <a href="https://t.co/y6eqrFy8pD">https://t.co/y6eqrFy8pD</a></p>&mdash; BSAC (@BSACandJAC) <a href="https://twitter.com/BSACandJAC/status/916312754759393281?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The antibacterial activity of macromolecules suggests a new way to combat growing problem of <a href="https://twitter.com/hashtag/antibiotic?src=hash&amp;ref_src=twsrc%5Etfw">#antibiotic</a> resistance. <a href="https://t.co/KJ5b9OrWS4">https://t.co/KJ5b9OrWS4</a></p>&mdash; AmericanVeterinarian (@Am_Veterinarian) <a href="https://twitter.com/Am_Veterinarian/status/916317137450426368?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
         </div>
-        
       </div>
       
       <div class="tab-pane fade show" id="antibiotics" role="tabpanel" aria-labelledby="home-tab">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Tweeted Links</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Tweeted Links</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
         
         <div class="row">
@@ -897,6 +803,24 @@ Introducing the UK&#39;s first ever mu...</p>
               </h6>
               <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 163</h6>
               <p class="card-text">A new book about the rise of cheap chicken</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="card" style="width: 100%">
+            <!-- <img class="card-img-top" src="https://www.naturalnews.com/wp-content/uploads/sites/91/2017/10/CWC-Bone-Broth-Protein-Lab-Testing-Mike-Adams-announcement.jpg" alt="Card image cap"> -->
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="http://bit.ly/2kr3b7w" target="_blank">EXCLUSIVE: Bone Broth Protein products found to contain insect repellent, antibiotics and prescription drugs - Consumer Wellness Center</a>
+              </h4>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <em>http://bit.ly/2kr3b7w</em>
+              </h6>
+              <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 67</h6>
+              <p class="card-text">Popular Bone Broth Protein products sold by companies like Ancient Nutrition, Left Coast and PrecisionNaturals have been found to contain an array of chemicals, according to mass spec laboratory science research conducted by the non-profit Consumer Wellness Center.
+
+According to a press release is</p>
             </div>
           </div>
         </div>
@@ -945,24 +869,6 @@ Introducing the UK&#39;s first ever mu...</p>
               </h6>
               <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 41</h6>
               <p class="card-text">Many people are prescribed antibiotics to prevent and treat infections caused by bacteria. However, the over-prescription of antibiotics does more harm than good, due to a phenomenon called antibiotic resistance, which is one of the biggest threats to global health today. Many infections that...</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <!-- <img class="card-img-top" src="https://www.naturalnews.com/wp-content/uploads/sites/91/2017/10/CWC-Bone-Broth-Protein-Lab-Testing-Mike-Adams-announcement.jpg" alt="Card image cap"> -->
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="http://bit.ly/2kr3b7w" target="_blank">EXCLUSIVE: Bone Broth Protein products found to contain insect repellent, antibiotics and prescription drugs - Consumer Wellness Center</a>
-              </h4>
-              <h6 class="card-subtitle mb-2 text-muted">
-                <em>http://bit.ly/2kr3b7w</em>
-              </h6>
-              <h6 class="card-subtitle mb-2 text-muted">Number of times Tweeted: 67</h6>
-              <p class="card-text">Popular Bone Broth Protein products sold by companies like Ancient Nutrition, Left Coast and PrecisionNaturals have been found to contain an array of chemicals, according to mass spec laboratory science research conducted by the non-profit Consumer Wellness Center.
-
-According to a press release is</p>
             </div>
           </div>
         </div>
@@ -1047,124 +953,73 @@ According to a press release is</p>
           </div>
         </div>
         
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Top Retweets</h3>
-          </div>
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Retweets</h1>
+          <p class="lead date">for Oct 06, 2017</p>
         </div>
-        
         <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 18</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916340621232820224" target="_blank">WHO provides 1.2 million antibiotics to fight #plague in #Madagascar https://t.co/IKH07tq1RN https://t.co/4TPcEkkZce</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 17</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916097469917822976" target="_blank">Around 34m pounds of antibiotics a year, or 80% of all antibiotics sold, go to farmers https://t.co/nECHkcx0M5</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 17</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916245695522377728" target="_blank">#Brexit risk of antibiotics-filled, hormone-stuffed meat &amp;amp; vegetables laced with dangerous pesticide. US will push https://t.co/VkYf8DFkvb</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 14</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916401846905745410" target="_blank">BUB&#39;s proud to partner with @halopets, who care about ALL animals: no factory farming, growth hormones, or antibiotics.  #sponsored https://t.co/GtTRSr9x2G</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 9</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916446810142633986" target="_blank">#BoneBroth Protein products found to contain insect repellent, antibiotics and prescription drugs. https://t.co/0aqidAfgaA #health</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 5</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916333631156752389" target="_blank">EXCLUSIVE: #BoneBroth Protein products found to contain insect repellent. https://t.co/VZDyZDgSNZ #health</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 5</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916413785795112961" target="_blank">Press Event: Antibiotics for Dental Procedures Linked to Superbug Infection #IDWeek2017 https://t.co/xQmg3Y7iFs</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 4</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916249749359157248" target="_blank">is there anything you can do to make antibiotics w o r k  f a s t e r ?</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 4</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916332244574273536" target="_blank">Once again, @OliveGarden fails our #antibiotics test. Tell them to stop sourcing meat that threatens public health.
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">WHO provides 1.2 million antibiotics to fight <a href="https://twitter.com/hashtag/plague?src=hash&amp;ref_src=twsrc%5Etfw">#plague</a> in <a href="https://twitter.com/hashtag/Madagascar?src=hash&amp;ref_src=twsrc%5Etfw">#Madagascar</a> <a href="https://t.co/IKH07tq1RN">https://t.co/IKH07tq1RN</a> <a href="https://t.co/4TPcEkkZce">pic.twitter.com/4TPcEkkZce</a></p>&mdash; WHO (@WHO) <a href="https://twitter.com/WHO/status/916340621232820224?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
 
-https://t.co/J6FxK9xGgC https://t.co/1NXfm5Dabn</a>
-              </p>
-            </div>
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">Number of Retweets: 4</h6>
-              <p class="card-text">
-                <a href="https://twitter.com/wojespn/status/916388930953420800" target="_blank">Antibiotics for dental procedures linked to superbug infection, study shows https://t.co/3Z8oooijXq</a>
-              </p>
-            </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Around 34m pounds of antibiotics a year, or 80% of all antibiotics sold, go to farmers <a href="https://t.co/nECHkcx0M5">https://t.co/nECHkcx0M5</a></p>&mdash; The Economist (@TheEconomist) <a href="https://twitter.com/TheEconomist/status/916097469917822976?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
           </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Brexit?src=hash&amp;ref_src=twsrc%5Etfw">#Brexit</a> risk of antibiotics-filled, hormone-stuffed meat &amp; vegetables laced with dangerous pesticide. US will push <a href="https://t.co/VkYf8DFkvb">https://t.co/VkYf8DFkvb</a></p>&mdash; Natalie Bennett (@natalieben) <a href="https://twitter.com/natalieben/status/916245695522377728?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">BUB&#39;s proud to partner with <a href="https://twitter.com/halopets?ref_src=twsrc%5Etfw">@halopets</a>, who care about ALL animals: no factory farming, growth hormones, or antibiotics.  <a href="https://twitter.com/hashtag/sponsored?src=hash&amp;ref_src=twsrc%5Etfw">#sponsored</a> <a href="https://t.co/GtTRSr9x2G">pic.twitter.com/GtTRSr9x2G</a></p>&mdash; Lil BUB (@IAMLILBUB) <a href="https://twitter.com/IAMLILBUB/status/916401846905745410?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/BoneBroth?src=hash&amp;ref_src=twsrc%5Etfw">#BoneBroth</a> Protein products found to contain insect repellent, antibiotics and prescription drugs. <a href="https://t.co/0aqidAfgaA">https://t.co/0aqidAfgaA</a> <a href="https://twitter.com/hashtag/health?src=hash&amp;ref_src=twsrc%5Etfw">#health</a></p>&mdash; HealthRanger (@HealthRanger) <a href="https://twitter.com/HealthRanger/status/916446810142633986?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">EXCLUSIVE: <a href="https://twitter.com/hashtag/BoneBroth?src=hash&amp;ref_src=twsrc%5Etfw">#BoneBroth</a> Protein products found to contain insect repellent. <a href="https://t.co/VZDyZDgSNZ">https://t.co/VZDyZDgSNZ</a> <a href="https://twitter.com/hashtag/health?src=hash&amp;ref_src=twsrc%5Etfw">#health</a></p>&mdash; HealthRanger (@HealthRanger) <a href="https://twitter.com/HealthRanger/status/916333631156752389?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Press Event: Antibiotics for Dental Procedures Linked to Superbug Infection <a href="https://twitter.com/hashtag/IDWeek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDWeek2017</a> <a href="https://t.co/xQmg3Y7iFs">pic.twitter.com/xQmg3Y7iFs</a></p>&mdash; IDSA (@IDSAInfo) <a href="https://twitter.com/IDSAInfo/status/916413785795112961?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">is there anything you can do to make antibiotics w o r k  f a s t e r ?</p>&mdash; GABBOWEEN (@velvetgh0st) <a href="https://twitter.com/velvetgh0st/status/916249749359157248?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Once again, <a href="https://twitter.com/olivegarden?ref_src=twsrc%5Etfw">@OliveGarden</a> fails our <a href="https://twitter.com/hashtag/antibiotics?src=hash&amp;ref_src=twsrc%5Etfw">#antibiotics</a> test. Tell them to stop sourcing meat that threatens public health.<a href="https://t.co/J6FxK9xGgC">https://t.co/J6FxK9xGgC</a> <a href="https://t.co/1NXfm5Dabn">pic.twitter.com/1NXfm5Dabn</a></p>&mdash; Friends of the Earth (@foe_us) <a href="https://twitter.com/foe_us/status/916332244574273536?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotics for dental procedures linked to superbug infection, study shows <a href="https://t.co/3Z8oooijXq">https://t.co/3Z8oooijXq</a></p>&mdash; Science (@scienmag) <a href="https://twitter.com/scienmag/status/916388930953420800?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotics for dental procedures linked to superbug infection, study shows <a href="https://t.co/3Z8oooijXq">https://t.co/3Z8oooijXq</a> <a href="https://t.co/YDqL3uT4YA">pic.twitter.com/YDqL3uT4YA</a></p>&mdash; Science (@scienmag) <a href="https://twitter.com/scienmag/status/916393075743666176?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Nice CDC study at <a href="https://twitter.com/hashtag/IDWeek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDWeek2017</a> suggesting that hospitals can ⬇️ HO-CDI by 4.4% for each 50 DOT/1,000 pt days ⬇️ in antibiotics. Abstract 76.</p>&mdash; Michael Calderwood (@CalderwoodMD) <a href="https://twitter.com/CalderwoodMD/status/916419353163075584?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
+
+          </div>
+          
         </div>
-        
       </div>
       
     </div>
@@ -1175,6 +1030,7 @@ https://t.co/J6FxK9xGgC https://t.co/1NXfm5Dabn</a>
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
     crossorigin="anonymous"></script>
+  <script src="https://platform.twitter.com/widgets.js"></script>
   <script>
     $(document).ready(function () {
       $("#antimicrobialstewardship").addClass('active');
