@@ -49,7 +49,7 @@
   .facebook-rich .numtweets {
     display: block;
     position: absolute;
-    bottom: 60px;
+    bottom: 62px;
     right: 20px;
   }
   .facebook-rich .brand {
@@ -65,6 +65,12 @@
     margin-left: 6px;
   }
 
+  .modal-subtitle {
+    display: block;
+    font-style: italic;
+    font-size: 14px;
+    color: gray;
+  }
   body {
     padding-bottom: 6px;
 
@@ -139,12 +145,73 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">About This Site</a>
+          <a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-lg" href="#">About This Site</a>
         </li>
       </ul>
     </div>
   </nav>
 
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title" style="color:white" id="myLargeModalLabel">[ asptweets ]<span class="modal-subtitle">Keeping track of Twitter, so you don't have to.</span></h4>
+                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="font-size: 14px; padding:30px">
+                <p>My name is Cameron, and I'm a full-time hospital Antimicrobial Stewardship Pharmacist and 
+                  part-time computer geek from Ottawa, Canada.</p>
+
+                <p>I recently attended an excellent talk from <a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>, entitled <em>
+                  3 Ways Twitter Improved my ID/ASP Practice</em>. Inspired,
+                I started trying to use Twitter for 3 main purposes: finding newly released and relevant ASP/ID literature, 
+                seeing what people were Tweeting about ASP related content, and seeing what kind of things
+                the public were saying about broad topics like "antibiotics".</p>
+
+                <p>Quickly, I was overwhelmed the sheer volume of information coming my way, and
+                  was finding it impossible to keep up.</p>
+
+                <p>I knew the information I wanted was there, but there was no way I was going to get
+                  it just trying to follow Twitter on my own.</p>
+
+                <p>Thus, asptweets.com was born. It tracks Twitter under broad search terms relating to 
+                  ASP and ID, and sorts through them daily to generate a list that is quickly consumable.</p>
+
+                <p>Pick a category at the top (e.g. "#antimicrobialstewardship") to see tweets related to it.
+                  For each category, you get the:
+                  <ul>
+                    <li>Top Links: shows things that were linked to from tweets, sorted by the top
+                      # of times that link was mentioned. This is great for finding new literature
+                      and interesting articles.
+                      </li> 
+                      <li>Most Popular: shows the top tweets as ordered by combined "retweeted" and "favourited"
+                        counts. See what people are talking about!</li>
+                        </ul>
+                        </p>
+                  <p>You can also see tweets from any of the past seven days, or aggregated for the entirety
+                    of the past week. Just click the "When do you want to view tweets from?" dropdown at the top. Great for 
+                  when you've missed checking for a day or two!</p>
+                  <p>Note that the site is fully automated and the algorithms aren't opinionated... so you might see things
+                    that are weird, unrelated, or generally not good information. The site is not endorsing anything posted on it,
+                    it's just a snapshot of crowdsourced interests. Also note 
+                  that there will be some unavoidable duplication of content.</p>
+                  
+                  <p>I personally use the site daily, and will be active trying to fix glitches and improve the search algorithms.
+                    I also keep a separate database of popular hashtags, so I can see if there's any other search headings
+                    that would be temporarily (like related to an ongoing conference) or permanently added to the
+                    category options.</p>
+
+                  <p>I hope you will find this site useful, and feel free to send any feedback to me at <a href="https://twitter.com/banjocam" 
+                    target="_blank">@BanjoCam</a>.</p>
+                  
+
+
+              </div>
+        </div>
+      </div>
+    </div>
   <div class="container">
     <ul class="nav nav-pills mb-3 justify-content-center" id="myTab" role="tablist">
       <li class="nav-item">
@@ -789,6 +856,7 @@ Bath to test a city&#39;s water could soon... </span>
       
     </div>
   </div>
+  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10px; padding-top: 50px">Created by Cameron Forbes, 2017.</p>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
