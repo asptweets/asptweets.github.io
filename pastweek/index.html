@@ -1,118 +1,24 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108198823-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108198823-1');
+  </script>
+
   <title>ASP Tweets</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
     integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/main.css">
 </head>
-<style>
-  .facebook-rich {
-    border: 1px solid #e9eaed;
-    display: block;
-    background: white;
-    /* width: 500px; */
-    font-size: 14px;
-    height: 200px;
-    padding: 10px;
-    /* position: relative; */
-    margin-bottom: 40px;
-    border-radius: 5px; 
-  }
-  a.facebook-rich {
-    color:black;
-    text-decoration: none;
-  }
-  .facebook-rich .website {
-    right: 20px;
-    bottom: 45px;
-    position: absolute;
-    display: block;
-    color: #9197a3 !important;
-  }
-  .facebook-rich .title {
-    font-size: 16px;
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    line-height: 1;
-    font-weight: 500;
-  }
-  .facebook-rich .description {
-    display: block;
-    margin-bottom: 5px;
-    color: #4e5665;
-    line-height: 1;
-  }
-  .facebook-rich .numtweets {
-    display: block;
-    position: absolute;
-    bottom: 62px;
-    right: 20px;
-  }
-  .facebook-rich .brand {
-    float: right;
-    width: 140px;
-    height: 140px;
-    border: 8px solid white;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-right: -6px;
-    margin-top: -6px;
-    margin-left: 6px;
-  }
-
-  .modal-subtitle {
-    display: block;
-    font-style: italic;
-    font-size: 14px;
-    color: gray;
-  }
-  body {
-    padding-bottom: 6px;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedbe9+0,aac5de+17,6199c7+50,419ad6+59,3a84c3+67,3a84c3+67,4bb8f0+71,3a8bc2+84,26558b+100 */
-    background: #cedbe9;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b', GradientType=0);
-    /* IE6-9 */
-  }
-
-  .jumbotron {
-
-    background-color: rgba(255, 255, 255, 0.0);
-  }
-
-  .jumbotron.jumbotron-title {
-    margin-bottom: 0px!important;
-  }
-
-  .jumbotron-heading {
-    font-weight: 300
-  }
-
-  .lead.date {
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  .container {
-    padding-top: 10px;
-  }
-
-  .nav-pills {
-    font-size: large;
-  }
-</style>
 
 <body>
 
@@ -151,67 +57,107 @@
     </div>
   </nav>
 
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-dark">
-                <h4 class="modal-title" style="color:white" id="myLargeModalLabel">[ asptweets ]<span class="modal-subtitle">Keeping track of Twitter, so you don't have to.</span></h4>
-                <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+          <h4 class="modal-title" style="color:white" id="myLargeModalLabel">[ asptweets ]
+            <span class="modal-subtitle">Keeping track of Twitter, so you don't have to.</span>
+          </h4>
+          <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="font-size: 14px; padding:30px">
+          <p>My name is Cameron, and I'm a full-time hospital Antimicrobial Stewardship Pharmacist and part-time
+            computer geek from Ottawa, Canada.</p>
+
+          <p>I recently attended an excellent talk from
+            <a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>, entitled
+            <em>
+              3 Ways Twitter Improved my ID/ASP Practice</em>. Inspired, I started trying to use Twitter
+            for 3 main purposes: finding newly released and relevant ASP/ID literature, seeing what people
+            were Tweeting about ASP related content, and seeing what kind of things the public were saying
+            about broad topics like "antibiotics".</p>
+
+          <p>Quickly, I was overwhelmed the sheer volume of information coming my way, and was finding it
+            impossible to keep up.</p>
+
+          <p>I knew the information I wanted was there, but there was no way I was going to get it just
+            trying to follow Twitter on my own.</p>
+
+          <p>Thus, asptweets.com was born. It tracks Twitter under broad search terms relating to ASP and
+            ID, and sorts through them daily to generate a list that is quickly consumable.</p>
+
+          <p>Pick a category at the top (e.g. "#antimicrobialstewardship") to see tweets related to it.
+            For each category, you get the:
+            <ul>
+              <li>Top Links: shows things that were linked to from tweets, sorted by the top # of times that
+                link was mentioned. This is great for finding new literature and interesting articles.
+              </li>
+              <li>Most Popular: shows the top tweets as ordered by combined "retweeted" and "favourited"
+                counts. See what people are talking about!</li>
+            </ul>
+          </p>
+          <p>You can also see tweets from any of the past seven days, or aggregated for the entirety of
+            the past week. Just click the "When do you want to view tweets from?" dropdown at the top.
+            Great for when you've missed checking for a day or two!</p>
+          <p>Note that the site is fully automated and the algorithms aren't opinionated... so you might
+            see things that are weird, unrelated, or generally not good information. The site is not
+            endorsing anything posted on it, it's just a snapshot of crowdsourced interests. Also note
+            that there will be some unavoidable duplication of content.</p>
+
+          <p>I personally use the site daily, and will be active trying to fix glitches and improve the
+            search algorithms. I also keep a separate database of popular hashtags, so I can see if there's
+            any other search headings that could be temporarily (like related to an ongoing conference)
+            or permanently added to the category options.</p>
+
+          <p>I hope you will find this site useful, and feel free to send any feedback to me at
+            <a href="https://twitter.com/banjocam" target="_blank">@BanjoCam</a> or 
+          <a href="mailto:cameron@asptweets.com">cameron@asptweets.com</a></p>
+
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <a class="tech-details" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Details for Geeks
+                  </a>
+                </h5>
               </div>
-              <div class="modal-body" style="font-size: 14px; padding:30px">
-                <p>My name is Cameron, and I'm a full-time hospital Antimicrobial Stewardship Pharmacist and 
-                  part-time computer geek from Ottawa, Canada.</p>
 
-                <p>I recently attended an excellent talk from <a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>, entitled <em>
-                  3 Ways Twitter Improved my ID/ASP Practice</em>. Inspired,
-                I started trying to use Twitter for 3 main purposes: finding newly released and relevant ASP/ID literature, 
-                seeing what people were Tweeting about ASP related content, and seeing what kind of things
-                the public were saying about broad topics like "antibiotics".</p>
-
-                <p>Quickly, I was overwhelmed the sheer volume of information coming my way, and
-                  was finding it impossible to keep up.</p>
-
-                <p>I knew the information I wanted was there, but there was no way I was going to get
-                  it just trying to follow Twitter on my own.</p>
-
-                <p>Thus, asptweets.com was born. It tracks Twitter under broad search terms relating to 
-                  ASP and ID, and sorts through them daily to generate a list that is quickly consumable.</p>
-
-                <p>Pick a category at the top (e.g. "#antimicrobialstewardship") to see tweets related to it.
-                  For each category, you get the:
+              <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
                   <ul>
-                    <li>Top Links: shows things that were linked to from tweets, sorted by the top
-                      # of times that link was mentioned. This is great for finding new literature
-                      and interesting articles.
-                      </li> 
-                      <li>Most Popular: shows the top tweets as ordered by combined "retweeted" and "favourited"
-                        counts. See what people are talking about!</li>
-                        </ul>
-                        </p>
-                  <p>You can also see tweets from any of the past seven days, or aggregated for the entirety
-                    of the past week. Just click the "When do you want to view tweets from?" dropdown at the top. Great for 
-                  when you've missed checking for a day or two!</p>
-                  <p>Note that the site is fully automated and the algorithms aren't opinionated... so you might see things
-                    that are weird, unrelated, or generally not good information. The site is not endorsing anything posted on it,
-                    it's just a snapshot of crowdsourced interests. Also note 
-                  that there will be some unavoidable duplication of content.</p>
-                  
-                  <p>I personally use the site daily, and will be active trying to fix glitches and improve the search algorithms.
-                    I also keep a separate database of popular hashtags, so I can see if there's any other search headings
-                    that would be temporarily (like related to an ongoing conference) or permanently added to the
-                    category options.</p>
-
-                  <p>I hope you will find this site useful, and feel free to send any feedback to me at <a href="https://twitter.com/banjocam" 
-                    target="_blank">@BanjoCam</a>.</p>
-                  
-
-
+                    <li>Entirely programmed in Python 2</li>
+                    <li>All scripts run automatically on a (mostly) always-on Raspberry Pi using cron</li>
+                    <li>Tweepy used to scrape Twitter API
+                      <ul>
+                        <li>Search run every 15 minutes to get most recent tweets for variety of search terms</li>
+                      </ul>
+                    </li>
+                    <li>Tweets saved into local SQLite database using Peewee ORM</li>
+                    <li>Flask used to build website</li>
+                    <li>Frozen-Flask used to generic static files</li>
+                    <ul>
+                      <li>Generated at 4am daily</li>
+                    </ul>
+                    <li>Modified version of link_preview.py used to generate Link Previews</li>
+                    <li>Tweet embedding code grabbed direct from twitter GET API</li>
+                    <li>Previews & Embedding HTML cached in database</li>
+                    <li>Hosted on Github Pages</li>
+                  </ul>
+                </div>
               </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
+  </div>
   <div class="container">
     <ul class="nav nav-pills mb-3 justify-content-center" id="myTab" role="tablist">
       <li class="nav-item">
@@ -236,174 +182,184 @@
           <h1 class="jumbotron-heading">Top Links</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://rdcu.be/wHcy" target="_blank">
-                <span class="brand" style="background-image:url('')"></span>
-                <span class="title">http://rdcu.be/wHcy</span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 70</span>
-                <span class="website"></span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="http://mayocl.in/2yTYMMw" target="_blank">
-                <span class="brand" style="background-image:url('https://newsnetwork.mayoclinic.org/files/2016/10/HPV-vaccine-vial.jpg')"></span>
-                <span class="title">Infectious Diseases A-Z:  Why the HPV vaccine is important</span>
-                <span class="description">Six out of 10 U.S. parents are choosing to get the HPV vaccine for their children, according to a recent report from [...] </span>
-                <span class="numtweets">Number of times Tweeted: 58</span>
-                <span class="website">MAYOCL.IN</span>
+              <span class="brand" style="background-image:url('')"></span>
+              <span class="title">http://rdcu.be/wHcy</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 73</span>
+              <span class="website"></span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://bit.ly/2gqlAfx" target="_blank">
-                <span class="brand" style="background-image:url('http://bit.ly/TemplatePackage/3.0/images/favicon.ico')"></span>
-                <span class="title">Flood Water After a Disaster or Emergency | Floods | Natural Disasters and Severe Weather | CDC</span>
-                <span class="description">Information on floods. Provided by the Centers for Disease Control and Prevention (CDC). </span>
-                <span class="numtweets">Number of times Tweeted: 54</span>
-                <span class="website">BIT.LY</span>
+              <span class="brand" style="background-image:url('http://bit.ly/TemplatePackage/3.0/images/favicon.ico')"></span>
+              <span class="title">Flood Water After a Disaster or Emergency | Floods | Natural Disasters and Severe Weather | CDC</span>
+              <span class="description">Information on floods. Provided by the Centers for Disease Control and Prevention (CDC). </span>
+              <span class="numtweets">Number of times Tweeted: 68</span>
+              <span class="website">BIT.LY</span>
             </a>
           </div>
           
           <div class="col-lg-6">
-            <a class="facebook-rich" href="http://bit.ly/2wO5UcI" target="_blank">
-                <span class="brand" style="background-image:url('http://bit.ly')"></span>
-                <span class="title">
-	IDSA : Puerto Rico and U.S. Virgin Islands Need Urgent Aid Now to Avert Public Health Crises
-</span>
-                <span class="description">Infectious Diseases Society of America; IDSA </span>
-                <span class="numtweets">Number of times Tweeted: 26</span>
-                <span class="website">BIT.LY</span>
+            <a class="facebook-rich" href="http://mayocl.in/2yTYMMw" target="_blank">
+              <span class="brand" style="background-image:url('https://newsnetwork.mayoclinic.org/files/2016/10/HPV-vaccine-vial.jpg')"></span>
+              <span class="title">Infectious Diseases A-Z:  Why the HPV vaccine is important</span>
+              <span class="description">Six out of 10 U.S. parents are choosing to get the HPV vaccine for their children, according to a recent report from [...] </span>
+              <span class="numtweets">Number of times Tweeted: 60</span>
+              <span class="website">MAYOCL.IN</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.news18.com/news/india/india-needs-20-medical-colleges-like-harvard-stanford-who-scientist-soumya-swaminathan-1537203.html" target="_blank">
-                <span class="brand" style="background-image:url('http://img01.ibnlive.in/ibnlive/uploads/2017/06/WHO.jpg')"></span>
-                <span class="title">India Needs 20 Medical Colleges Like Harvard, Stanford: WHO Scientist Soumya Swaminathan</span>
-                <span class="description">Soumya Swaminathan, who has been appointed as Deputy Director General of the World Health Organisation (WHO), said TB will be a high... </span>
-                <span class="numtweets">Number of times Tweeted: 24</span>
-                <span class="website">NEWS18.COM</span>
+              <span class="brand" style="background-image:url('http://img01.ibnlive.in/ibnlive/uploads/2017/06/WHO.jpg')"></span>
+              <span class="title">India Needs 20 Medical Colleges Like Harvard, Stanford: WHO Scientist Soumya Swaminathan</span>
+              <span class="description">Soumya Swaminathan, who has been appointed as Deputy Director General of the World Health Organisation (WHO), said TB will be a high... </span>
+              <span class="numtweets">Number of times Tweeted: 47</span>
+              <span class="website">NEWS18.COM</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="http://bit.ly/2yO0seK" target="_blank">
+              <span class="brand" style="background-image:url('http://www.telegraph.co.uk/content/dam/business/2017/10/15/TELEMMGLPICT000039917418-xlarge_trans_NvBQzQNjv4BqIdQOHsjvO6CIjF4N15tBYrc96NdUiwniNDzGc84-Dto.jpeg')"></span>
+              <span class="title">Are we prepared for the next Ebola-scale epidemic?</span>
+              <span class="description">Infectious diseases scientist Sanjeev Krishna knew about Ebola long before the epidemic of 2014 and 2015 that claimed 11,315 lives. </span>
+              <span class="numtweets">Number of times Tweeted: 28</span>
+              <span class="website">BIT.LY</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="http://bit.ly/2wO5UcI" target="_blank">
+              <span class="brand" style="background-image:url('http://bit.ly')"></span>
+              <span class="title">
+	IDSA : Puerto Rico and U.S. Virgin Islands Need Urgent Aid Now to Avert Public Health Crises
+</span>
+              <span class="description">Infectious Diseases Society of America; IDSA </span>
+              <span class="numtweets">Number of times Tweeted: 26</span>
+              <span class="website">BIT.LY</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="http://www.meactionuk.org.uk/ramsey.html" target="_blank">
+              <span class="brand" style="background-image:url('http://www.meactionuk.org.uk')"></span>
+              <span class="title">The Definitive Description of ME</span>
+              <span class="description">Melvin Ramsay's description of Myalgic
+Encephalomyelitis </span>
+              <span class="numtweets">Number of times Tweeted: 15</span>
+              <span class="website">MEACTIONUK.ORG.UK</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://academic.oup.com/cid/article-abstract/doi/10.1093/cid/cix548/3866742/Infectious-diseases-team-for-the-early-management" target="_blank">
-                <span class="brand" style="background-image:url('https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/cid/Issue/65/8/1/m_cover.png?Expires=1571159750&amp;amp;Signature=PBx9KW58GecCI5jb~bH7OVslHgZT1jCgi54IyyOBLmKmv-ceo-MMl78fo9J7N6X12ty7yf2ai6bGGvPZRzIXoVGlqYL5th0nOrnZ76x~txy8L7afpOl-aLvqq0lhxnsz~U0UxdZwMEbuszLXecH7ceDirkirYfVCLpAaiYYb2JOeavMdJwg-c~leozc4JVGtDG49jLA7dhMpwEmpnOJLRRiNRVzrEZHs3Y3mFwJG-~ikRIx4u343LiD2ccH-anRQuxk1z3YwP33dQbmjjpbEdAGWMyHG6of01dhZLDJ-xVr~I8LO8R7KcgXpGwxUAdMGJM8A5d8gShwJYtfYemfBPA__&amp;amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q')"></span>
-                <span class="title">Infectious Diseases Team for the Early Management of Severe Sepsis and Septic Shock in the...</span>
-                <span class="description">BackgroundThe impact on patient survival of an infectious disease (ID) team dedicated to the early management of severe sepsis/septic... </span>
-                <span class="numtweets">Number of times Tweeted: 15</span>
-                <span class="website">ACADEMIC.OUP.COM</span>
+              <span class="brand" style="background-image:url('https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/cid/Issue/65/8/1/m_cover.png?Expires=1571159750&amp;Signature=PBx9KW58GecCI5jb~bH7OVslHgZT1jCgi54IyyOBLmKmv-ceo-MMl78fo9J7N6X12ty7yf2ai6bGGvPZRzIXoVGlqYL5th0nOrnZ76x~txy8L7afpOl-aLvqq0lhxnsz~U0UxdZwMEbuszLXecH7ceDirkirYfVCLpAaiYYb2JOeavMdJwg-c~leozc4JVGtDG49jLA7dhMpwEmpnOJLRRiNRVzrEZHs3Y3mFwJG-~ikRIx4u343LiD2ccH-anRQuxk1z3YwP33dQbmjjpbEdAGWMyHG6of01dhZLDJ-xVr~I8LO8R7KcgXpGwxUAdMGJM8A5d8gShwJYtfYemfBPA__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q')"></span>
+              <span class="title">Infectious Diseases Team for the Early Management of Severe Sepsis and Septic Shock in the...</span>
+              <span class="description">BackgroundThe impact on patient survival of an infectious disease (ID) team dedicated to the early management of severe sepsis/septic... </span>
+              <span class="numtweets">Number of times Tweeted: 15</span>
+              <span class="website">ACADEMIC.OUP.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.independent.ie/business/farming/agri-business/six-out-of-ten-infectious-diseases-in-humans-are-spread-from-animals-36220336.html" target="_blank">
-                <span class="brand" style="background-image:url('http://www.independent.ie/incoming/article36220335.ece/ALTERNATES/h342/actlt%20Read-Only.jpg')"></span>
-                <span class="title">&#039;Six out of ten infectious diseases in humans are spread from animals&#039; - FarmIreland.ie</span>
-                <span class="description">Better understanding of the connection between human health and the animal world is vital if lethal outbreaks of disease are to be... </span>
-                <span class="numtweets">Number of times Tweeted: 14</span>
-                <span class="website">INDEPENDENT.IE</span>
+              <span class="brand" style="background-image:url('http://www.independent.ie/incoming/article36220335.ece/ALTERNATES/h342/actlt%20Read-Only.jpg')"></span>
+              <span class="title">&#039;Six out of ten infectious diseases in humans are spread from animals&#039; - FarmIreland.ie</span>
+              <span class="description">Better understanding of the connection between human health and the animal world is vital if lethal outbreaks of disease are to be... </span>
+              <span class="numtweets">Number of times Tweeted: 14</span>
+              <span class="website">INDEPENDENT.IE</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://academic.oup.com/cid/article-abstract/doi/10.1093/cid/cix794/4372047/The-Impact-of-a-Reported-Penicillin-Allergy-on?redirectedFrom=fulltext" target="_blank">
-                <span class="brand" style="background-image:url('https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/cid/Issue/65/8/1/m_cover.png?Expires=1571149394&amp;amp;Signature=goZXuqpCK1jeJ2633YLT-S43uQIO2ZQo5lc4XKtQKpK3AsEyd1TxzbvlLEPFtvX9Pibc3wKeA~azA261q-h74PGrx2onHkjVphA8zyQwArU6wbt2PhfFERkUogIHiEpxYYlLg33-vdrvDNWJNfewrPYxmIFqYnbtr24C6F7YPDnh0WEMSuDCzWCkhCGpXIVhqHZH3VE2ZcEtdDIp~csm5NAQL1i-9dECoyTZb2P46EHPOlGERwegJZcKBPbSe5oqfJuLQlJt66KulSISWGhFi8K99px43o~WtyY2OtPN6-8vXbAWfS3pbAMCiAHsADs~j0YAkh0rsh446bxuFFdWgw__&amp;amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q')"></span>
-                <span class="title">Impact of a Reported Penicillin Allergy on Surgical Site Infection Risk | Clinical Infectious...</span>
-                <span class="description">BackgroundA reported penicillin allergy may compromise receipt of recommended antibiotic prophylaxis intended to prevent surgical site... </span>
-                <span class="numtweets">Number of times Tweeted: 13</span>
-                <span class="website">ACADEMIC.OUP.COM</span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="http://ow.ly/2rvr30fJfCp" target="_blank">
-                <span class="brand" style="background-image:url('http://media.empr.com/images/2017/03/28/breastfeedingbabyss44741282_1190311.jpg')"></span>
-                <span class="title">Maternal Antibiotics Affect Infant Gut Microbiome Diversity</span>
-                <span class="description">The composition of the developing gut microbiome is thought to have crucial roles in maturation of the immune system. </span>
-                <span class="numtweets">Number of times Tweeted: 12</span>
-                <span class="website">OW.LY</span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="http://www.thelancet.com/journals/laninf/article/PIIS1473-3099%2817%2930467-X/fulltext#.Wd4bYR0lqd0.twitter" target="_blank">
-                <span class="brand" style="background-image:url('http://www.thelancet.com/cms/attachment/2111018109/2083405777/gr1.gif')"></span>
-                <span class="title">Antimicrobial resistance among children in sub-Saharan Africa</span>
-                <span class="description">Antimicrobial resistance is an important threat to international health. Therapeutic
-guidelines for empirical treatment of common... </span>
-                <span class="numtweets">Number of times Tweeted: 12</span>
-                <span class="website">THELANCET.COM</span>
+              <span class="brand" style="background-image:url('https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/cid/Issue/65/8/1/m_cover.png?Expires=1571149394&amp;Signature=goZXuqpCK1jeJ2633YLT-S43uQIO2ZQo5lc4XKtQKpK3AsEyd1TxzbvlLEPFtvX9Pibc3wKeA~azA261q-h74PGrx2onHkjVphA8zyQwArU6wbt2PhfFERkUogIHiEpxYYlLg33-vdrvDNWJNfewrPYxmIFqYnbtr24C6F7YPDnh0WEMSuDCzWCkhCGpXIVhqHZH3VE2ZcEtdDIp~csm5NAQL1i-9dECoyTZb2P46EHPOlGERwegJZcKBPbSe5oqfJuLQlJt66KulSISWGhFi8K99px43o~WtyY2OtPN6-8vXbAWfS3pbAMCiAHsADs~j0YAkh0rsh446bxuFFdWgw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q')"></span>
+              <span class="title">Impact of a Reported Penicillin Allergy on Surgical Site Infection Risk | Clinical Infectious...</span>
+              <span class="description">BackgroundA reported penicillin allergy may compromise receipt of recommended antibiotic prophylaxis intended to prevent surgical site... </span>
+              <span class="numtweets">Number of times Tweeted: 13</span>
+              <span class="website">ACADEMIC.OUP.COM</span>
             </a>
           </div>
           
         </div>
+        
+
         <div class="jumbotron jumbotron-title text-center">
           <h1 class="jumbotron-heading">Popular Tweets</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&#39;&quot;Post-antibiotic apocalypse&quot;&#39; warnings are not scaremongering, 10 million a year could die from infectious diseases by 2050&#39; - <a href="https://twitter.com/SfAMtweets?ref_src=twsrc%5Etfw">@SfAMtweets</a> <a href="https://t.co/sn8RXzvz80">pic.twitter.com/sn8RXzvz80</a></p>&mdash; Victoria Derbyshire (@VictoriaLIVE) <a href="https://twitter.com/VictoriaLIVE/status/918771291183706113?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Handwashing?src=hash&amp;ref_src=twsrc%5Etfw">#Handwashing</a> remains one of the strongest measures against spread of infectious diseases. Wash your hands frequently. <a href="https://twitter.com/hashtag/GlobalHandwashingDay?src=hash&amp;ref_src=twsrc%5Etfw">#GlobalHandwashingDay</a> <a href="https://t.co/FJjyjIYyoW">pic.twitter.com/FJjyjIYyoW</a></p>&mdash; NCDC (@NCDCgov) <a href="https://twitter.com/NCDCgov/status/919607424721543169?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Standing <a href="https://twitter.com/hashtag/flood?src=hash&amp;ref_src=twsrc%5Etfw">#flood</a> waters can spread infectious diseases, bring chemical hazards, and cause injuries. <a href="https://t.co/7quSU9iBhN">https://t.co/7quSU9iBhN</a> <a href="https://t.co/NAUdmPRBnO">pic.twitter.com/NAUdmPRBnO</a></p>&mdash; CDC (@CDCgov) <a href="https://twitter.com/CDCgov/status/918144186938822656?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">More than 1/3 of Puerto Rico lacks clean water. Infectious diseases are spreading. Americans are drinking water from hazardous waste sites.</p>&mdash; Richard Blumenthal (@SenBlumenthal) <a href="https://twitter.com/SenBlumenthal/status/920002652649459718?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Floodwater poses various risks, incl infectious diseases, &amp; may even contain sewage. Protect yourself &amp; your family. <a href="https://t.co/hPPySjPu6Y">https://t.co/hPPySjPu6Y</a> <a href="https://t.co/YobVdZOSwK">pic.twitter.com/YobVdZOSwK</a></p>&mdash; CDC Emergency (@CDCemergency) <a href="https://twitter.com/CDCemergency/status/919322048127799296?ref_src=twsrc%5Etfw">October 14, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;TB will be a high priority for WHO as it’s the top killer among infectious diseases&quot; : <a href="https://twitter.com/doctorsoumya?ref_src=twsrc%5Etfw">@doctorsoumya</a> <a href="https://t.co/WXOXxY3bm7">https://t.co/WXOXxY3bm7</a></p>&mdash; ICMR (@ICMRDELHI) <a href="https://twitter.com/ICMRDELHI/status/919463021184872449?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I mean, if Christopher Columbus is skilled at anything it&#39;s being a walking incubator for highly-evolved European infectious diseases.</p>&mdash; Jarrod Alonge (@JarrodAlonge) <a href="https://twitter.com/JarrodAlonge/status/917406921916846080?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">2,000 health experts from 100 countries meeting in sunny <a href="https://twitter.com/hashtag/Berlin?src=hash&amp;ref_src=twsrc%5Etfw">#Berlin</a> at <a href="https://twitter.com/hashtag/WHS2017?src=hash&amp;ref_src=twsrc%5Etfw">#WHS2017</a> to discuss <a href="https://twitter.com/hashtag/publichealth?src=hash&amp;ref_src=twsrc%5Etfw">#publichealth</a> issues and <a href="https://twitter.com/hashtag/clinicalroutine?src=hash&amp;ref_src=twsrc%5Etfw">#clinicalroutine</a> challenges for infectious and noninfectious diseases. Topics include <a href="https://twitter.com/hashtag/precisionmedicine?src=hash&amp;ref_src=twsrc%5Etfw">#precisionmedicine</a> based on <a href="https://twitter.com/hashtag/BigData?src=hash&amp;ref_src=twsrc%5Etfw">#BigData</a> <a href="https://t.co/6bLmjVmYt2">pic.twitter.com/6bLmjVmYt2</a></p>&mdash; Michael Reiter (@MichaelReiterPR) <a href="https://twitter.com/MichaelReiterPR/status/919500658654547968?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you know why the <a href="https://twitter.com/hashtag/HPVvaccine?src=hash&amp;ref_src=twsrc%5Etfw">#HPVvaccine</a> is so important for kids? Hear from <a href="https://twitter.com/RobertJMD?ref_src=twsrc%5Etfw">@RobertJMD</a> in <a href="https://twitter.com/hashtag/InfectiousDiseases?src=hash&amp;ref_src=twsrc%5Etfw">#InfectiousDiseases</a> A-Z. <a href="https://t.co/26K8qhuf5e">https://t.co/26K8qhuf5e</a> <a href="https://twitter.com/hashtag/HPV?src=hash&amp;ref_src=twsrc%5Etfw">#HPV</a> <a href="https://t.co/EozPUxyynr">pic.twitter.com/EozPUxyynr</a></p>&mdash; Mayo Clinic (@MayoClinic) <a href="https://twitter.com/MayoClinic/status/917512745007960064?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Vaccination against infectious diseases is a critical part of epidemic preparedness. <a href="https://twitter.com/ResolveTSL?ref_src=twsrc%5Etfw">@ResolveTSL</a> <a href="https://twitter.com/CEPIvaccines?ref_src=twsrc%5Etfw">@CEPIvaccines</a> <a href="https://t.co/k6E8oZUMCs">https://t.co/k6E8oZUMCs</a></p>&mdash; Dr. Tom Frieden (@DrFrieden) <a href="https://twitter.com/DrFrieden/status/919991022888869889?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Most infectious diseases have been easily prevented. Age-Arelated diseases have not. Why not? - <a href="https://twitter.com/aubreydegrey?ref_src=twsrc%5Etfw">@aubreydegrey</a> at <a href="https://twitter.com/hashtag/TMSante17?src=hash&amp;ref_src=twsrc%5Etfw">#TMSante17</a> <a href="https://twitter.com/TechnoMontreal?ref_src=twsrc%5Etfw">@TechnoMontreal</a> <a href="https://t.co/8BahmXpxVt">pic.twitter.com/8BahmXpxVt</a></p>&mdash; Luc Sirois (@lsirois007) <a href="https://twitter.com/lsirois007/status/917733996796219392?ref_src=twsrc%5Etfw">October 10, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Definitive Description of M.E. by A. Melvin Ramsay M.D., Infectious Diseases Dept, Royal Free Hospital. [1986]  <a href="https://t.co/xYrOmJcJUY">https://t.co/xYrOmJcJUY</a></p>&mdash; CFS is not M.E. (@MEisNotFatigue) <a href="https://twitter.com/MEisNotFatigue/status/919554841231446017?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Lancet Infectious Diseases &#39;Antimicrobial resistance among children in sub-Saharan Africa&#39; <a href="https://t.co/6ctpAnMF8z">https://t.co/6ctpAnMF8z</a></p>&mdash; Antibiotic Action (@TheUrgentNeed) <a href="https://twitter.com/TheUrgentNeed/status/918105142842585088?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Announcing the launch of the Ohio State University Infectious Diseases Institute! Big plans ahead. See: <a href="https://t.co/Tznzkn9qdF">https://t.co/Tznzkn9qdF</a> <a href="https://twitter.com/hashtag/OSUIDI?src=hash&amp;ref_src=twsrc%5Etfw">#OSUIDI</a></p>&mdash; John Gunn (@DrGunn43) <a href="https://twitter.com/DrGunn43/status/919673568488812544?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;One Health focuses heavily on antimicrobial resistance, food safety, and infectious diseases.&quot; <a href="https://t.co/VRPwlu41Zj">https://t.co/VRPwlu41Zj</a></p>&mdash; JHU Public Health (@JohnsHopkinsSPH) <a href="https://twitter.com/JohnsHopkinsSPH/status/918140650251603970?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Floodwater poses various risks, incl infectious diseases, &amp; may even contain sewage. Protect yourself &amp; your family. <a href="https://t.co/Zi7Bj1fqm8">https://t.co/Zi7Bj1fqm8</a> <a href="https://t.co/JtwncBDhGM">pic.twitter.com/JtwncBDhGM</a></p>&mdash; CDC Emergency (@CDCemergency) <a href="https://twitter.com/CDCemergency/status/920061943523762177?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The final <a href="https://twitter.com/hashtag/Crossover?src=hash&amp;ref_src=twsrc%5Etfw">#Crossover</a> this year w/ <a href="https://twitter.com/fleetscience?ref_src=twsrc%5Etfw">@fleetscience</a> is coming up! <a href="https://twitter.com/hashtag/InfectiousDiseases?src=hash&amp;ref_src=twsrc%5Etfw">#InfectiousDiseases</a> w/ <a href="https://twitter.com/SteveNiles?ref_src=twsrc%5Etfw">@SteveNiles</a> &amp; <a href="https://twitter.com/JonathanMaberry?ref_src=twsrc%5Etfw">@JonathanMaberry</a>!<a href="https://t.co/UKfAQqxabD">https://t.co/UKfAQqxabD</a> <a href="https://t.co/kcX4txX79D">pic.twitter.com/kcX4txX79D</a></p>&mdash; San Diego Comic Art (@sdcagallery) <a href="https://twitter.com/sdcagallery/status/918194716394577921?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Join us this October 21 in Contagion: An Infectious Disease Seminar and equip yourself with the necessary knowledge on infectious diseases! <a href="https://t.co/bInm7ErVkn">pic.twitter.com/bInm7ErVkn</a></p>&mdash; Lingkod E.R. - UST (@USTLingkodER) <a href="https://twitter.com/USTLingkodER/status/919793890768465920?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Review from Wykes and Lewin: Immune checkpoint blockade in infectious diseases <a href="https://t.co/yrZ6viDzKZ">https://t.co/yrZ6viDzKZ</a> <a href="https://twitter.com/hashtag/immune?src=hash&amp;ref_src=twsrc%5Etfw">#immune</a> <a href="https://twitter.com/hashtag/checkpoint?src=hash&amp;ref_src=twsrc%5Etfw">#checkpoint</a> <a href="https://twitter.com/hashtag/Immunotherapy?src=hash&amp;ref_src=twsrc%5Etfw">#Immunotherapy</a> <a href="https://t.co/dMQiKyyEjG">pic.twitter.com/dMQiKyyEjG</a></p>&mdash; Nature Rev Immunol (@NatRevImmunol) <a href="https://twitter.com/NatRevImmunol/status/918481934837219329?ref_src=twsrc%5Etfw">October 12, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Lyme cells KILLED in test of oregano, cinnamon, clove oils. <a href="https://twitter.com/hashtag/BreakingThrough?src=hash&amp;ref_src=twsrc%5Etfw">#BreakingThrough</a> <a href="https://twitter.com/NeecheeNeechee?ref_src=twsrc%5Etfw">@NeecheeNeechee</a> <a href="https://twitter.com/zebrafinch?ref_src=twsrc%5Etfw">@zebrafinch</a> <a href="https://twitter.com/Lymenews?ref_src=twsrc%5Etfw">@Lymenews</a> <a href="https://t.co/DVKRMhz4PP">https://t.co/DVKRMhz4PP</a></p>&mdash; Mary Beth Pfeiffer (@marybethpf) <a href="https://twitter.com/marybethpf/status/919539482650660864?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr. Timoney underscores importance of infectious diseases research to advise and serve an industry that’s global &amp; valuable. <a href="https://twitter.com/hashtag/glucklegacy?src=hash&amp;ref_src=twsrc%5Etfw">#glucklegacy</a></p>&mdash; UK Gluck Center (@UKGluckCenter) <a href="https://twitter.com/UKGluckCenter/status/918488014841700353?ref_src=twsrc%5Etfw">October 12, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Re-emerging infectious diseases from the past: hysteria or real risk?<a href="https://t.co/kwfYAL7muB">https://t.co/kwfYAL7muB</a> <a href="https://t.co/NkpDJm4BXr">pic.twitter.com/NkpDJm4BXr</a></p>&mdash; Philippe Charlier (@doctroptard) <a href="https://twitter.com/doctroptard/status/919860549214703616?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunday&#39;s review: Immune checkpoint blockade in infectious diseases <a href="https://t.co/bV1zvP5Rch">https://t.co/bV1zvP5Rch</a> <a href="https://twitter.com/hashtag/Immunotherapy?src=hash&amp;ref_src=twsrc%5Etfw">#Immunotherapy</a> <a href="https://t.co/JlWHzkDTvT">pic.twitter.com/JlWHzkDTvT</a></p>&mdash; Gorka Orive, PhD (@gorka_orive) <a href="https://twitter.com/gorka_orive/status/919487915880837121?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
         </div>
+        
       </div>
       
       <div class="tab-pane fade show" id="antimicrobialstewardship" role="tabpanel" aria-labelledby="home-tab">
@@ -411,116 +367,135 @@ guidelines for empirical treatment of common... </span>
           <h1 class="jumbotron-heading">Top Links</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://pew.org/2yEktEx" target="_blank">
-                <span class="brand" style="background-image:url('http://www.infectioncontroltoday.com/~/media/5ff39f0473f64680baee0e3808c2001c.ashx')"></span>
-                <span class="title">Pharmacists Help Drive Antimicrobial Stewardship Programs</span>
-                <span class="description">It has been more than a decade since several medical societies outlined recommendations to optimize the use of antimicrobials through </span>
-                <span class="numtweets">Number of times Tweeted: 15</span>
-                <span class="website">PEW.ORG</span>
+              <span class="brand" style="background-image:url('http://www.infectioncontroltoday.com/~/media/5ff39f0473f64680baee0e3808c2001c.ashx')"></span>
+              <span class="title">Pharmacists Help Drive Antimicrobial Stewardship Programs</span>
+              <span class="description">It has been more than a decade since several medical societies outlined recommendations to optimize the use of antimicrobials through </span>
+              <span class="numtweets">Number of times Tweeted: 16</span>
+              <span class="website">PEW.ORG</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.cidrap.umn.edu/infectious-disease-topics/antimicrobial-stewardship#bibliography" target="_blank">
-                <span class="brand" style="background-image:url('http://www.cidrap.umn.edu/sites/default/themes/siteskin/inc/images/logo-fb.png')"></span>
-                <span class="title">Antimicrobial Stewardship</span>
-                <span class="description">CIDRAP provides a lengthy bibliography and other resources on antimicrobial resistance and antibiotic stewardship. </span>
-                <span class="numtweets">Number of times Tweeted: 12</span>
-                <span class="website">CIDRAP.UMN.EDU</span>
+              <span class="brand" style="background-image:url('http://www.cidrap.umn.edu/sites/default/themes/siteskin/inc/images/logo-fb.png')"></span>
+              <span class="title">Antimicrobial Stewardship</span>
+              <span class="description">CIDRAP provides a lengthy bibliography and other resources on antimicrobial resistance and antibiotic stewardship. </span>
+              <span class="numtweets">Number of times Tweeted: 12</span>
+              <span class="website">CIDRAP.UMN.EDU</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://bit.ly/NQPABX" target="_blank">
-                <span class="brand" style="background-image:url('http://app.cvent.com/a/images/cvent_social_media.png')"></span>
-                <span class="title">NQF Quality Innovation Antibiotic Stewardship Education Intensive</span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 10</span>
-                <span class="website">BIT.LY</span>
+              <span class="brand" style="background-image:url('http://app.cvent.com/a/images/cvent_social_media.png')"></span>
+              <span class="title">NQF Quality Innovation Antibiotic Stewardship Education Intensive</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 10</span>
+              <span class="website">BIT.LY</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.nejm.org/doi/full/10.1056/NEJMp1705348" target="_blank">
-                <span class="brand" style="background-image:url('http://cdn.nejm.org/img/NEJM_defaultlogo_200px.png')"></span>
-                <span class="title">Lost in Thought — The Limits of the Human Mind and the Future of Medicine &mdash; NEJM</span>
-                <span class="description">Perspective from The New England Journal of Medicine &mdash; Lost in Thought — The Limits of the Human Mind and the Future of Medicine </span>
-                <span class="numtweets">Number of times Tweeted: 9</span>
-                <span class="website">NEJM.ORG</span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="http://www.rpharms.com/ams" target="_blank">
-                <span class="brand" style="background-image:url('http://www.rpharms.com')"></span>
-                <span class="title">
-	Antimicrobial resistance & stewardship
-</span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 8</span>
-                <span class="website">RPHARMS.COM</span>
+              <span class="brand" style="background-image:url('http://cdn.nejm.org/img/NEJM_defaultlogo_200px.png')"></span>
+              <span class="title">Lost in Thought — The Limits of the Human Mind and the Future of Medicine &mdash; NEJM</span>
+              <span class="description">Perspective from The New England Journal of Medicine &mdash; Lost in Thought — The Limits of the Human Mind and the Future of Medicine </span>
+              <span class="numtweets">Number of times Tweeted: 9</span>
+              <span class="website">NEJM.ORG</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://onelink.to/sy896k" target="_blank">
-                <span class="brand" style="background-image:url('http://onelink.to')"></span>
-                <span class="title">EM Guidance</span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 7</span>
-                <span class="website">ONELINK.TO</span>
+              <span class="brand" style="background-image:url('http://onelink.to')"></span>
+              <span class="title">EM Guidance</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 8</span>
+              <span class="website">ONELINK.TO</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="http://www.rpharms.com/ams" target="_blank">
+              <span class="brand" style="background-image:url('http://www.rpharms.com')"></span>
+              <span class="title">
+	Antimicrobial resistance & stewardship
+</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 8</span>
+              <span class="website">RPHARMS.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.asresearchworkshop.org" target="_blank">
-                <span class="brand" style="background-image:url('http://www.asresearchworkshop.org/templates/shea/images/favicons/favicon.ico')"></span>
-                <span class="title">Home</span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 7</span>
-                <span class="website">ASRESEARCHWORKSHOP.ORG</span>
+              <span class="brand" style="background-image:url('http://www.asresearchworkshop.org/templates/shea/images/favicons/favicon.ico')"></span>
+              <span class="title">Home</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 7</span>
+              <span class="website">ASRESEARCHWORKSHOP.ORG</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://www.ncbi.nlm.nih.gov/pubmed/29020290?dopt=Abstract" target="_blank">
-                <span class="brand" style="background-image:url('http://www.ncbi.nlm.nih.gov/coreutils/img/pubmed256blue.png')"></span>
-                <span class="title">Implementing Antimicrobial Stewardship in Long-term Care Settings: An Integrative Review Using a...</span>
-                <span class="description">Clin Infect Dis. 2017 Jun 20. doi: 10.1093/cid/cix566. [Epub ahead of print] </span>
-                <span class="numtweets">Number of times Tweeted: 7</span>
-                <span class="website">NCBI.NLM.NIH.GOV</span>
+              <span class="brand" style="background-image:url('http://www.ncbi.nlm.nih.gov/coreutils/img/pubmed256blue.png')"></span>
+              <span class="title">Implementing Antimicrobial Stewardship in Long-term Care Settings: An Integrative Review Using a...</span>
+              <span class="description">Clin Infect Dis. 2017 Jun 20. doi: 10.1093/cid/cix566. [Epub ahead of print] </span>
+              <span class="numtweets">Number of times Tweeted: 7</span>
+              <span class="website">NCBI.NLM.NIH.GOV</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://www.youtube.com/watch?v=6TFQpkbo2a0&amp;t=25s" target="_blank">
-                <span class="brand" style="background-image:url('https://i.ytimg.com/vi/6TFQpkbo2a0/hqdefault.jpg')"></span>
-                <span class="title">CIDRAP ASP - Pediatric antimicrobial stewardship (Oct 11th 2017) - YouTube</span>
-                <span class="description">CIDRAP ASP hosted Dr. Jason G. Newland, as he presented “Pediatric antimicrobial stewardship”. </span>
-                <span class="numtweets">Number of times Tweeted: 7</span>
-                <span class="website">YOUTUBE.COM</span>
+              <span class="brand" style="background-image:url('https://i.ytimg.com/vi/6TFQpkbo2a0/hqdefault.jpg')"></span>
+              <span class="title">CIDRAP ASP - Pediatric antimicrobial stewardship (Oct 11th 2017) - YouTube</span>
+              <span class="description">CIDRAP ASP hosted Dr. Jason G. Newland, as he presented “Pediatric antimicrobial stewardship”. </span>
+              <span class="numtweets">Number of times Tweeted: 7</span>
+              <span class="website">YOUTUBE.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.choosingwisely.org/patient-resources/antibiotic-treatment-in-the-hospital/" target="_blank">
-                <span class="brand" style="background-image:url('http://www.choosingwisely.org')"></span>
-                <span class="title">Antibiotic Treatment in the Hospital | Choosing Wisely</span>
-                <span class="description">The U.S. Centers for Disease Control and Prevention is now urging hospitals to cut back on the drugs when they are not needed. Here’s... </span>
-                <span class="numtweets">Number of times Tweeted: 5</span>
-                <span class="website">CHOOSINGWISELY.ORG</span>
+              <span class="brand" style="background-image:url('http://www.choosingwisely.org')"></span>
+              <span class="title">Antibiotic Treatment in the Hospital | Choosing Wisely</span>
+              <span class="description">The U.S. Centers for Disease Control and Prevention is now urging hospitals to cut back on the drugs when they are not needed. Here’s... </span>
+              <span class="numtweets">Number of times Tweeted: 5</span>
+              <span class="website">CHOOSINGWISELY.ORG</span>
             </a>
           </div>
           
         </div>
+        
+
         <div class="jumbotron jumbotron-title text-center">
           <h1 class="jumbotron-heading">Popular Tweets</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">During Int&#39;l Infection Protection Wk our guide for community pharmacists will help you help patients: <a href="https://t.co/v6T6V6FkcR">https://t.co/v6T6V6FkcR</a> <a href="https://t.co/oejAwGgJ0I">pic.twitter.com/oejAwGgJ0I</a></p>&mdash; RPS (@rpharms) <a href="https://twitter.com/rpharms/status/919827253592313857?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just out! &quot;AST the Linchpin of Antimicrobial Stewardship&quot; by <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> member Dr. Jim Lewis: <a href="https://twitter.com/hashtag/ams?src=hash&amp;ref_src=twsrc%5Etfw">#ams</a> <a href="https://twitter.com/hashtag/asp?src=hash&amp;ref_src=twsrc%5Etfw">#asp</a> <a href="https://twitter.com/hashtag/microbiology?src=hash&amp;ref_src=twsrc%5Etfw">#microbiology</a> <a href="https://t.co/wgAtQSsJlX">https://t.co/wgAtQSsJlX</a> <a href="https://t.co/9S4r6msXSu">pic.twitter.com/9S4r6msXSu</a></p>&mdash; SIDP (@SIDPharm) <a href="https://twitter.com/SIDPharm/status/919993624984776705?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check out our new <a href="https://twitter.com/hashtag/IDWeek2017?src=hash&amp;ref_src=twsrc%5Etfw">#IDWeek2017</a> summary for perspective on the latest <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> &amp; <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a> research <a href="https://t.co/RJI0ZjgxmQ">https://t.co/RJI0ZjgxmQ</a></p>&mdash; CIDRAP-ASP (@CIDRAP_ASP) <a href="https://twitter.com/CIDRAP_ASP/status/919990054503768064?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
           
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Scheetz: flyers in restrooms may be effective education strategy 4 <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> initiatives that impact many staff <a href="https://twitter.com/hashtag/accpam17?src=hash&amp;ref_src=twsrc%5Etfw">#accpam17</a></p>&mdash; Erin McCreary (@ErinMcCreary) <a href="https://twitter.com/ErinMcCreary/status/917509373441695744?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
@@ -567,22 +542,8 @@ guidelines for empirical treatment of common... </span>
 
           </div>
           
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Great meeting with <a href="https://twitter.com/jomcewen1977?ref_src=twsrc%5Etfw">@jomcewen1977</a> revising <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> in our MSc/BSc progs. Discussing this paper <a href="https://t.co/fv4IbKgcFR">https://t.co/fv4IbKgcFR</a> <a href="https://t.co/wGPPIDnAFH">pic.twitter.com/wGPPIDnAFH</a></p>&mdash; Emma Burnett (@EmmaBurnettx) <a href="https://twitter.com/EmmaBurnettx/status/917715618652196864?ref_src=twsrc%5Etfw">October 10, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Lost in Thought: algorithms as thinking partners rather than replacements <a href="https://twitter.com/NEJM?ref_src=twsrc%5Etfw">@NEJM</a> <a href="https://twitter.com/hashtag/HealthIT?src=hash&amp;ref_src=twsrc%5Etfw">#HealthIT</a> <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a>  <a href="https://t.co/fYF7XG9RXf">https://t.co/fYF7XG9RXf</a></p>&mdash; Lauren Hunt (@LNHsteward) <a href="https://twitter.com/LNHsteward/status/918203943838199809?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Join us 11/15 in DC for a fully accredited <a href="https://twitter.com/hashtag/ABX?src=hash&amp;ref_src=twsrc%5Etfw">#ABX</a> <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> Workshop. Register now: <a href="https://t.co/yE7aWp5xNr">https://t.co/yE7aWp5xNr</a></p>&mdash; NationalQualityForum (@NatQualityForum) <a href="https://twitter.com/NatQualityForum/status/918243596297560064?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
-
-          </div>
-          
         </div>
+        
       </div>
       
       <div class="tab-pane fade show" id="antimicrobialresistance" role="tabpanel" aria-labelledby="home-tab">
@@ -590,120 +551,170 @@ guidelines for empirical treatment of common... </span>
           <h1 class="jumbotron-heading">Top Links</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://www.theguardian.com/lifeandstyle/2017/oct/13/can-never-eat-chicken-again-antibiotic-resistance?CMP=share_btn_tw" target="_blank">
-                <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/95fe4b365fa53b7c435cd14d882365c99c308cf8/0_111_4252_2551/master/4252.jpg?w=1200&amp;amp;h=630&amp;amp;q=55&amp;amp;auto=format&amp;amp;usm=12&amp;amp;fit=crop&amp;amp;crop=faces%2Centropy&amp;amp;bm=normal&amp;amp;ba=bottom%2Cleft&amp;amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;amp;s=2ab8e9043280a4afbf196e6a49c9c0a7')"></span>
-                <span class="title">Read this and you may never eat chicken again</span>
-                <span class="description">Most meat animals are raised with the assistance of daily doses of antibiotics. By 2050, antibiotic resistance will cause a staggering... </span>
-                <span class="numtweets">Number of times Tweeted: 1531</span>
-                <span class="website">THEGUARDIAN.COM</span>
+              <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/95fe4b365fa53b7c435cd14d882365c99c308cf8/0_111_4252_2551/master/4252.jpg?w=1200&amp;h=630&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=crop&amp;crop=faces%2Centropy&amp;bm=normal&amp;ba=bottom%2Cleft&amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;s=2ab8e9043280a4afbf196e6a49c9c0a7')"></span>
+              <span class="title">Read this and you may never eat chicken again</span>
+              <span class="description">Most meat animals are raised with the assistance of daily doses of antibiotics. By 2050, antibiotic resistance will cause a staggering... </span>
+              <span class="numtweets">Number of times Tweeted: 1659</span>
+              <span class="website">THEGUARDIAN.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://www.theguardian.com/society/2017/oct/13/antibiotic-resistance-could-spell-end-of-modern-medicine-says-chief-medic?CMP=share_btn_tw" target="_blank">
-                <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/eac411065f16aae74ab15f9088c864e908a8f2be/205_0_6160_3697/master/6160.jpg?w=1200&amp;amp;h=630&amp;amp;q=55&amp;amp;auto=format&amp;amp;usm=12&amp;amp;fit=crop&amp;amp;crop=faces%2Centropy&amp;amp;bm=normal&amp;amp;ba=bottom%2Cleft&amp;amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;amp;s=46101c9c831a9dd48b37f313118c02f5')"></span>
-                <span class="title">Antibiotic resistance could spell end of modern medicine, says chief medic</span>
-                <span class="description">Prof Dame Sally Davies says action is needed around the world to tackle ‘hidden’ problem that is already claiming lives </span>
-                <span class="numtweets">Number of times Tweeted: 967</span>
-                <span class="website">THEGUARDIAN.COM</span>
+              <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/eac411065f16aae74ab15f9088c864e908a8f2be/205_0_6160_3697/master/6160.jpg?w=1200&amp;h=630&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=crop&amp;crop=faces%2Centropy&amp;bm=normal&amp;ba=bottom%2Cleft&amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;s=46101c9c831a9dd48b37f313118c02f5')"></span>
+              <span class="title">Antibiotic resistance could spell end of modern medicine, says chief medic</span>
+              <span class="description">Prof Dame Sally Davies says action is needed around the world to tackle ‘hidden’ problem that is already claiming lives </span>
+              <span class="numtweets">Number of times Tweeted: 1017</span>
+              <span class="website">THEGUARDIAN.COM</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="http://bit.ly/2uzEwAZ" target="_blank">
+              <span class="brand" style="background-image:url('http://www.who.int/entity/mediacentre/factsheets/WHO_Antimicrobial_resistance_Facebook.jpg')"></span>
+              <span class="title">Antimicrobial resistance</span>
+              <span class="description">Antimicrobial resistance is resistance of a microorganism to an antimicrobial drug that was originally effective for treatment of... </span>
+              <span class="numtweets">Number of times Tweeted: 367</span>
+              <span class="website">BIT.LY</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://www.theguardian.com/society/2017/oct/08/world-faces-antibiotic-apocalypse-says-chief-medical-officer?CMP=share_btn_tw" target="_blank">
-                <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/e723519fab834ecbbec412db86cb77977e6f8d6c/0_0_5382_3229/master/5382.jpg?w=1200&amp;amp;h=630&amp;amp;q=55&amp;amp;auto=format&amp;amp;usm=12&amp;amp;fit=crop&amp;amp;crop=faces%2Centropy&amp;amp;bm=normal&amp;amp;ba=bottom%2Cleft&amp;amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;amp;s=5071a3adb77a820c5ece7d7fa536e533')"></span>
-                <span class="title">‘Antibiotic apocalypse’: doctors sound alarm over drug resistance</span>
-                <span class="description">The terrifying prospect that even routine operations will be impossible to perform has been raised by experts alarmed by the rise of... </span>
-                <span class="numtweets">Number of times Tweeted: 354</span>
-                <span class="website">THEGUARDIAN.COM</span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="http://www.nature.com/collections/antimicrobialresistance" target="_blank">
-                <span class="brand" style="background-image:url('http://www.nature.com/static/images/favicon.14515a9f.ico')"></span>
-                <span class="title">Antimicrobial resistance</span>
-                <span class="description">Antimicrobial resistance </span>
-                <span class="numtweets">Number of times Tweeted: 146</span>
-                <span class="website">NATURE.COM</span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="https://on.rt.com/8ppi" target="_blank">
-                <span class="brand" style="background-image:url('https://cdni.rt.com/files/2017.10/article/59e07a51fc7e93fe778b4569.jpg')"></span>
-                <span class="title">World must act or risk ‘post-antibiotic apocalypse’ – top doctor</span>
-                <span class="description">England’s chief medical officer has warned of a “post-antibiotic apocalypse,” calling on world leaders to address the growing threat of... </span>
-                <span class="numtweets">Number of times Tweeted: 87</span>
-                <span class="website">ON.RT.COM</span>
+              <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/e723519fab834ecbbec412db86cb77977e6f8d6c/0_0_5382_3229/master/5382.jpg?w=1200&amp;h=630&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=crop&amp;crop=faces%2Centropy&amp;bm=normal&amp;ba=bottom%2Cleft&amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;s=5071a3adb77a820c5ece7d7fa536e533')"></span>
+              <span class="title">‘Antibiotic apocalypse’: doctors sound alarm over drug resistance</span>
+              <span class="description">The terrifying prospect that even routine operations will be impossible to perform has been raised by experts alarmed by the rise of... </span>
+              <span class="numtweets">Number of times Tweeted: 364</span>
+              <span class="website">THEGUARDIAN.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://pew.org/2fWW6qa" target="_blank">
-                <span class="brand" style="background-image:url('http://www.pewtrusts.org/~/media/Post-Launch-Images/2017/10/ARP_Superbugs_Dont_Respect_Borders_16x9/arp_superbugs_dont_respect_borders_16x9_16x9.jpg')"></span>
-                <span class="title">Superbugs Don’t Respect Borders</span>
-                <span class="description">The recently reported outbreak of a deadly new type of antibiotic-resistant pneumonia in Hangzhou, China, has once again raised alarm... </span>
-                <span class="numtweets">Number of times Tweeted: 63</span>
-                <span class="website">PEW.ORG</span>
+              <span class="brand" style="background-image:url('http://www.pewtrusts.org/~/media/Post-Launch-Images/2017/10/ARP_Superbugs_Dont_Respect_Borders_16x9/arp_superbugs_dont_respect_borders_16x9_16x9.jpg')"></span>
+              <span class="title">Superbugs Don’t Respect Borders</span>
+              <span class="description">The recently reported outbreak of a deadly new type of antibiotic-resistant pneumonia in Hangzhou, China, has once again raised alarm... </span>
+              <span class="numtweets">Number of times Tweeted: 88</span>
+              <span class="website">PEW.ORG</span>
             </a>
           </div>
           
           <div class="col-lg-6">
-            <a class="facebook-rich" href="https://on.rt.com/8pe7" target="_blank">
-                <span class="brand" style="background-image:url('https://cdni.rt.com/files/2017.10/article/59dba6c6fc7e93bd378b4568.jpg')"></span>
-                <span class="title">‘Antibiotic apocalypse’: Drug-resistant gene spread across globe within 2 years</span>
-                <span class="description">The life-saving antibiotic of “last resort” is in danger of becoming powerless after a drug-resistant gene was found to have spread... </span>
-                <span class="numtweets">Number of times Tweeted: 60</span>
-                <span class="website">ON.RT.COM</span>
+            <a class="facebook-rich" href="https://on.rt.com/8ppi" target="_blank">
+              <span class="brand" style="background-image:url('https://cdni.rt.com/files/2017.10/article/59e07a51fc7e93fe778b4569.jpg')"></span>
+              <span class="title">World must act or risk ‘post-antibiotic apocalypse’ – top doctor</span>
+              <span class="description">England’s chief medical officer has warned of a “post-antibiotic apocalypse,” calling on world leaders to address the growing threat of... </span>
+              <span class="numtweets">Number of times Tweeted: 87</span>
+              <span class="website">ON.RT.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://bit.ly/Wellcome-AAMR" target="_blank">
-                <span class="brand" style="background-image:url('http://bit.ly')"></span>
-                <span class="title">
+              <span class="brand" style="background-image:url('http://bit.ly')"></span>
+              <span class="title">
 	Antimicrobials and Antimicrobial Resistance - University of Birmingham
 </span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 54</span>
-                <span class="website">BIT.LY</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 63</span>
+              <span class="website">BIT.LY</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="https://on.rt.com/8pe7" target="_blank">
+              <span class="brand" style="background-image:url('https://cdni.rt.com/files/2017.10/article/59dba6c6fc7e93bd378b4568.jpg')"></span>
+              <span class="title">‘Antibiotic apocalypse’: Drug-resistant gene spread across globe within 2 years</span>
+              <span class="description">The life-saving antibiotic of “last resort” is in danger of becoming powerless after a drug-resistant gene was found to have spread... </span>
+              <span class="numtweets">Number of times Tweeted: 60</span>
+              <span class="website">ON.RT.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://trib.al/L8aKYMp" target="_blank">
-                <span class="brand" style="background-image:url('https://e3.365dm.com/17/10/1600x900/skynews-pa-32193665-antibiotics_4127023.jpg?20171013105652')"></span>
-                <span class="title">&#039;Post-antibiotic apocalypse&#039; could make everyday procedures &#039;risky&#039;</span>
-                <span class="description">Dame Sally Davies warns antibiotic resistance could make everyday medical procedures like C-sections and hip replacements &quot;risky&quot;. </span>
-                <span class="numtweets">Number of times Tweeted: 41</span>
-                <span class="website">TRIB.AL</span>
+              <span class="brand" style="background-image:url('https://e3.365dm.com/17/10/1600x900/skynews-pa-32193665-antibiotics_4127023.jpg?20171013105652')"></span>
+              <span class="title">&#039;Post-antibiotic apocalypse&#039; could make everyday procedures &#039;risky&#039;</span>
+              <span class="description">Dame Sally Davies warns antibiotic resistance could make everyday medical procedures like C-sections and hip replacements &quot;risky&quot;. </span>
+              <span class="numtweets">Number of times Tweeted: 41</span>
+              <span class="website">TRIB.AL</span>
             </a>
           </div>
           
           <div class="col-lg-6">
-            <a class="facebook-rich" href="http://www.thelancet.com/journals/laninf/article/PIIS1473-3099(17)30467-X/fulltext" target="_blank">
-                <span class="brand" style="background-image:url('http://www.thelancet.com/cms/attachment/2111018109/2083405777/gr1.gif')"></span>
-                <span class="title">Antimicrobial resistance among children in sub-Saharan Africa</span>
-                <span class="description">Antimicrobial resistance is an important threat to international health. Therapeutic
-guidelines for empirical treatment of common... </span>
-                <span class="numtweets">Number of times Tweeted: 34</span>
-                <span class="website">THELANCET.COM</span>
+            <a class="facebook-rich" href="http://bit.ly/AMRAoH" target="_blank">
+              <span class="brand" style="background-image:url('https://assets.publishing.service.gov.uk/static/opengraph-image-a1f7d89ffd0782738b1aeb0da37842d8bd0addbd724b8e58c3edbc7287cc11de.png')"></span>
+              <span class="title">
+      Antimicrobial resistance (AMR): applying All Our Health - GOV.UK
+  </span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 36</span>
+              <span class="website">BIT.LY</span>
             </a>
           </div>
           
         </div>
+        
+
         <div class="jumbotron jumbotron-title text-center">
           <h1 class="jumbotron-heading">Popular Tweets</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;A 🌍 in which drugs don&#39;t work is a threat to global health security.&quot;-<a href="https://twitter.com/DrTedros?ref_src=twsrc%5Etfw">@DrTedros</a><br>Let&#39;s tackle antibiotic resistance: <a href="https://t.co/Rfe0pUnSJA">https://t.co/Rfe0pUnSJA</a> <a href="https://t.co/gWGKO9jNaX">https://t.co/gWGKO9jNaX</a></p>&mdash; United Nations (@UN) <a href="https://twitter.com/UN/status/919731119641243648?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“To tackle <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> we need a <a href="https://twitter.com/hashtag/OneHealth?src=hash&amp;ref_src=twsrc%5Etfw">#OneHealth</a> approach that integrates human, animal &amp; environmental health”—<a href="https://twitter.com/DrTedros?ref_src=twsrc%5Etfw">@DrTedros</a> <a href="https://t.co/uggMWolhiD">pic.twitter.com/uggMWolhiD</a></p>&mdash; WHO (@WHO) <a href="https://twitter.com/WHO/status/919953523508482049?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> is a top priority: combating AMR is key to effective UHC and global health security.</p>&mdash; Tedros Adhanom (@DrTedros) <a href="https://twitter.com/DrTedros/status/919948135425826816?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> can only be addressed through coordinated, multi-sectoral action. Working with partners across sectors is a must</p>&mdash; Tedros Adhanom (@DrTedros) <a href="https://twitter.com/DrTedros/status/919948457481244672?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotic resistance could spell end of modern medicine, says <a href="https://twitter.com/CMO_England?ref_src=twsrc%5Etfw">@CMO_England</a> <a href="https://t.co/hYlLhE8EpI">https://t.co/hYlLhE8EpI</a> via <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> <a href="https://twitter.com/MichaelMarmot?ref_src=twsrc%5Etfw">@MichaelMarmot</a> <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a></p>&mdash; André Picard (@picardonhealth) <a href="https://twitter.com/picardonhealth/status/919532668936773633?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today is <a href="https://twitter.com/hashtag/GlobalHandwashingDay?src=hash&amp;ref_src=twsrc%5Etfw">#GlobalHandwashingDay</a> Something we can all do and promote to prevent disease <a href="https://twitter.com/hashtag/allourhealth?src=hash&amp;ref_src=twsrc%5Etfw">#allourhealth</a> has topic on AMR<a href="https://t.co/QGNJLeeSOU">https://t.co/QGNJLeeSOU</a> <a href="https://t.co/ixjzBgTTbT">pic.twitter.com/ixjzBgTTbT</a></p>&mdash; Viv Bennett (@VivJBennett) <a href="https://twitter.com/VivJBennett/status/919488016539901953?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">What you need to know about <a href="https://twitter.com/hashtag/antibiotic?src=hash&amp;ref_src=twsrc%5Etfw">#antibiotic</a> resistance <a href="https://t.co/Np2q767qbe">https://t.co/Np2q767qbe</a> <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a> <a href="https://t.co/emEPgwNUuL">pic.twitter.com/emEPgwNUuL</a></p>&mdash; Pfizer Inc. (@pfizer) <a href="https://twitter.com/pfizer/status/919660906375675905?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Understanding this mechanism could help better target antibiotics, and even weaken the virulence of certain bacteri… <a href="https://t.co/UXO1VUBf9K">https://t.co/UXO1VUBf9K</a></p>&mdash; Futurism (@futurism) <a href="https://twitter.com/futurism/status/920046800198828032?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Read this and you may never eat chicken again <a href="https://t.co/tdpnd8yWPU">https://t.co/tdpnd8yWPU</a></p>&mdash; The Guardian (@guardian) <a href="https://twitter.com/guardian/status/918772099694686208?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">.<a href="https://twitter.com/DrTedros?ref_src=twsrc%5Etfw">@DrTedros</a> DG of <a href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">@WHO</a>, co-charing at <a href="https://twitter.com/hashtag/OIE?src=hash&amp;ref_src=twsrc%5Etfw">#OIE</a> headquarters, during the 4th meeting of the IACG on the fight against <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a>. <a href="https://t.co/JnAws5fhKC">pic.twitter.com/JnAws5fhKC</a></p>&mdash; OIE Animal Health (@OIEAnimalHealth) <a href="https://twitter.com/OIEAnimalHealth/status/919958412544413696?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
@@ -713,56 +724,12 @@ guidelines for empirical treatment of common... </span>
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Read this and you may never eat chicken again <a href="https://t.co/e2MLlJ2Zom">https://t.co/e2MLlJ2Zom</a></p>&mdash; The Guardian (@guardian) <a href="https://twitter.com/guardian/status/918794680162242560?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Chief medical officer warns antibiotic resistance will push us into a &quot;post-antibiotic apocalypse&quot; <a href="https://t.co/lruKHUjyy7">https://t.co/lruKHUjyy7</a></p>&mdash; Sky News (@SkyNews) <a href="https://twitter.com/SkyNews/status/918876965712678914?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotic resistance will end modern medicine and push us into a &quot;post-antibiotic apocalypse&quot; warns England&#39;s chief medical officer <a href="https://t.co/Ehj7LQ1nMn">pic.twitter.com/Ehj7LQ1nMn</a></p>&mdash; Sky News (@SkyNews) <a href="https://twitter.com/SkyNews/status/918820243799138305?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Post-antibiotic apocalypse: ‘We really are facing it’ <a href="https://t.co/S8KUOzy8dY">https://t.co/S8KUOzy8dY</a> <a href="https://t.co/bPtPoeh0EH">pic.twitter.com/bPtPoeh0EH</a></p>&mdash; RT (@RT_com) <a href="https://twitter.com/RT_com/status/918798119999102976?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotic resistance could spell end of modern medicine, says chief medic <a href="https://t.co/3HAZPKqCeH">https://t.co/3HAZPKqCeH</a></p>&mdash; Guardian news (@guardiannews) <a href="https://twitter.com/guardiannews/status/918753299779719168?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">‘Dreadful post-antibiotic apocalypse may spell the end of modern medicine’ – top doctor <a href="https://t.co/S8KUOzy8dY">https://t.co/S8KUOzy8dY</a> <a href="https://t.co/oLFmfM5mVp">pic.twitter.com/oLFmfM5mVp</a></p>&mdash; RT (@RT_com) <a href="https://twitter.com/RT_com/status/918820865223151616?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">And you reckon artificial meat is disgusting? <a href="https://t.co/SfFYlsjG0Q">https://t.co/SfFYlsjG0Q</a></p>&mdash; GeorgeMonbiot (@GeorgeMonbiot) <a href="https://twitter.com/GeorgeMonbiot/status/918769229746327552?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Call to Action on <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> lays out Antimicrobial Resistance Benchmark due 2018 <a href="https://twitter.com/hashtag/ctaAMR17?src=hash&amp;ref_src=twsrc%5Etfw">#ctaAMR17</a> <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a> <a href="https://t.co/EfvaK1Pq81">https://t.co/EfvaK1Pq81</a></p>&mdash; The Lancet (@TheLancet) <a href="https://twitter.com/TheLancet/status/918468844267687937?ref_src=twsrc%5Etfw">October 12, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Chicken is the meat most likely to transmit food-borne illness &amp; antibiotic resistance <a href="https://t.co/geer4Gs4kh">https://t.co/geer4Gs4kh</a></p>&mdash; Claire Lehmann (@clairlemon) <a href="https://twitter.com/clairlemon/status/918791253357084673?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A New Weapon in the Battle Against Antibiotic Resistance <a href="https://t.co/ZmZW3a3OYS">https://t.co/ZmZW3a3OYS</a> <a href="https://twitter.com/search?q=%24MTFB&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$MTFB</a> <a href="https://twitter.com/DavidBautz?ref_src=twsrc%5Etfw">@davidbautz</a> <a href="https://twitter.com/hashtag/biotech?src=hash&amp;ref_src=twsrc%5Etfw">#biotech</a> <a href="https://t.co/zp59veGbAN">pic.twitter.com/zp59veGbAN</a></p>&mdash; Zack Capp (@zackcapp) <a href="https://twitter.com/zackcapp/status/917427018039463940?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotic-Resistance Genes in Waste Water<br>-review in <a href="https://twitter.com/TrendsMicrobiol?ref_src=twsrc%5Etfw">@TrendsMicrobiol</a> <a href="https://t.co/7R6iQhd4yW">https://t.co/7R6iQhd4yW</a> <a href="https://t.co/Okh2BETj72">pic.twitter.com/Okh2BETj72</a></p>&mdash; Akos T. Kovacs (@EvolvedBiofilm) <a href="https://twitter.com/EvolvedBiofilm/status/919463864105951239?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
         </div>
+        
       </div>
       
       <div class="tab-pane fade show" id="antibiotics" role="tabpanel" aria-labelledby="home-tab">
@@ -770,117 +737,156 @@ guidelines for empirical treatment of common... </span>
           <h1 class="jumbotron-heading">Top Links</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-lg-6">
-            <a class="facebook-rich" href="http://econ.st/2fQtWNk" target="_blank">
-                <span class="brand" style="background-image:url('https://cdn.static-economist.com/sites/default/files/images/print-edition/20170304_STP001_0.jpg')"></span>
-                <span class="title">The 48 uses of dragon’s blood</span>
-                <span class="description">Komodo dragons could be the source for a new generation of antibiotics </span>
-                <span class="numtweets">Number of times Tweeted: 432</span>
-                <span class="website">ECON.ST</span>
+            <a class="facebook-rich" href="http://ow.ly/rCUf30fKdI1" target="_blank">
+              <span class="brand" style="background-image:url('https://www.sciencenews.org/sites/default/files/2017/10/main/articles/100617_MT_nanoparticle_main_FREE.jpg')"></span>
+              <span class="title">Superbugs may meet their match in these nanoparticles</span>
+              <span class="description">Quantum dots and antibiotics hit bacteria with a one-two punch. </span>
+              <span class="numtweets">Number of times Tweeted: 464</span>
+              <span class="website">OW.LY</span>
             </a>
           </div>
           
           <div class="col-lg-6">
-            <a class="facebook-rich" href="http://ow.ly/rCUf30fKdI1" target="_blank">
-                <span class="brand" style="background-image:url('https://www.sciencenews.org/sites/default/files/2017/10/main/articles/100617_MT_nanoparticle_main_FREE.jpg')"></span>
-                <span class="title">Superbugs may meet their match in these nanoparticles</span>
-                <span class="description">Quantum dots and antibiotics hit bacteria with a one-two punch. </span>
-                <span class="numtweets">Number of times Tweeted: 354</span>
-                <span class="website">OW.LY</span>
+            <a class="facebook-rich" href="http://econ.st/2fQtWNk" target="_blank">
+              <span class="brand" style="background-image:url('https://cdn.static-economist.com/sites/default/files/images/print-edition/20170304_STP001_0.jpg')"></span>
+              <span class="title">The 48 uses of dragon’s blood</span>
+              <span class="description">Komodo dragons could be the source for a new generation of antibiotics </span>
+              <span class="numtweets">Number of times Tweeted: 432</span>
+              <span class="website">ECON.ST</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://bit.ly/2uzEwAZ" target="_blank">
-                <span class="brand" style="background-image:url('http://www.who.int/entity/mediacentre/factsheets/WHO_Antimicrobial_resistance_Facebook.jpg')"></span>
-                <span class="title">Antimicrobial resistance</span>
-                <span class="description">Antimicrobial resistance is resistance of a microorganism to an antimicrobial drug that was originally effective for treatment of... </span>
-                <span class="numtweets">Number of times Tweeted: 330</span>
-                <span class="website">BIT.LY</span>
+              <span class="brand" style="background-image:url('http://www.who.int/entity/mediacentre/factsheets/WHO_Antimicrobial_resistance_Facebook.jpg')"></span>
+              <span class="title">Antimicrobial resistance</span>
+              <span class="description">Antimicrobial resistance is resistance of a microorganism to an antimicrobial drug that was originally effective for treatment of... </span>
+              <span class="numtweets">Number of times Tweeted: 330</span>
+              <span class="website">BIT.LY</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.bbc.co.uk/news/av/uk-41606921/antibiotics-may-be-lost-through-overuse-says-chief-medical-officer" target="_blank">
-                <span class="brand" style="background-image:url('https://ichef.bbci.co.uk/news/1024/cpsprodpb/16287/production/_98295709_sally-davies_cps.jpg')"></span>
-                <span class="title">'We risk losing antibiotics as medicine'</span>
-                <span class="description">England's chief medical officer is &quot;really worried&quot; about the threat of antibiotic resistance. </span>
-                <span class="numtweets">Number of times Tweeted: 247</span>
-                <span class="website">BBC.CO.UK</span>
+              <span class="brand" style="background-image:url('https://ichef.bbci.co.uk/news/1024/cpsprodpb/16287/production/_98295709_sally-davies_cps.jpg')"></span>
+              <span class="title">'We risk losing antibiotics as medicine'</span>
+              <span class="description">England's chief medical officer is &quot;really worried&quot; about the threat of antibiotic resistance. </span>
+              <span class="numtweets">Number of times Tweeted: 256</span>
+              <span class="website">BBC.CO.UK</span>
+            </a>
+          </div>
+          
+          <div class="col-lg-6">
+            <a class="facebook-rich" href="http://thndr.me/0pbz3M" target="_blank">
+              <span class="brand" style="background-image:url('https://i.ytimg.com/vi/YcKxVVhk1i0/hqdefault.jpg')"></span>
+              <span class="title">Lobbyist Claims Monsanto&#39;s Roundup Is Safe To Drink, Freaks Out When Offered A Glass</span>
+              <span class="description">He is full of it! </span>
+              <span class="numtweets">Number of times Tweeted: 143</span>
+              <span class="website">THNDR.ME</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://www.bbc.com/future/story/20171010-the-new-ways-well-fight-infections?ocid=ww.social.link.twitter" target="_blank">
-                <span class="brand" style="background-image:url('http://ichef.bbci.co.uk/wwfeatures/live/624_351/images/live/p0/5j/lk/p05jlkv8.jpg')"></span>
-                <span class="title">Six grand ideas to fight the end of antibiotics</span>
-                <span class="description">Overuse of antibiotics has led them to becoming less and less effective to treat us when we’re sick – leaving scientists scrambling for a fix.  </span>
-                <span class="numtweets">Number of times Tweeted: 220</span>
-                <span class="website">BBC.COM</span>
+              <span class="brand" style="background-image:url('http://ichef.bbci.co.uk/wwfeatures/live/624_351/images/live/p0/5j/lk/p05jlkv8.jpg')"></span>
+              <span class="title">Six grand ideas to fight the end of antibiotics</span>
+              <span class="description">Overuse of antibiotics has led them to becoming less and less effective to treat us when we’re sick – leaving scientists scrambling for a fix.  </span>
+              <span class="numtweets">Number of times Tweeted: 141</span>
+              <span class="website">BBC.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://bbc.in/2wQyLx4" target="_blank">
-                <span class="brand" style="background-image:url('https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12FFA/production/_98281877_gundam.jpg')"></span>
-                <span class="title">Anime hero joins antibiotics campaign</span>
-                <span class="description">Japan's health ministry enlists Mobile Suit Gundam to combat overuse of antibiotics. </span>
-                <span class="numtweets">Number of times Tweeted: 114</span>
-                <span class="website">BBC.IN</span>
+              <span class="brand" style="background-image:url('https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12FFA/production/_98281877_gundam.jpg')"></span>
+              <span class="title">Anime hero joins antibiotics campaign</span>
+              <span class="description">Japan's health ministry enlists Mobile Suit Gundam to combat overuse of antibiotics. </span>
+              <span class="numtweets">Number of times Tweeted: 114</span>
+              <span class="website">BBC.IN</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="https://www.theguardian.com/lifeandstyle/2017/oct/13/can-never-eat-chicken-again-antibiotic-resistance" target="_blank">
-                <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/95fe4b365fa53b7c435cd14d882365c99c308cf8/0_111_4252_2551/master/4252.jpg?w=1200&amp;amp;h=630&amp;amp;q=55&amp;amp;auto=format&amp;amp;usm=12&amp;amp;fit=crop&amp;amp;crop=faces%2Centropy&amp;amp;bm=normal&amp;amp;ba=bottom%2Cleft&amp;amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;amp;s=2ab8e9043280a4afbf196e6a49c9c0a7')"></span>
-                <span class="title">Read this and you may never eat chicken again</span>
-                <span class="description">Most meat animals are raised with the assistance of daily doses of antibiotics. By 2050, antibiotic resistance will cause a staggering... </span>
-                <span class="numtweets">Number of times Tweeted: 114</span>
-                <span class="website">THEGUARDIAN.COM</span>
+              <span class="brand" style="background-image:url('https://i.guim.co.uk/img/media/95fe4b365fa53b7c435cd14d882365c99c308cf8/0_111_4252_2551/master/4252.jpg?w=1200&amp;h=630&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=crop&amp;crop=faces%2Centropy&amp;bm=normal&amp;ba=bottom%2Cleft&amp;blend64=aHR0cHM6Ly91cGxvYWRzLmd1aW0uY28udWsvMjAxNi8wNS8yNS9vdmVybGF5LWxvZ28tMTIwMC05MF9vcHQucG5n&amp;s=2ab8e9043280a4afbf196e6a49c9c0a7')"></span>
+              <span class="title">Read this and you may never eat chicken again</span>
+              <span class="description">Most meat animals are raised with the assistance of daily doses of antibiotics. By 2050, antibiotic resistance will cause a staggering... </span>
+              <span class="numtweets">Number of times Tweeted: 114</span>
+              <span class="website">THEGUARDIAN.COM</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://bit.ly/2xCmAnl" target="_blank">
-                <span class="brand" style="background-image:url('http://bit.ly//cdn.nice.org.uk/V3/Content/nice/favicon.ico')"></span>
-                <span class="title">Search Results</span>
-                <span class="description"> </span>
-                <span class="numtweets">Number of times Tweeted: 111</span>
-                <span class="website">BIT.LY</span>
+              <span class="brand" style="background-image:url('http://bit.ly//cdn.nice.org.uk/V3/Content/nice/favicon.ico')"></span>
+              <span class="title">Search Results</span>
+              <span class="description"> </span>
+              <span class="numtweets">Number of times Tweeted: 111</span>
+              <span class="website">BIT.LY</span>
             </a>
           </div>
           
           <div class="col-lg-6">
             <a class="facebook-rich" href="http://jtim.es/7Qmk30fN6Xb" target="_blank">
-                <span class="brand" style="background-image:url('https://www.japantimes.co.jp/wp-content/uploads/2017/10/n-health-a-20171012-870x1231.jpg')"></span>
-                <span class="title">Japan&#039;s health ministry enlists anime hero in battle against overuse of antibiotics | The...</span>
-                <span class="description">The health ministry has enlisted the help of Amuro, the protagonist of the popular anime series &quot;Mobile Suit Gundam,&quot; in its... </span>
-                <span class="numtweets">Number of times Tweeted: 91</span>
-                <span class="website">JTIM.ES</span>
-            </a>
-          </div>
-          
-          <div class="col-lg-6">
-            <a class="facebook-rich" href="http://www.independent.co.uk/life-style/health-and-families/health-news/antibiotics-resistance-apocalypse-warning-chief-medical-officer-professor-dame-sally-davies-drugs-a7996806.html" target="_blank">
-                <span class="brand" style="background-image:url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/09/26/13/antibiotics.jpg')"></span>
-                <span class="title">World leaders urged to act to prevent &#039;post-antibiotic apocalypse&#039;</span>
-                <span class="description">England’s chief medical officer has warned of a “post-antibiotic apocalypse” as she issued a call to action urging global leaders to... </span>
-                <span class="numtweets">Number of times Tweeted: 84</span>
-                <span class="website">INDEPENDENT.CO.UK</span>
+              <span class="brand" style="background-image:url('https://www.japantimes.co.jp/wp-content/uploads/2017/10/n-health-a-20171012-870x1231.jpg')"></span>
+              <span class="title">Japan&#039;s health ministry enlists anime hero in battle against overuse of antibiotics | The...</span>
+              <span class="description">The health ministry has enlisted the help of Amuro, the protagonist of the popular anime series &quot;Mobile Suit Gundam,&quot; in its... </span>
+              <span class="numtweets">Number of times Tweeted: 91</span>
+              <span class="website">JTIM.ES</span>
             </a>
           </div>
           
         </div>
+        
+
         <div class="jumbotron jumbotron-title text-center">
           <h1 class="jumbotron-heading">Popular Tweets</h1>
           <p class="lead date">for the Past Week</p>
         </div>
+        
         <div class="row">
           
           <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Handwashing?src=hash&amp;ref_src=twsrc%5Etfw">#Handwashing</a> helps battle <a href="https://twitter.com/hashtag/AntibioticResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntibioticResistance</a>.<br>💧🖐️ By washing your hands you can prevent infections (and avoid the need for antibiotics). <a href="https://t.co/35QZ1IMJ6y">pic.twitter.com/35QZ1IMJ6y</a></p>&mdash; WHO (@WHO) <a href="https://twitter.com/WHO/status/919582311011799041?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Quantum dots mess with bacteria’s defenses, allowing antibiotics to work. <a href="https://t.co/bbR3me6XdZ">https://t.co/bbR3me6XdZ</a></p>&mdash; Science News (@ScienceNews) <a href="https://twitter.com/ScienceNews/status/919768625959129088?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Quantum dots could be a useful power-up for antibiotics. <a href="https://t.co/W0xFTBFwoR">https://t.co/W0xFTBFwoR</a></p>&mdash; Science News (@ScienceNews) <a href="https://twitter.com/ScienceNews/status/920011517013131264?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The blood of Komodo dragons is loaded with compounds that could be used as antibiotics, researchers found <a href="https://t.co/AefIUyaKGN">https://t.co/AefIUyaKGN</a></p>&mdash; The Economist (@TheEconomist) <a href="https://twitter.com/TheEconomist/status/917213599336161281?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Illustrates another point. Folks don&#39;t realuse that antibiotics don&#39;t cure everything. No use against viruses or irreversible toxins.</p>&mdash; Hipster Bookfairy (@HipBookfairy) <a href="https://twitter.com/HipBookfairy/status/919658650385367040?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Why antibiotics might work differently to how we thought <a href="https://t.co/3vwl5E9bEW">https://t.co/3vwl5E9bEW</a> <a href="https://t.co/6yXj4IX8un">pic.twitter.com/6yXj4IX8un</a></p>&mdash; World Economic Forum (@wef) <a href="https://twitter.com/wef/status/919602022055337985?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Bible also doesn&#39;t have cellphones, antibiotics, or window screens, yet here they are. And they are good.</p>&mdash; M. Kei (@kujakupoet) <a href="https://twitter.com/kujakupoet/status/919370849106452480?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+
+          </div>
+          
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ur mcm asks for antibiotics when he gets a viral infection</p>&mdash; HUTOI BOI (@xxxphILLEST) <a href="https://twitter.com/xxxphILLEST/status/919605393109733376?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
 
           </div>
           
@@ -890,61 +896,27 @@ guidelines for empirical treatment of common... </span>
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Anime hero joins Japan&#39;s antibiotics resistance campaign <a href="https://t.co/djy0d7zAtE">https://t.co/djy0d7zAtE</a></p>&mdash; BBC News (World) (@BBCWorld) <a href="https://twitter.com/BBCWorld/status/918429219549581312?ref_src=twsrc%5Etfw">October 12, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Predatory bacteria: The quest for a new class of antibiotics <a href="https://t.co/cjL5VivmCc">https://t.co/cjL5VivmCc</a> <a href="https://t.co/zJGbRCDcXB">pic.twitter.com/zJGbRCDcXB</a></p>&mdash; Science (@scienmag) <a href="https://twitter.com/scienmag/status/919753484232114176?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotics have a new weapon in their arsenals to take down drug-resistant bacteria: Quantum dots. <a href="https://t.co/vz9QY9gqdB">https://t.co/vz9QY9gqdB</a></p>&mdash; Science News (@ScienceNews) <a href="https://twitter.com/ScienceNews/status/917926495292706816?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Damn baby your dick drooling for me already&quot;<br><br>First of all, thats the discharge from my chlamydia... can you hand me my antibiotics please</p>&mdash; Chandler Bing (@rjjohnson9) <a href="https://twitter.com/rjjohnson9/status/919734837396889600?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/KIWILunchDay?src=hash&amp;ref_src=twsrc%5Etfw">#KIWILunchDay</a> Sponsor <a href="https://twitter.com/a2milk?ref_src=twsrc%5Etfw">@a2milk</a> is made from pure, natural cow’s milk, is free of added hormones, rBST, antibiotics, &amp; is gentle on tummies. <a href="https://t.co/fWGPt2wE3Q">pic.twitter.com/fWGPt2wE3Q</a></p>&mdash; KIWI magazine (@KIWImagazine) <a href="https://twitter.com/KIWImagazine/status/917801418450456576?ref_src=twsrc%5Etfw">October 10, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotics spiked with quantum dots fought off bacteria as effectively as 1,000 times as much antibiotic alone. <a href="https://t.co/K51SUIbS4k">https://t.co/K51SUIbS4k</a></p>&mdash; Science News (@ScienceNews) <a href="https://twitter.com/ScienceNews/status/918787173977133056?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Antibiotics may have a new teammate in the fight against drug-resistant infections: Quantum dots. <a href="https://t.co/a4JQ2To0UP">https://t.co/a4JQ2To0UP</a></p>&mdash; Science News (@ScienceNews) <a href="https://twitter.com/ScienceNews/status/917404458971205633?ref_src=twsrc%5Etfw">October 9, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Rizzo says Strasburg had flu like symptoms since his start, was placed on antibiotics, was given IVs, and told Dusty Baker he would start</p>&mdash; Bob Nightengale (@BNightengale) <a href="https://twitter.com/BNightengale/status/918167518602321920?ref_src=twsrc%5Etfw">October 11, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&#39;European doctors prescribe antibiotics like smarties, and patients expect it&#39;, says Dr Clare Gerada <a href="https://t.co/oQ0cAx89kN">pic.twitter.com/oQ0cAx89kN</a></p>&mdash; Victoria Derbyshire (@VictoriaLIVE) <a href="https://twitter.com/VictoriaLIVE/status/918756060210462725?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">As drug-resistant infections become a more serious threat, nanotechnology may present an answer. <a href="https://t.co/Qeh5ho1Qc3">https://t.co/Qeh5ho1Qc3</a></p>&mdash; Futurism (@futurism) <a href="https://twitter.com/futurism/status/917834655390486529?ref_src=twsrc%5Etfw">October 10, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Researchers discover that bacteria respond to antibiotics very differently inside the body than on a petri dish <a href="https://t.co/7ljXC2bjEn">https://t.co/7ljXC2bjEn</a></p>&mdash; Harvard University (@Harvard) <a href="https://twitter.com/Harvard/status/918948227449225216?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
-
-          </div>
-          
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It seems pretty clear that millions of people will die thanks to the meat industry&#39;s reliance on antibiotics. <a href="https://t.co/bb8yUFVZKT">https://t.co/bb8yUFVZKT</a></p>&mdash; Vegan (@vegan) <a href="https://twitter.com/vegan/status/918889375932538881?ref_src=twsrc%5Etfw">October 13, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I prefer to pay a little more to have a milk of quality (without hormones or antibiotics). I prefer encourage Canadian farmers than buy US.</p>&mdash; Charles Darwin (@CDarwin3270) <a href="https://twitter.com/CDarwin3270/status/920005205332254720?ref_src=twsrc%5Etfw">October 16, 2017</a></blockquote>
 
           </div>
           
         </div>
+        
       </div>
       
     </div>
   </div>
-  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left:10%; padding-top: 50px">Created by Cameron Forbes. Last updated on October 16, 2017 at 04:00 EST.</p>
+  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left: 10%; padding-top: 50px">Created by Cameron Forbes. Last updated October 16, 2017 at 21:18 EST.</p>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

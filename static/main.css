@@ -1,0 +1,119 @@
+  .facebook-rich {
+    border: 1px solid #e9eaed;
+    display: block;
+    background: white;
+    /* width: 500px; */
+    font-size: 14px;
+    height: 200px;
+    padding: 10px;
+    /* position: relative; */
+    margin-bottom: 40px;
+    border-radius: 5px;
+  }
+
+  a.facebook-rich {
+    color: black;
+    text-decoration: none;
+  }
+
+  .facebook-rich .website {
+    right: 20px;
+    bottom: 45px;
+    position: absolute;
+    display: block;
+    color: #9197a3 !important;
+  }
+
+  .facebook-rich .title {
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    line-height: 1;
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+
+  .facebook-rich .description {
+    display: block;
+    margin-bottom: 5px;
+    color: #4e5665;
+    line-height: 1;
+  }
+
+  .facebook-rich .numtweets {
+    display: block;
+    position: absolute;
+    bottom: 62px;
+    right: 20px;
+  }
+
+  .facebook-rich .brand {
+    float: right;
+    width: 140px;
+    height: 140px;
+    border: 8px solid white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: -6px;
+    margin-top: -6px;
+    margin-left: 6px;
+  }
+
+  .modal-subtitle {
+    display: block;
+    font-style: italic;
+    font-size: 14px;
+    color: gray;
+  }
+
+  body {
+    padding-bottom: 6px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedbe9+0,aac5de+17,6199c7+50,419ad6+59,3a84c3+67,3a84c3+67,4bb8f0+71,3a8bc2+84,26558b+100 */
+    background: #cedbe9;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #419ad6 59%, #3a84c3 67%, #3a84c3 67%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b', GradientType=0);
+    /* IE6-9 */
+  }
+
+  .jumbotron {
+
+    background-color: rgba(255, 255, 255, 0.0);
+  }
+
+  .jumbotron.jumbotron-title {
+    margin-bottom: 0px!important;
+  }
+
+  .jumbotron-heading {
+    font-weight: 300
+  }
+
+  .lead.date {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .container {
+    padding-top: 10px;
+  }
+
+  .nav-pills {
+    font-size: large;
+  }
+
+  .tech-details {
+    color:black;
+    font-size:14px;
+  }
+  .tech-details:hover {
+    text-decoration: underline;
+  }
