@@ -63,7 +63,7 @@
       <div class="modal-content">
         <div class="modal-header bg-dark">
           <h4 class="modal-title" style="color:white" id="myLargeModalLabel">[ asptweets ]
-            <span class="modal-subtitle">Keeping track of Twitter, so you don't have to.</span>
+            <span class="modal-subtitle">Keeping track of ASP on Twitter, so you don't have to.</span>
           </h4>
           <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -72,46 +72,24 @@
         <div class="modal-body" style="font-size: 14px; padding:30px">
           <p>My name is Cameron, and I'm a full-time hospital Antimicrobial Stewardship Pharmacist and part-time
             computer geek from Ottawa, Canada.</p>
+          <p>I tried to start using Twitter to improve my ASP practice - it's a great way to keep
+            up with the latest ASP/ID research and discussions. However, there's a massive volume of
+            (often unrelated) content, and it's easy to get overwhelmed.</p>
 
-          <p>I recently attended an excellent talk from
-            <a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>, entitled
-            <em>
-              3 Ways Twitter Improved my ID/ASP Practice</em>. Inspired, I started trying to use Twitter
-            for 3 main purposes: finding newly released and relevant ASP/ID literature, seeing what people
-            were Tweeting about ASP related content, and seeing what kind of things the public were saying
-            about broad topics like "antibiotics".</p>
-
-          <p>Quickly, I was overwhelmed the sheer volume of information coming my way, and was finding it
-            impossible to keep up.</p>
-
-          <p>I knew the information I wanted was there, but there was no way I was going to get it just
-            trying to follow Twitter on my own.</p>
-
-          <p>Thus, asptweets.com was born. It tracks Twitter under broad search terms relating to ASP and
-            ID, and sorts through them daily to generate a list that is quickly consumable.</p>
-
-          <p>Pick a category at the top (e.g. "#antimicrobialstewardship") to see tweets related to it.
-            For each category, you get the:
-            <ul>
-              <li>Top Links: shows things that were linked to from tweets, sorted by the top # of times that
-                link was mentioned. This is great for finding new literature and interesting articles.
-              </li>
-              <li>Most Popular: shows the top tweets as ordered by combined "retweeted" and "favourited"
-                counts. See what people are talking about!</li>
-            </ul>
-          </p>
-          <p>You can also see tweets from any of the past seven days, or aggregated for the entirety of
-            the past week. Just click the "When do you want to view tweets from?" dropdown at the top.
-            Great for when you've missed checking for a day or two!</p>
-          <p>Note that the site is fully automated and the algorithms aren't opinionated... so you might
-            see things that are weird, unrelated, or generally not good information. The site is not
-            endorsing anything posted on it, it's just a snapshot of crowdsourced interests. Also note
-            that there will be some unavoidable duplication of content.</p>
+          <p>To that end, I created this site. It does its best to track tweets related to ASP and ID
+            and scores them based on a custom algorithm. Every day, it automatically updates to show
+            tweets from days prior that are considered "probably useful", with the most important
+            ones at the top. It also gives a top 50 for the past week, if you just want a fast glance.
+          The algorithm takes into account relevant keywords and leverages the power of social media, 
+        factoring in Favourites and Retweets to figure out what is most important.</p>
 
           <p>I personally use the site daily, and will be active trying to fix glitches and improve the
-            search algorithms. I also keep a separate database of popular hashtags, so I can see if there's
-            any other search headings that could be temporarily (like related to an ongoing conference)
-            or permanently added to the category options.</p>
+            search algorithms. This also allows me to update the search parameters to include things
+          like ongoing ID conference hashtags. </p>
+
+          <p>Special thanks to Brad Langford (<a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>) for
+            giving the original conference presentation that got me into Twitter in the first place, as well as for
+            his help and support (and use of his "ASP Tweeters" list) while developing the site.</p>
 
           <p>I hope you will find this site useful, and feel free to send any feedback to me at
             <a href="https://twitter.com/banjocam" target="_blank">@BanjoCam</a> or
@@ -131,7 +109,7 @@
               <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
                   <ul>
-                    <li>Entirely programmed in Python 2</li>
+                    <li>Programmed in Python 2</li>
                     <li>All scripts run automatically on a (mostly) always-on Raspberry Pi using cron</li>
                     <li>Tweepy used to scrape Twitter API
                       <ul>
@@ -144,7 +122,6 @@
                     <ul>
                       <li>Generated at 4am daily</li>
                     </ul>
-                    <li>Modified version of link_preview.py used to generate Link Previews</li>
                     <li>Tweet embedding code grabbed direct from twitter GET API</li>
                     <li>Previews & Embedding HTML cached in database</li>
                     <li>Hosted on Github Pages</li>
@@ -230,6 +207,11 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check out this <a href="https://twitter.com/CIDRAP_ASP?ref_src=twsrc%5Etfw">@CIDRAP_ASP</a> webinar on <a href="https://twitter.com/hashtag/AntimicrobialStewardship?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialStewardship</a> in the Immunocompromised Host <a href="https://t.co/rotMklIuvA">https://t.co/rotMklIuvA</a></p>&mdash; DASON (@DASON_duke) <a href="https://twitter.com/DASON_duke/status/934084192844918784?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Are you superbug savvy? Test your knowledge on antibiotic resistance: <a href="https://t.co/ClsnTcAjwy">https://t.co/ClsnTcAjwy</a></p>&mdash; Save Antibiotics (@saveantibiotics) <a href="https://twitter.com/saveantibiotics/status/933856695536836608?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
@@ -240,7 +222,7 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check out this <a href="https://twitter.com/CIDRAP_ASP?ref_src=twsrc%5Etfw">@CIDRAP_ASP</a> webinar on <a href="https://twitter.com/hashtag/AntimicrobialStewardship?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialStewardship</a> in the Immunocompromised Host <a href="https://t.co/rotMklIuvA">https://t.co/rotMklIuvA</a></p>&mdash; DASON (@DASON_duke) <a href="https://twitter.com/DASON_duke/status/934084192844918784?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Chinese scientists can now use recombinant chicken α-interferon to prevent and treat avian <a href="https://twitter.com/hashtag/influenza?src=hash&amp;ref_src=twsrc%5Etfw">#influenza</a> infection <a href="https://t.co/3vjQ6m7ZhT">https://t.co/3vjQ6m7ZhT</a> <a href="https://twitter.com/hashtag/IFN?src=hash&amp;ref_src=twsrc%5Etfw">#IFN</a> <a href="https://twitter.com/hashtag/avianflu?src=hash&amp;ref_src=twsrc%5Etfw">#avianflu</a> <a href="https://twitter.com/hashtag/flu?src=hash&amp;ref_src=twsrc%5Etfw">#flu</a> <a href="https://t.co/JN9hsf8tMr">pic.twitter.com/JN9hsf8tMr</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/933880283463430144?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -255,22 +237,17 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Chinese scientists can now use recombinant chicken α-interferon to prevent and treat avian <a href="https://twitter.com/hashtag/influenza?src=hash&amp;ref_src=twsrc%5Etfw">#influenza</a> infection <a href="https://t.co/3vjQ6m7ZhT">https://t.co/3vjQ6m7ZhT</a> <a href="https://twitter.com/hashtag/IFN?src=hash&amp;ref_src=twsrc%5Etfw">#IFN</a> <a href="https://twitter.com/hashtag/avianflu?src=hash&amp;ref_src=twsrc%5Etfw">#avianflu</a> <a href="https://twitter.com/hashtag/flu?src=hash&amp;ref_src=twsrc%5Etfw">#flu</a> <a href="https://t.co/JN9hsf8tMr">pic.twitter.com/JN9hsf8tMr</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/933880283463430144?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New mouse models suggests role for CD4+ T cells in C. neoformans meningoencephalitis pathogenesis <a href="https://twitter.com/mbiojournal?ref_src=twsrc%5Etfw">@mbiojournal</a> <a href="https://t.co/yB7dpFkyrM">https://t.co/yB7dpFkyrM</a> <a href="https://t.co/PhVHXINREy">pic.twitter.com/PhVHXINREy</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/934059316331544583?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New <a href="https://twitter.com/TheLancetPH?ref_src=twsrc%5Etfw">@TheLancetPH</a>: Prevalence and circumstances of forced sex and post-migration <a href="https://twitter.com/hashtag/HIV?src=hash&amp;ref_src=twsrc%5Etfw">#HIV</a> acquisition in sub-Saharan African migrant women in France <a href="https://t.co/ECeBNyYVsc">https://t.co/ECeBNyYVsc</a></p>&mdash; Lancet Inf Diseases (@TheLancetInfDis) <a href="https://twitter.com/TheLancetInfDis/status/934053362189737984?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">First detailed description of biofilm formation and a glycogen extrapolysaccharide by P. multocida <a href="https://twitter.com/mbiojournal?ref_src=twsrc%5Etfw">@mbiojournal</a> <a href="https://t.co/Eg3RXxKoaD">https://t.co/Eg3RXxKoaD</a> <a href="https://t.co/nsEbR8Z3CE">pic.twitter.com/nsEbR8Z3CE</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/934180037233922048?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">First detailed description of biofilm formation and a glycogen extrapolysaccharide by P. multocida <a href="https://twitter.com/mbiojournal?ref_src=twsrc%5Etfw">@mbiojournal</a> <a href="https://t.co/Eg3RXxKoaD">https://t.co/Eg3RXxKoaD</a> <a href="https://t.co/nsEbR8Z3CE">pic.twitter.com/nsEbR8Z3CE</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/934180037233922048?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New <a href="https://twitter.com/TheLancetPH?ref_src=twsrc%5Etfw">@TheLancetPH</a>: Prevalence and circumstances of forced sex and post-migration <a href="https://twitter.com/hashtag/HIV?src=hash&amp;ref_src=twsrc%5Etfw">#HIV</a> acquisition in sub-Saharan African migrant women in France <a href="https://t.co/ECeBNyYVsc">https://t.co/ECeBNyYVsc</a></p>&mdash; Lancet Inf Diseases (@TheLancetInfDis) <a href="https://twitter.com/TheLancetInfDis/status/934053362189737984?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -290,17 +267,12 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Govt report on the 1st &#39;Call to Action on Antimicrobial Resistance Conference&#39;. This summary of last month&#39;s discussion between ministers &amp; CEOs includes 10 underpinning principles <a href="https://t.co/Axl7ZH0I9j">https://t.co/Axl7ZH0I9j</a></p>&mdash; BSAC (@BSACandJAC) <a href="https://twitter.com/BSACandJAC/status/934008963913474048?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Congress needs to hear from you that fighting <a href="https://twitter.com/hashtag/antibioticresistance?src=hash&amp;ref_src=twsrc%5Etfw">#antibioticresistance</a> must remain a national priority <a href="https://t.co/fhe4VMqpSs">https://t.co/fhe4VMqpSs</a></p>&mdash; Save Antibiotics (@saveantibiotics) <a href="https://twitter.com/saveantibiotics/status/934136288013357056?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Over 1200 people in Angola have died of <a href="https://twitter.com/hashtag/malaria?src=hash&amp;ref_src=twsrc%5Etfw">#malaria</a> since the outbreak of the mosquito-borne disease this year - most of the victims are children &lt; 5 years of age <a href="https://t.co/m7InasufHr">https://t.co/m7InasufHr</a> <a href="https://t.co/FXcV51tWvK">pic.twitter.com/FXcV51tWvK</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/933875323732606977?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Researchers are looking to the past to repurpose drugs for fight against <a href="https://twitter.com/hashtag/antibioticresistance?src=hash&amp;ref_src=twsrc%5Etfw">#antibioticresistance</a> <a href="https://t.co/052xnuer5V">https://t.co/052xnuer5V</a></p>&mdash; Save Antibiotics (@saveantibiotics) <a href="https://twitter.com/saveantibiotics/status/934082189100273665?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -315,12 +287,22 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Govt report on the 1st &#39;Call to Action on Antimicrobial Resistance Conference&#39;. This summary of last month&#39;s discussion between ministers &amp; CEOs includes 10 underpinning principles <a href="https://t.co/Axl7ZH0I9j">https://t.co/Axl7ZH0I9j</a></p>&mdash; BSAC (@BSACandJAC) <a href="https://twitter.com/BSACandJAC/status/934008963913474048?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Over 1200 people in Angola have died of <a href="https://twitter.com/hashtag/malaria?src=hash&amp;ref_src=twsrc%5Etfw">#malaria</a> since the outbreak of the mosquito-borne disease this year - most of the victims are children &lt; 5 years of age <a href="https://t.co/m7InasufHr">https://t.co/m7InasufHr</a> <a href="https://t.co/FXcV51tWvK">pic.twitter.com/FXcV51tWvK</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/933875323732606977?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Researchers are looking to the past to repurpose drugs for fight against <a href="https://twitter.com/hashtag/antibioticresistance?src=hash&amp;ref_src=twsrc%5Etfw">#antibioticresistance</a> <a href="https://t.co/052xnuer5V">https://t.co/052xnuer5V</a></p>&mdash; Save Antibiotics (@saveantibiotics) <a href="https://twitter.com/saveantibiotics/status/934082189100273665?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How often are antibiotics prescribed in your state? See map of US geographic variation in abx prescribing: <a href="https://t.co/vv0oqJS4OC">https://t.co/vv0oqJS4OC</a> <a href="https://t.co/1BEarR6Skn">pic.twitter.com/1BEarR6Skn</a></p>&mdash; Save Antibiotics (@saveantibiotics) <a href="https://twitter.com/saveantibiotics/status/934057777126871040?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ReAct Asia Pacific: Sensitizing the Indian media to <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> via workshop. ➡️ <a href="https://t.co/GJ17i0t4V4">https://t.co/GJ17i0t4V4</a></p>&mdash; ReAct Action on ABR (@reactgroup) <a href="https://twitter.com/reactgroup/status/933971805194391552?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -331,11 +313,6 @@
     
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Job opportunity for Lead Antimicrobial and Cardiology pharmacist at SWFT <a href="https://t.co/Nci6mwlLeV">https://t.co/Nci6mwlLeV</a></p>&mdash; Julie Wilkinson (@Julie_oh) <a href="https://twitter.com/Julie_oh/status/934000433038872576?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ReAct Asia Pacific: Sensitizing the Indian media to <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> via workshop. ➡️ <a href="https://t.co/GJ17i0t4V4">https://t.co/GJ17i0t4V4</a></p>&mdash; ReAct Action on ABR (@reactgroup) <a href="https://twitter.com/reactgroup/status/933971805194391552?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -351,6 +328,11 @@
     
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/FluFact?src=hash&amp;ref_src=twsrc%5Etfw">#FluFact</a>: The <a href="https://twitter.com/hashtag/flu?src=hash&amp;ref_src=twsrc%5Etfw">#flu</a> <a href="https://twitter.com/hashtag/vaccine?src=hash&amp;ref_src=twsrc%5Etfw">#vaccine</a> protects you, it cannot cause flu or other viruses! <a href="https://twitter.com/hashtag/KFOS?src=hash&amp;ref_src=twsrc%5Etfw">#KFOS</a> <a href="https://twitter.com/hashtag/FightFlu?src=hash&amp;ref_src=twsrc%5Etfw">#FightFlu</a> <a href="https://t.co/8REiqWIBEs">https://t.co/8REiqWIBEs</a> <a href="https://t.co/LQxIlQFg0E">pic.twitter.com/LQxIlQFg0E</a></p>&mdash; NFID (@NFIDvaccines) <a href="https://twitter.com/NFIDvaccines/status/934157300520144896?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Genetic manipulatin of a T4-like phage to expand the host range <a href="https://twitter.com/AppEnvMicro?ref_src=twsrc%5Etfw">@AppEnvMicro</a> <a href="https://t.co/hrDEqpozOf">https://t.co/hrDEqpozOf</a> <a href="https://t.co/2haEF2inmj">pic.twitter.com/2haEF2inmj</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/934149930976989184?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -390,16 +372,6 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Genetic manipulatin of a T4-like phage to expand the host range <a href="https://twitter.com/AppEnvMicro?ref_src=twsrc%5Etfw">@AppEnvMicro</a> <a href="https://t.co/hrDEqpozOf">https://t.co/hrDEqpozOf</a> <a href="https://t.co/2haEF2inmj">pic.twitter.com/2haEF2inmj</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/934149930976989184?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Agree with <a href="https://twitter.com/dynarski?ref_src=twsrc%5Etfw">@dynarski</a>: the best evidence shows laptops are bad in the classroom<br><br>Disagree with outright laptop bans though. Treating adult students like kids is disrespectful, and likely to have unintended consequences.<a href="https://t.co/Mi5L4HvFfQ">https://t.co/Mi5L4HvFfQ</a> <a href="https://twitter.com/hashtag/MedEd?src=hash&amp;ref_src=twsrc%5Etfw">#MedEd</a> <a href="https://twitter.com/hashtag/edtech?src=hash&amp;ref_src=twsrc%5Etfw">#edtech</a> <a href="https://t.co/cGct6SaDzD">pic.twitter.com/cGct6SaDzD</a></p>&mdash; Tim Lahey (@TimLaheyMD) <a href="https://twitter.com/TimLaheyMD/status/934057564668653568?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Immunomodulation of dual specificity phosphatase 4 during visceral <a href="https://twitter.com/hashtag/leishmaniasis?src=hash&amp;ref_src=twsrc%5Etfw">#leishmaniasis</a> <a href="https://t.co/RTXlfBNKm0">https://t.co/RTXlfBNKm0</a> <a href="https://twitter.com/hashtag/Leishmania?src=hash&amp;ref_src=twsrc%5Etfw">#Leishmania</a> <a href="https://twitter.com/hashtag/immunology?src=hash&amp;ref_src=twsrc%5Etfw">#immunology</a> <a href="https://t.co/nHVqqkUSdJ">pic.twitter.com/nHVqqkUSdJ</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/933883905060384769?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
@@ -411,6 +383,11 @@
     
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The role of dalbavancin in the multi-disciplinary management of wound infections in orthopaedic surgery. <a href="https://t.co/HoV6ntOiTw">https://t.co/HoV6ntOiTw</a> <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a> <a href="https://twitter.com/hashtag/ABresistance?src=hash&amp;ref_src=twsrc%5Etfw">#ABresistance</a></p>&mdash; AntibioticResistance (@AntibioticResis) <a href="https://twitter.com/AntibioticResis/status/934021811544645632?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Agree with <a href="https://twitter.com/dynarski?ref_src=twsrc%5Etfw">@dynarski</a>: the best evidence shows laptops are bad in the classroom<br><br>Disagree with outright laptop bans though. Treating adult students like kids is disrespectful, and likely to have unintended consequences.<a href="https://t.co/Mi5L4HvFfQ">https://t.co/Mi5L4HvFfQ</a> <a href="https://twitter.com/hashtag/MedEd?src=hash&amp;ref_src=twsrc%5Etfw">#MedEd</a> <a href="https://twitter.com/hashtag/edtech?src=hash&amp;ref_src=twsrc%5Etfw">#edtech</a> <a href="https://t.co/cGct6SaDzD">pic.twitter.com/cGct6SaDzD</a></p>&mdash; Tim Lahey (@TimLaheyMD) <a href="https://twitter.com/TimLaheyMD/status/934057564668653568?ref_src=twsrc%5Etfw">November 24, 2017</a></blockquote>
 
           </div>
     
@@ -491,7 +468,7 @@
     
     </div>
   </div>
-  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left: 10%; padding-top: 50px">Created by Cameron Forbes. Last updated November 27, 2017 at 04:09 EST.</p>
+  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left: 10%; padding-top: 50px">Created by Cameron Forbes. Last updated November 27, 2017 at 18:53 EST.</p>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

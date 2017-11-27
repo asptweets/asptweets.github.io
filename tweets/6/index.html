@@ -63,7 +63,7 @@
       <div class="modal-content">
         <div class="modal-header bg-dark">
           <h4 class="modal-title" style="color:white" id="myLargeModalLabel">[ asptweets ]
-            <span class="modal-subtitle">Keeping track of Twitter, so you don't have to.</span>
+            <span class="modal-subtitle">Keeping track of ASP on Twitter, so you don't have to.</span>
           </h4>
           <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -72,46 +72,24 @@
         <div class="modal-body" style="font-size: 14px; padding:30px">
           <p>My name is Cameron, and I'm a full-time hospital Antimicrobial Stewardship Pharmacist and part-time
             computer geek from Ottawa, Canada.</p>
+          <p>I tried to start using Twitter to improve my ASP practice - it's a great way to keep
+            up with the latest ASP/ID research and discussions. However, there's a massive volume of
+            (often unrelated) content, and it's easy to get overwhelmed.</p>
 
-          <p>I recently attended an excellent talk from
-            <a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>, entitled
-            <em>
-              3 Ways Twitter Improved my ID/ASP Practice</em>. Inspired, I started trying to use Twitter
-            for 3 main purposes: finding newly released and relevant ASP/ID literature, seeing what people
-            were Tweeting about ASP related content, and seeing what kind of things the public were saying
-            about broad topics like "antibiotics".</p>
-
-          <p>Quickly, I was overwhelmed the sheer volume of information coming my way, and was finding it
-            impossible to keep up.</p>
-
-          <p>I knew the information I wanted was there, but there was no way I was going to get it just
-            trying to follow Twitter on my own.</p>
-
-          <p>Thus, asptweets.com was born. It tracks Twitter under broad search terms relating to ASP and
-            ID, and sorts through them daily to generate a list that is quickly consumable.</p>
-
-          <p>Pick a category at the top (e.g. "#antimicrobialstewardship") to see tweets related to it.
-            For each category, you get the:
-            <ul>
-              <li>Top Links: shows things that were linked to from tweets, sorted by the top # of times that
-                link was mentioned. This is great for finding new literature and interesting articles.
-              </li>
-              <li>Most Popular: shows the top tweets as ordered by combined "retweeted" and "favourited"
-                counts. See what people are talking about!</li>
-            </ul>
-          </p>
-          <p>You can also see tweets from any of the past seven days, or aggregated for the entirety of
-            the past week. Just click the "When do you want to view tweets from?" dropdown at the top.
-            Great for when you've missed checking for a day or two!</p>
-          <p>Note that the site is fully automated and the algorithms aren't opinionated... so you might
-            see things that are weird, unrelated, or generally not good information. The site is not
-            endorsing anything posted on it, it's just a snapshot of crowdsourced interests. Also note
-            that there will be some unavoidable duplication of content.</p>
+          <p>To that end, I created this site. It does its best to track tweets related to ASP and ID
+            and scores them based on a custom algorithm. Every day, it automatically updates to show
+            tweets from days prior that are considered "probably useful", with the most important
+            ones at the top. It also gives a top 50 for the past week, if you just want a fast glance.
+          The algorithm takes into account relevant keywords and leverages the power of social media, 
+        factoring in Favourites and Retweets to figure out what is most important.</p>
 
           <p>I personally use the site daily, and will be active trying to fix glitches and improve the
-            search algorithms. I also keep a separate database of popular hashtags, so I can see if there's
-            any other search headings that could be temporarily (like related to an ongoing conference)
-            or permanently added to the category options.</p>
+            search algorithms. This also allows me to update the search parameters to include things
+          like ongoing ID conference hashtags. </p>
+
+          <p>Special thanks to Brad Langford (<a href="https://twitter.com/BRxAD" target="_blank">@BRxAD</a>) for
+            giving the original conference presentation that got me into Twitter in the first place, as well as for
+            his help and support (and use of his "ASP Tweeters" list) while developing the site.</p>
 
           <p>I hope you will find this site useful, and feel free to send any feedback to me at
             <a href="https://twitter.com/banjocam" target="_blank">@BanjoCam</a> or
@@ -131,7 +109,7 @@
               <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
                   <ul>
-                    <li>Entirely programmed in Python 2</li>
+                    <li>Programmed in Python 2</li>
                     <li>All scripts run automatically on a (mostly) always-on Raspberry Pi using cron</li>
                     <li>Tweepy used to scrape Twitter API
                       <ul>
@@ -144,7 +122,6 @@
                     <ul>
                       <li>Generated at 4am daily</li>
                     </ul>
-                    <li>Modified version of link_preview.py used to generate Link Previews</li>
                     <li>Tweet embedding code grabbed direct from twitter GET API</li>
                     <li>Previews & Embedding HTML cached in database</li>
                     <li>Hosted on Github Pages</li>
@@ -235,6 +212,11 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The importance of patient sharing between hospitals on MRSA transmission <a href="https://t.co/npuKWywMCO">https://t.co/npuKWywMCO</a> <a href="https://t.co/Lxx5rVYa0V">pic.twitter.com/Lxx5rVYa0V</a></p>&mdash; Jon Otter (@jonotter) <a href="https://twitter.com/jonotter/status/932911141113577474?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Did you know we publish <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> policy updates ~4x/year? Check out our latest on diagnostics, <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a> data sources, global initiatives, and <a href="https://twitter.com/hashtag/OneHealth?src=hash&amp;ref_src=twsrc%5Etfw">#OneHealth</a> <a href="https://t.co/mEcpCfpplQ">https://t.co/mEcpCfpplQ</a></p>&mdash; CIDRAP-ASP (@CIDRAP_ASP) <a href="https://twitter.com/CIDRAP_ASP/status/932996836943593474?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
 
           </div>
@@ -246,11 +228,6 @@
     
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I Never Get The <a href="https://twitter.com/hashtag/Flu?src=hash&amp;ref_src=twsrc%5Etfw">#Flu</a>, So Why Do I Need A <a href="https://twitter.com/hashtag/FluShot?src=hash&amp;ref_src=twsrc%5Etfw">#FluShot</a>? - flu viruses mutate every year, so even if you did not get last season’s virus, you may still succumb to this season’s <a href="https://t.co/PgBu3BcblH">https://t.co/PgBu3BcblH</a> <a href="https://t.co/WNUvFODtAM">pic.twitter.com/WNUvFODtAM</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/933045851475161088?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The importance of patient sharing between hospitals on MRSA transmission <a href="https://t.co/npuKWywMCO">https://t.co/npuKWywMCO</a> <a href="https://t.co/Lxx5rVYa0V">pic.twitter.com/Lxx5rVYa0V</a></p>&mdash; Jon Otter (@jonotter) <a href="https://twitter.com/jonotter/status/932911141113577474?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
 
           </div>
     
@@ -340,6 +317,11 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Gut?src=hash&amp;ref_src=twsrc%5Etfw">#Gut</a> <a href="https://twitter.com/hashtag/bacteria?src=hash&amp;ref_src=twsrc%5Etfw">#bacteria</a> &#39;boost&#39; <a href="https://twitter.com/hashtag/cancer?src=hash&amp;ref_src=twsrc%5Etfw">#cancer</a> <a href="https://twitter.com/hashtag/therapy?src=hash&amp;ref_src=twsrc%5Etfw">#therapy</a><a href="https://twitter.com/hashtag/immunotherapy?src=hash&amp;ref_src=twsrc%5Etfw">#immunotherapy</a> <a href="https://twitter.com/hashtag/diseases?src=hash&amp;ref_src=twsrc%5Etfw">#diseases</a> <a href="https://twitter.com/hashtag/infectious?src=hash&amp;ref_src=twsrc%5Etfw">#infectious</a> <a href="https://twitter.com/hashtag/allergy?src=hash&amp;ref_src=twsrc%5Etfw">#allergy</a> <a href="https://twitter.com/hashtag/tumours?src=hash&amp;ref_src=twsrc%5Etfw">#tumours</a> <a href="https://t.co/ASx8P0t9fU">https://t.co/ASx8P0t9fU</a></p>&mdash; GlobalAcademy for HS (@globalacademyhs) <a href="https://twitter.com/globalacademyhs/status/933018927382323200?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">First outbreak of colonization by linezolid- and glycopeptide-resistant Enterococcus faecium harbouring the cfr gene in a UK nephrology unit <a href="https://t.co/WARsXuJs1i">https://t.co/WARsXuJs1i</a> <a href="https://twitter.com/ItishaG?ref_src=twsrc%5Etfw">@ItishaG</a> <a href="https://twitter.com/WvSchaik?ref_src=twsrc%5Etfw">@WvSchaik</a> <a href="https://twitter.com/renalpages?ref_src=twsrc%5Etfw">@renalpages</a> <a href="https://twitter.com/IMIBirmingham?ref_src=twsrc%5Etfw">@IMIBirmingham</a></p>&mdash; Abid Hussain (@MicrobLog_me_uk) <a href="https://twitter.com/MicrobLog_me_uk/status/933071814309416962?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
 
           </div>
@@ -380,11 +362,6 @@
           </div>
     
           <div class="col-md-6 col-xl-4">
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Gut?src=hash&amp;ref_src=twsrc%5Etfw">#Gut</a> <a href="https://twitter.com/hashtag/bacteria?src=hash&amp;ref_src=twsrc%5Etfw">#bacteria</a> &#39;boost&#39; <a href="https://twitter.com/hashtag/cancer?src=hash&amp;ref_src=twsrc%5Etfw">#cancer</a> <a href="https://twitter.com/hashtag/therapy?src=hash&amp;ref_src=twsrc%5Etfw">#therapy</a><a href="https://twitter.com/hashtag/immunotherapy?src=hash&amp;ref_src=twsrc%5Etfw">#immunotherapy</a> <a href="https://twitter.com/hashtag/diseases?src=hash&amp;ref_src=twsrc%5Etfw">#diseases</a> <a href="https://twitter.com/hashtag/infectious?src=hash&amp;ref_src=twsrc%5Etfw">#infectious</a> <a href="https://twitter.com/hashtag/allergy?src=hash&amp;ref_src=twsrc%5Etfw">#allergy</a> <a href="https://twitter.com/hashtag/tumours?src=hash&amp;ref_src=twsrc%5Etfw">#tumours</a> <a href="https://t.co/ASx8P0t9fU">https://t.co/ASx8P0t9fU</a></p>&mdash; GlobalAcademy for HS (@globalacademyhs) <a href="https://twitter.com/globalacademyhs/status/933018927382323200?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
-
-          </div>
-    
-          <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/ESCMID?ref_src=twsrc%5Etfw">@ESCMID</a> members may now select 3 members for the new Executive Committee: 2 representing <a href="https://twitter.com/hashtag/infectiousdiseases?src=hash&amp;ref_src=twsrc%5Etfw">#infectiousdiseases</a> and 1 representing clinical <a href="https://twitter.com/hashtag/microbiology?src=hash&amp;ref_src=twsrc%5Etfw">#microbiology</a> <a href="https://t.co/hTDgF5kOz3">https://t.co/hTDgF5kOz3</a> <a href="https://t.co/7f5Ar1yBod">pic.twitter.com/7f5Ar1yBod</a></p>&mdash; ESCMID (@ESCMID) <a href="https://twitter.com/ESCMID/status/933032821106642946?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
 
           </div>
@@ -411,6 +388,11 @@
     
           <div class="col-md-6 col-xl-4">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Unvaccinated young adults drive <a href="https://twitter.com/hashtag/measles?src=hash&amp;ref_src=twsrc%5Etfw">#measles</a> outbreak in Mongolia <a href="https://twitter.com/CDCGlobal?ref_src=twsrc%5Etfw">@CDCGlobal</a> <a href="https://twitter.com/IDSAInfo?ref_src=twsrc%5Etfw">@IDSAInfo</a> <a href="https://t.co/2jiQ1MCjXH">https://t.co/2jiQ1MCjXH</a></p>&mdash; ID News (@InfectDisNews) <a href="https://twitter.com/InfectDisNews/status/933043588543459329?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
+
+          </div>
+    
+          <div class="col-md-6 col-xl-4">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">WOW! We live in an era in which persons living with <a href="https://twitter.com/hashtag/HIV?src=hash&amp;ref_src=twsrc%5Etfw">#HIV</a> can now control the virus with only TWO drugs in a SINGLE pill. No boosters required!<a href="https://twitter.com/SeeFisch?ref_src=twsrc%5Etfw">@SeeFisch</a> <a href="https://twitter.com/PaulSaxMD?ref_src=twsrc%5Etfw">@PaulSaxMD</a> <a href="https://twitter.com/CarlosdelRio7?ref_src=twsrc%5Etfw">@CarlosdelRio7</a> <a href="https://twitter.com/DrDemetre?ref_src=twsrc%5Etfw">@DrDemetre</a><a href="https://t.co/uxGp2TgbdX">https://t.co/uxGp2TgbdX</a></p>&mdash; Ed (@Rx_Ed) <a href="https://twitter.com/Rx_Ed/status/933060726607921152?ref_src=twsrc%5Etfw">November 21, 2017</a></blockquote>
 
           </div>
     
@@ -496,7 +478,7 @@
     
     </div>
   </div>
-  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left: 10%; padding-top: 50px">Created by Cameron Forbes. Last updated November 27, 2017 at 04:09 EST.</p>
+  <p style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left: 10%; padding-top: 50px">Created by Cameron Forbes. Last updated November 27, 2017 at 18:53 EST.</p>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
