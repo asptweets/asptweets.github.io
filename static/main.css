@@ -1,3 +1,4 @@
+
   .facebook-rich {
     border: 1px solid #e9eaed;
     display: block;
@@ -116,4 +117,5 @@
   }
   .tech-details:hover {
     text-decoration: underline;
+    color:black;
   }
