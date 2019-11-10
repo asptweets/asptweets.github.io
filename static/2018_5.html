@@ -1,0 +1,702 @@
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108198823-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108198823-1");
+    </script>
+
+    <title>ASP Tweets</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/main.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">[ asptweets ]</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              When do you want to view tweets from?
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/"
+                >Yesterday</a
+              >
+              <a
+                class="dropdown-item"
+                href="/tweets/2/"
+                >Nov 08, 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/tweets/3/"
+                >Nov 07, 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/tweets/4/"
+                >Nov 06, 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/tweets/5/"
+                >Nov 05, 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/tweets/6/"
+                >Nov 04, 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/tweets/7/"
+                >Nov 03, 2019</a
+              >
+              <a class="dropdown-item" href="/pastweek/"
+                >Past Week</a
+              >
+              <a class="dropdown-item" href="/twoweeksago/"
+                >Two Weeks Ago</a
+              >
+              <a class="dropdown-item" href="/threeweeksago/"
+                >Three Weeks Ago</a
+              >
+              <a class="dropdown-item" href="/fourweeksago/"
+                >Four Weeks Ago</a
+              >
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              2019
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a
+                class="dropdown-item"
+                href="/static/2019_10.html"
+                >October 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_9.html"
+                >September 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_8.html"
+                >August 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_7.html"
+                >July 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_6.html"
+                >June 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_5.html"
+                >May 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_4.html"
+                >April 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_3.html"
+                >March 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_2.html"
+                >February 2019</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2019_1.html"
+                >January 2019</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              2018
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a
+                class="dropdown-item"
+                href="/static/2018_12.html"
+                >December 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_11.html"
+                >November 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_10.html"
+                >October 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_9.html"
+                >September 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_8.html"
+                >August 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_7.html"
+                >July 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_6.html"
+                >June 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_5.html"
+                >May 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_4.html"
+                >April 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_3.html"
+                >March 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_2.html"
+                >February 2018</a
+              >
+              <a
+                class="dropdown-item"
+                href="/static/2018_1.html"
+                >January 2018</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="modal"
+              data-target=".bd-example-modal-lg"
+              href="#"
+              >About This Site</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade bd-example-modal-lg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h4 class="modal-title" style="color:white" id="myLargeModalLabel">
+              [ asptweets ]
+              <span class="modal-subtitle"
+                >Keeping track of ASP on Twitter, so you don't have to.</span
+              >
+            </h4>
+            <button
+              type="button"
+              style="color: white"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="font-size: 14px; padding:30px">
+            <p>
+              My name is Cameron, and I'm a full-time hospital Antimicrobial
+              Stewardship Pharmacist and part-time computer geek from Ottawa,
+              Canada.
+            </p>
+            <p>
+              I tried to start using Twitter to improve my ASP practice - it's a
+              great way to keep up with the latest ASP/ID research and
+              discussions. However, there's a massive volume of (often
+              unrelated) content, and it's easy to get overwhelmed.
+            </p>
+
+            <p>
+              To that end, I created this site. It does its best to track tweets
+              related to ASP and ID and scores them based on a custom algorithm.
+              Every day, it automatically updates to show tweets from days prior
+              that are considered "probably useful", with the most important
+              ones at the top. It also gives a top 50 for the past week, if you
+              just want a fast glance. The algorithm takes into account relevant
+              keywords and leverages the power of social media, factoring in
+              Favourites and Retweets to figure out what is most important.
+            </p>
+
+            <p>
+              I personally use the site daily, and will be active trying to fix
+              glitches and improve the search algorithms. This also allows me to
+              update the search parameters to include things like ongoing ID
+              conference hashtags.
+            </p>
+
+            <p>
+              Special thanks to Brad Langford (<a
+                href="https://twitter.com/BRxAD"
+                target="_blank"
+                >@BRxAD</a
+              >) for giving the original conference presentation that got me
+              into Twitter in the first place, as well as for his help and
+              support (and use of his "ASP Tweeters" list) while developing the
+              site.
+            </p>
+
+            <p>
+              I hope you will find this site useful, and feel free to send any
+              feedback to me at
+              <a href="https://twitter.com/banjocam" target="_blank"
+                >@campicillin</a
+              >
+              or
+              <a href="mailto:cameron@asptweets.com">cameron@asptweets.com</a>
+            </p>
+
+            <div id="accordion" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                  <h5 class="mb-0">
+                    <a
+                      class="tech-details"
+                      data-toggle="collapse"
+                      href="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      Details for Geeks
+                    </a>
+                  </h5>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <ul>
+                      <li>Programmed in Python 2</li>
+                      <li>
+                        All scripts run automatically on a (mostly) always-on
+                        Raspberry Pi using cron
+                      </li>
+                      <li>
+                        Tweepy used to scrape Twitter API
+                        <ul>
+                          <li>
+                            Search run every 15 minutes to get most recent
+                            tweets for variety of search terms
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Tweets saved into local SQLite database using Peewee ORM
+                      </li>
+                      <li>Flask used to build website</li>
+                      <li>Frozen-Flask used to generic static files</li>
+                      <ul>
+                        <li>Generated at 4am daily</li>
+                      </ul>
+                      <li>
+                        Tweet embedding code grabbed direct from twitter GET API
+                      </li>
+                      <li>Previews & Embedding HTML cached in database</li>
+                      <li>Hosted on Github Pages</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div
+        class="tab-pane fade show"
+        id=""
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <div class="jumbotron jumbotron-title text-center">
+          <h1 class="jumbotron-heading">Top Tweets</h1>
+          <p class="lead date">for May 2018</p>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;The effects of climate are increasingly being recognized in a variety of infectious diseases, but so far as we know this is the first time it has been implicated in the distribution of antibiotic resistance over geographies,&quot;<a href="https://twitter.com/hashtag/ActOnClimate?src=hash&amp;ref_src=twsrc%5Etfw">#ActOnClimate</a> <a href="https://twitter.com/hashtag/ClimateChange?src=hash&amp;ref_src=twsrc%5Etfw">#ClimateChange</a> <a href="https://t.co/s4RzUJyZiD">https://t.co/s4RzUJyZiD</a></p>&mdash; Paul Dawson (@PaulEDawson) <a href="https://twitter.com/PaulEDawson/status/1000421312232210433?ref_src=twsrc%5Etfw">May 26, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Important paper: antibiotic resistance genes expressed at higher levels in human infection than in vitro, potentially explaining why assays in the clinical laboratory underestimate resistance in patients <a href="https://t.co/Ky8wb0SWyz">https://t.co/Ky8wb0SWyz</a></p>&mdash; Laura Piddock (@LauraPiddock) <a href="https://twitter.com/LauraPiddock/status/996605440271282176?ref_src=twsrc%5Etfw">May 16, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">There’s no “I” in Stewardship!<br> (ok, well there is but successful antimicrobial stewardship programs are all about the team).  <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/accpinfdprn?ref_src=twsrc%5Etfw">@accpinfdprn</a> <a href="https://t.co/hJ6nFE4cAm">https://t.co/hJ6nFE4cAm</a></p>&mdash; Emily Heil (@emilylheil) <a href="https://twitter.com/emilylheil/status/996456720414248960?ref_src=twsrc%5Etfw">May 15, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A new 💥 meta-analysis in <a href="https://twitter.com/BSACandJAC?ref_src=twsrc%5Etfw">@BSACandJAC</a> :No differences between carbapenems and other antibiotics namely Quinolones, aminoglycosides and BL/BLIs for treatment of ESBL-producing Enterobacteriaceae bacteraemia. <a href="https://twitter.com/MerinoTrial?ref_src=twsrc%5Etfw">@MerinoTrial</a><br> <a href="https://t.co/cfqaP5VxFJ">https://t.co/cfqaP5VxFJ</a> <a href="https://t.co/iYmQH8cagV">pic.twitter.com/iYmQH8cagV</a></p>&mdash; Antibiotic Steward (@ABsteward) <a href="https://twitter.com/ABsteward/status/1000002498332184578?ref_src=twsrc%5Etfw">May 25, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Why oxacillin/nafcillin might sometimes be more effective than cefazolin for staph bacteremia. Any RCTs coming? (Doubtful.) Could initial Rx with ox/naf (more potent) with transition to cefazolin (safer) be the best strategy?  <a href="https://t.co/EtNMdlzZVy">https://t.co/EtNMdlzZVy</a></p>&mdash; Paul Sax (@PaulSaxMD) <a href="https://twitter.com/PaulSaxMD/status/999958251696541697?ref_src=twsrc%5Etfw">May 25, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Macrolide resistance in CAP in the ED. &quot;Macrolide resistance is now above 25% in all regions of the United States...&quot; Highlights the need for  <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> <a href="https://t.co/8aeOZlp06g">https://t.co/8aeOZlp06g</a> <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a></p>&mdash; ASHP Emergency Care (@ASHP_EMPharm) <a href="https://twitter.com/ASHP_EMPharm/status/1001126701416378369?ref_src=twsrc%5Etfw">May 28, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A new 💥qualitative study of the Real World Experiences of ID Fellows in OFID :Pharmacists, not ID physician leaders, were identified as fellow&#39;s 1ry resource for antibiotic teaching. Several fellows suggested ASP should be led by <a href="https://twitter.com/hashtag/pharmacists?src=hash&amp;ref_src=twsrc%5Etfw">#pharmacists</a> <a href="https://t.co/pflc5jLbd4">https://t.co/pflc5jLbd4</a> <a href="https://t.co/hvSWCu0mOq">pic.twitter.com/hvSWCu0mOq</a></p>&mdash; Antibiotic Steward (@ABsteward) <a href="https://twitter.com/ABsteward/status/992362737404710912?ref_src=twsrc%5Etfw">May 4, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Leveraging <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> in the emergency department to improve the quality of urinary tract infection management and outcomes<a href="https://t.co/pu4HL0f3uB">https://t.co/pu4HL0f3uB</a></p>&mdash; Brad Langford (@BRxAD) <a href="https://twitter.com/BRxAD/status/992764417476460545?ref_src=twsrc%5Etfw">May 5, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Editorial in June <a href="https://twitter.com/LancetGH?ref_src=twsrc%5Etfw">@LancetGH</a> &quot;No one likes a parachute researcher: the one who drops into a country, makes use of the local infrastructure, personnel, and patients, and then goes home and writes an academic paper for a prestigious journal.&quot; <a href="https://t.co/p7s44FLeta">https://t.co/p7s44FLeta</a></p>&mdash; The Lancet Infectious Diseases (@TheLancetInfDis) <a href="https://twitter.com/TheLancetInfDis/status/996351347963383808?ref_src=twsrc%5Etfw">May 15, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Meta-analysis in J Hosp Med finds no diff in outcomes for hospitalized pts treated with long v short Abx courses.  Article at  <a href="https://t.co/vc9922ly9A">https://t.co/vc9922ly9A</a>, and my accompanying editorial at <a href="https://t.co/QdxUgIouhF">https://t.co/QdxUgIouhF</a></p>&mdash; Brad Spellberg (@BradSpellberg) <a href="https://twitter.com/BradSpellberg/status/994582217031532544?ref_src=twsrc%5Etfw">May 10, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Funding fights antibiotic resistance in nursing homes: telehealth intervention for antibiotic stewardships <a href="https://t.co/e12VddoCdy">https://t.co/e12VddoCdy</a> via <a href="https://twitter.com/UQ_News?ref_src=twsrc%5Etfw">@uq_news</a></p>&mdash; David Paterson (@davidantibiotic) <a href="https://twitter.com/davidantibiotic/status/996951135612157952?ref_src=twsrc%5Etfw">May 17, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A retrospective cohort study of 71 MSSA👾 bacteremia pts found more treatment failure with ceftriaxone compared to cefazolin.<a href="https://t.co/i9DQHLidYa">https://t.co/i9DQHLidYa</a><a href="https://twitter.com/IDSAInfo?ref_src=twsrc%5Etfw">@IDSAInfo</a> <a href="https://twitter.com/ESCMID?ref_src=twsrc%5Etfw">@ESCMID</a> <a href="https://twitter.com/PaulSaxMD?ref_src=twsrc%5Etfw">@PaulSaxMD</a>  <a href="https://twitter.com/BradSpellberg?ref_src=twsrc%5Etfw">@BradSpellberg</a> <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/accpinfdprn?ref_src=twsrc%5Etfw">@accpinfdprn</a> <a href="https://twitter.com/InfectiousDz?ref_src=twsrc%5Etfw">@InfectiousDz</a> <a href="https://twitter.com/BRxAD?ref_src=twsrc%5Etfw">@BRxAD</a> <a href="https://twitter.com/ASPphysician?ref_src=twsrc%5Etfw">@ASPphysician</a> <a href="https://twitter.com/BSACandJAC?ref_src=twsrc%5Etfw">@BSACandJAC</a> <a href="https://twitter.com/Guru_JoshD?ref_src=twsrc%5Etfw">@Guru_JoshD</a></p>&mdash; Antibiotic Tweets (@khalideljaaly) <a href="https://twitter.com/khalideljaaly/status/997545286162579456?ref_src=twsrc%5Etfw">May 18, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Bacteria were  once thought to be lonely, inde­pendent unicellular organisms. This, of course, was a gross oversimplification.  Bacteria aggregate to form multicellular communities that behave as a single organism &amp; cooperate to keep this &quot;self&quot; alive. <a href="https://t.co/n7PNL80u90">https://t.co/n7PNL80u90</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/1002157883184832513?ref_src=twsrc%5Etfw">May 31, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A new study in OFID showed Ceftriaxone had a higher rate of treatment failure than cefazolin for the treatment of MSSA bacteremia  in a Tertiary Care VA Medical Center. <a href="https://t.co/6swRvFCxoP">https://t.co/6swRvFCxoP</a> <a href="https://t.co/z2Kt0IDXeR">pic.twitter.com/z2Kt0IDXeR</a></p>&mdash; Antibiotic Steward (@ABsteward) <a href="https://twitter.com/ABsteward/status/997542169111154688?ref_src=twsrc%5Etfw">May 18, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Interested in <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> - <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a>? New UNSW Sydney Scientia PhD Scholarship to study w us. Scholarship incl. $40k/year tax free stipend + tuition fees covered for four years + $10k/year for career development.  <a href="https://t.co/36xQ7W1Py7">https://t.co/36xQ7W1Py7</a> <a href="https://twitter.com/CSRH_UNSW?ref_src=twsrc%5Etfw">@CSRH_UNSW</a></p>&mdash; Alex Broom (@BroomAlex) <a href="https://twitter.com/BroomAlex/status/1001326199963029509?ref_src=twsrc%5Etfw">May 29, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Major findings underscore the need for intensified antimicrobial stewardship efforts in NICUs&quot; New <a href="https://twitter.com/hashtag/openaccess?src=hash&amp;ref_src=twsrc%5Etfw">#openaccess</a> study in <a href="https://twitter.com/JAMANetworkOpen?ref_src=twsrc%5Etfw">@JAMANetworkOpen</a> of antibiotic use in premature infants: <a href="https://t.co/ic5hgDzJCw">https://t.co/ic5hgDzJCw</a><br>and invited commentary: <a href="https://t.co/aKgoirRjeO">https://t.co/aKgoirRjeO</a></p>&mdash; Eli Perencevich 😷 (@eliowa) <a href="https://twitter.com/eliowa/status/1000059268631089154?ref_src=twsrc%5Etfw">May 25, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/WeWontRest?src=hash&amp;ref_src=twsrc%5Etfw">#WeWontRest</a> until we can have an impact on slowing down the rise in infections resistant to antibiotics, with our commitment to develop new therapeutics to fight infectious diseases and to continue supporting antimicrobial stewardship <a href="https://twitter.com/hashtag/AMR?src=hash&amp;ref_src=twsrc%5Etfw">#AMR</a> <a href="https://t.co/3UM5HeSpPL">https://t.co/3UM5HeSpPL</a> <a href="https://twitter.com/MSDInvents?ref_src=twsrc%5Etfw">@MSDInvents</a> <a href="https://t.co/uNmepzLo1b">pic.twitter.com/uNmepzLo1b</a></p>&mdash; EFPIA (@EFPIA) <a href="https://twitter.com/EFPIA/status/997217478345359360?ref_src=twsrc%5Etfw">May 17, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">More evidence for using direct oral challenges to confirm penicillin tolerance.<br><br>Safety and Outcomes of Oral Graded Challenges to Amoxicillin without Prior Skin Testing. - PubMed - NCBI <a href="https://t.co/nE08wWFjtX">https://t.co/nE08wWFjtX</a></p>&mdash; Eric Macy (@EricMacyMD) <a href="https://twitter.com/EricMacyMD/status/1001896835970027520?ref_src=twsrc%5Etfw">May 30, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Have questions about managing infections complicated by secondary bacteremias? The latest “Top Questions in ID” review in OFID addresses oral antibiotics, therapy duration, and repeat blood cultures. <a href="https://t.co/yrCU0Jg661">https://t.co/yrCU0Jg661</a> <a href="https://twitter.com/PaulSaxMD?ref_src=twsrc%5Etfw">@PaulSaxMD</a> <a href="https://twitter.com/hashtag/OpenForumInfectDis?src=hash&amp;ref_src=twsrc%5Etfw">#OpenForumInfectDis</a> <a href="https://t.co/NePSQafKkz">pic.twitter.com/NePSQafKkz</a></p>&mdash; IDSA (@IDSAInfo) <a href="https://twitter.com/IDSAInfo/status/996883085156405249?ref_src=twsrc%5Etfw">May 16, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New <a href="https://twitter.com/hashtag/AACJournal?src=hash&amp;ref_src=twsrc%5Etfw">#AACJournal</a> minireview: Bacterial adaptation to antibiotics through regulatory RNAs <a href="https://t.co/CM8tdLWA6w">https://t.co/CM8tdLWA6w</a> <a href="https://t.co/tmauags9pI">pic.twitter.com/tmauags9pI</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/994279655262883843?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Report on our work to protect carbapenems is finally published <a href="https://twitter.com/SAPGAbx?ref_src=twsrc%5Etfw">@SAPGAbx</a> <a href="https://twitter.com/SIPBS_Strath?ref_src=twsrc%5Etfw">@SIPBS_Strath</a> <a href="https://twitter.com/AntibioticScot?ref_src=twsrc%5Etfw">@AntibioticScot</a> <a href="https://twitter.com/raseaton66?ref_src=twsrc%5Etfw">@raseaton66</a> <a href="https://twitter.com/AndreaLynPatton?ref_src=twsrc%5Etfw">@AndreaLynPatton</a> <a href="https://t.co/Ip4qHccFWg">https://t.co/Ip4qHccFWg</a></p>&mdash; jacqui sneddon (@jacquisneddons) <a href="https://twitter.com/jacquisneddons/status/999742431255060487?ref_src=twsrc%5Etfw">May 24, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">FDA Advisory Committee Votes Unanimously in Favor of Plazomicin for Adults with cUTIs  however the panel does not back BSI indication <a href="https://twitter.com/IDstewardship?ref_src=twsrc%5Etfw">@IDstewardship</a><a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/KisgenUF?ref_src=twsrc%5Etfw">@KisgenUF</a> <a href="https://twitter.com/BradSpellberg?ref_src=twsrc%5Etfw">@BradSpellberg</a> <a href="https://twitter.com/padstamundo?ref_src=twsrc%5Etfw">@padstamundo</a><a href="https://t.co/mAlRNyuicC">https://t.co/mAlRNyuicC</a></p>&mdash; Antibiotic Steward (@ABsteward) <a href="https://twitter.com/ABsteward/status/991800681752420352?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New <a href="https://twitter.com/IDstewardship?ref_src=twsrc%5Etfw">@IDstewardship</a> 💥MRSA Nasal Colonization Screening As An Antimicrobial Stewardship Tool For Tailoring Pneumonia Therapy. An interview with <a href="https://twitter.com/TimbrookTT?ref_src=twsrc%5Etfw">@TimbrookTT</a> <a href="https://twitter.com/AMSPharmD?ref_src=twsrc%5Etfw">@AMSPharmD</a> <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/accpinfdprn?ref_src=twsrc%5Etfw">@accpinfdprn</a> <a href="https://twitter.com/KisgenUF?ref_src=twsrc%5Etfw">@KisgenUF</a> <a href="https://twitter.com/ErinMcCreary?ref_src=twsrc%5Etfw">@ErinMcCreary</a> <a href="https://t.co/A4k7ggeWBr">https://t.co/A4k7ggeWBr</a></p>&mdash; Antibiotic Steward (@ABsteward) <a href="https://twitter.com/ABsteward/status/992684451011399680?ref_src=twsrc%5Etfw">May 5, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“A new review has evidence from 26 trials with more than 75,000 participants, that the <a href="https://twitter.com/hashtag/HumanPapillomavirus?src=hash&amp;ref_src=twsrc%5Etfw">#HumanPapillomavirus</a> vaccine protects against <a href="https://twitter.com/hashtag/CervicalPrecancer?src=hash&amp;ref_src=twsrc%5Etfw">#CervicalPrecancer</a> lesions w/out serious adverse effects,&quot; says pediatrician Dr. Robert Jacobson. <a href="https://t.co/8bBQuMtaXf">https://t.co/8bBQuMtaXf</a> <a href="https://t.co/VWLbBldmBM">pic.twitter.com/VWLbBldmBM</a></p>&mdash; Mayo Clinic (@MayoClinic) <a href="https://twitter.com/MayoClinic/status/996154442901803008?ref_src=twsrc%5Etfw">May 14, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Rapid Molecular Detection of Gastrointestinal Pathogens and Its Role in Antimicrobial Stewardship. &quot;using [molecular gastrointestinal pathogen test] in clinical practice significantly decreased the inappropriate use of antibiotics&quot; <a href="https://t.co/deFdmBvwlA">https://t.co/deFdmBvwlA</a> <a href="https://twitter.com/ASMicrobiology?ref_src=twsrc%5Etfw">@ASMicrobiology</a> <a href="https://t.co/Djmc19EJ5M">pic.twitter.com/Djmc19EJ5M</a></p>&mdash; JClinMicro EIC (@JClinMicro) <a href="https://twitter.com/JClinMicro/status/996010338192711680?ref_src=twsrc%5Etfw">May 14, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Drum roll please! The moment you’ve been waiting for – congrats to our 2018 <a href="https://twitter.com/hashtag/AgarArt?src=hash&amp;ref_src=twsrc%5Etfw">#AgarArt</a> main contest winners!  And thank you to our judges and FB voters. <a href="https://twitter.com/agruni?ref_src=twsrc%5Etfw">@agruni</a>  @FollowNibmg@NEBiolabs <a href="https://twitter.com/IBR_CONICET?ref_src=twsrc%5Etfw">@IBR_CONICET</a> <a href="https://twitter.com/hashtag/SciArt?src=hash&amp;ref_src=twsrc%5Etfw">#SciArt</a> <a href="https://twitter.com/hashtag/BioArt?src=hash&amp;ref_src=twsrc%5Etfw">#BioArt</a> <a href="https://twitter.com/hashtag/Microbiology?src=hash&amp;ref_src=twsrc%5Etfw">#Microbiology</a> <a href="https://twitter.com/hashtag/ASMOutreach?src=hash&amp;ref_src=twsrc%5Etfw">#ASMOutreach</a> <a href="https://twitter.com/hashtag/ASMicrobe?src=hash&amp;ref_src=twsrc%5Etfw">#ASMicrobe</a> <a href="https://t.co/T2e9FJ0YyH">https://t.co/T2e9FJ0YyH</a> <a href="https://t.co/IeZuLQAFh5">pic.twitter.com/IeZuLQAFh5</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/999319166241984512?ref_src=twsrc%5Etfw">May 23, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">~150,000 ED visits per year for <a href="https://twitter.com/hashtag/antibiotic?src=hash&amp;ref_src=twsrc%5Etfw">#antibiotic</a> 😳😣 adverse reaction in this new study, most commonly sulfas, penicillins, fluoroquinolones. 📲 <a href="https://t.co/6kXU8yRCbI">https://t.co/6kXU8yRCbI</a> via <a href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw">@cdcgov</a> <a href="https://twitter.com/CDC_NCEZID?ref_src=twsrc%5Etfw">@CDC_NCEZID</a> <a href="https://twitter.com/hashtag/NotHarmless?src=hash&amp;ref_src=twsrc%5Etfw">#NotHarmless</a> <a href="https://twitter.com/hashtag/UseOnlyWhenNeeded?src=hash&amp;ref_src=twsrc%5Etfw">#UseOnlyWhenNeeded</a> <a href="https://t.co/92Ilh2CNkA">pic.twitter.com/92Ilh2CNkA</a></p>&mdash; Tim Gauthier (@IDstewardship) <a href="https://twitter.com/IDstewardship/status/999481870315413504?ref_src=twsrc%5Etfw">May 24, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Bacteria or yeast? Vote for the 2018 <a href="https://twitter.com/hashtag/AgarArt?src=hash&amp;ref_src=twsrc%5Etfw">#AgarArt</a> People&#39;s Choice winner by &#39;like&#39;-ing your favorite over at <a href="https://t.co/rXPgR2Vbe0">https://t.co/rXPgR2Vbe0</a>. <a href="https://twitter.com/hashtag/ASMOutreach?src=hash&amp;ref_src=twsrc%5Etfw">#ASMOutreach</a> <a href="https://twitter.com/hashtag/scienceisfun?src=hash&amp;ref_src=twsrc%5Etfw">#scienceisfun</a> <a href="https://twitter.com/hashtag/bioart?src=hash&amp;ref_src=twsrc%5Etfw">#bioart</a> <a href="https://twitter.com/hashtag/art?src=hash&amp;ref_src=twsrc%5Etfw">#art</a> <a href="https://twitter.com/hashtag/microbiology?src=hash&amp;ref_src=twsrc%5Etfw">#microbiology</a> <a href="https://t.co/x8xooOsjbE">pic.twitter.com/x8xooOsjbE</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/995710520383688704?ref_src=twsrc%5Etfw">May 13, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“A new review has evidence from 26 trials with more than 75,000 participants, that the <a href="https://twitter.com/hashtag/HumanPapillomavirus?src=hash&amp;ref_src=twsrc%5Etfw">#HumanPapillomavirus</a> vaccine protects against <a href="https://twitter.com/hashtag/CervicalPrecancer?src=hash&amp;ref_src=twsrc%5Etfw">#CervicalPrecancer</a> lesions w/out serious adverse effects,&quot; says pediatrician Dr. Robert Jacobson. <a href="https://t.co/OOmIFqqpiX">https://t.co/OOmIFqqpiX</a> <a href="https://t.co/CDJBHwrLpq">pic.twitter.com/CDJBHwrLpq</a></p>&mdash; Mayo Clinic (@MayoClinic) <a href="https://twitter.com/MayoClinic/status/998893243260719104?ref_src=twsrc%5Etfw">May 22, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“The cornerstone of antibiotic stewardship is making an accurate diagnosis.” <a href="https://twitter.com/Medscape?ref_src=twsrc%5Etfw">@Medscape</a> <a href="https://t.co/pOj2MmN7aN">https://t.co/pOj2MmN7aN</a></p>&mdash; IDSA (@IDSAInfo) <a href="https://twitter.com/IDSAInfo/status/991661057059024896?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">NEW article out on minimum acceptable susceptibility of empirical antibiotic regimens for Gram Negative BSI with <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> members <a href="https://twitter.com/julie_justo?ref_src=twsrc%5Etfw">@julie_justo</a> &amp; <a href="https://twitter.com/BBookstaver_USC?ref_src=twsrc%5Etfw">@BBookstaver_USC</a> <a href="https://t.co/U0bX0XxW40">https://t.co/U0bX0XxW40</a> <a href="https://t.co/x65FAk4v22">pic.twitter.com/x65FAk4v22</a></p>&mdash; SIDP (@SIDPharm) <a href="https://twitter.com/SIDPharm/status/996018589160394753?ref_src=twsrc%5Etfw">May 14, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&#39;Effects of primary care <a href="https://twitter.com/hashtag/AntimicrobialStewardship?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialStewardship</a> outreach on antibiotic use by general practice staff&#39; <a href="https://twitter.com/hashtag/JACnews?src=hash&amp;ref_src=twsrc%5Etfw">#JACnews</a> <a href="https://t.co/LrQuYqo9La">https://t.co/LrQuYqo9La</a></p>&mdash; BSAC (@BSACandJAC) <a href="https://twitter.com/BSACandJAC/status/1001697573483307008?ref_src=twsrc%5Etfw">May 30, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Great <a href="https://twitter.com/Contagion_Live?ref_src=twsrc%5Etfw">@Contagion_Live</a> interview with <a href="https://twitter.com/JulieSzymczak?ref_src=twsrc%5Etfw">@JulieSzymczak</a> on the non-cognitive drivers of antibiotic use. If you don’t follow her research, give it a whirl- you’ll be intrigued by what you see. <a href="https://twitter.com/hashtag/Antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#Antimicrobialstewardship</a> <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/accpinfdprn?ref_src=twsrc%5Etfw">@accpinfdprn</a> <a href="https://t.co/KL2obo2Tbr">https://t.co/KL2obo2Tbr</a></p>&mdash; Jason Gallagher (@JGPharmD) <a href="https://twitter.com/JGPharmD/status/991752712072187904?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New from <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/accpinfdprn?ref_src=twsrc%5Etfw">@accpinfdprn</a> and <a href="https://twitter.com/MAD_ID_ASP?ref_src=twsrc%5Etfw">@MAD_ID_ASP</a> Best Care for Patients is Achieved through Multi-disciplinary Stewardship <a href="https://t.co/ZPbbI2klig">https://t.co/ZPbbI2klig</a> It was a pleasure being part of this paper</p>&mdash; Susan Davis (@IDPharmProf) <a href="https://twitter.com/IDPharmProf/status/996458597117808642?ref_src=twsrc%5Etfw">May 15, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our second June Editor&#39;s choice article is: Role of antimicrobial stewardship programmes in children: a systematic review, free to read here:<a href="https://t.co/PgYSjv4vel">https://t.co/PgYSjv4vel</a><br><br>Shows lack of evidence that programmes reduce antibiotic use in PICUs.</p>&mdash; Journal of Hospital Infection (@jhieditor) <a href="https://twitter.com/jhieditor/status/994870858945646593?ref_src=twsrc%5Etfw">May 11, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/LHSNwebinar?src=hash&amp;ref_src=twsrc%5Etfw">#LHSNwebinar</a> series: Catch Enrique Castro speaking on the role of nurses in antimicrobial stewardship programs. Register: <a href="https://t.co/HnbofBVdEr">https://t.co/HnbofBVdEr</a>  <a href="https://twitter.com/hashtag/StopSuperBugs?src=hash&amp;ref_src=twsrc%5Etfw">#StopSuperBugs</a>! <a href="https://twitter.com/hashtag/AntimicrobialResistance?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialResistance</a> <a href="https://twitter.com/hashtag/Nursing?src=hash&amp;ref_src=twsrc%5Etfw">#Nursing</a> <a href="https://twitter.com/castrocloud?ref_src=twsrc%5Etfw">@castrocloud</a> <a href="https://t.co/VntVq2qMx0">pic.twitter.com/VntVq2qMx0</a></p>&mdash; LHSN (@LHSN_wish) <a href="https://twitter.com/LHSN_wish/status/1001899064965959681?ref_src=twsrc%5Etfw">May 30, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">📄New! 💊🤓 <br><br>ID pharmacist <a href="https://twitter.com/DHpharmd?ref_src=twsrc%5Etfw">@DHpharmd</a> reflects in his work engaging bedside <a href="https://twitter.com/hashtag/nurses?src=hash&amp;ref_src=twsrc%5Etfw">#nurses</a> in antimicrobial stewardship activities 📲 <a href="https://t.co/VNhKzDcvpG">https://t.co/VNhKzDcvpG</a> <a href="https://twitter.com/hashtag/nurse?src=hash&amp;ref_src=twsrc%5Etfw">#nurse</a> <br><br>cc: <a href="https://twitter.com/canadanurses?ref_src=twsrc%5Etfw">@canadanurses</a> <a href="https://twitter.com/NurseJamieLA?ref_src=twsrc%5Etfw">@NurseJamieLA</a> <a href="https://twitter.com/AmerNurse2Day?ref_src=twsrc%5Etfw">@AmerNurse2Day</a> <a href="https://twitter.com/IJHNursing?ref_src=twsrc%5Etfw">@IJHNursing</a> <a href="https://twitter.com/UCF_Nursing?ref_src=twsrc%5Etfw">@UCF_Nursing</a> <a href="https://twitter.com/UofSCNursing?ref_src=twsrc%5Etfw">@UofSCNursing</a> <a href="https://twitter.com/NYUNursing?ref_src=twsrc%5Etfw">@NYUNursing</a> <a href="https://twitter.com/faunursing?ref_src=twsrc%5Etfw">@faunursing</a> <a href="https://twitter.com/SHEA_Epi?ref_src=twsrc%5Etfw">@SHEA_Epi</a> <a href="https://t.co/Kh9w2uee5k">pic.twitter.com/Kh9w2uee5k</a></p>&mdash; Tim Gauthier (@IDstewardship) <a href="https://twitter.com/IDstewardship/status/997219030992908288?ref_src=twsrc%5Etfw">May 17, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today we posted more than 100 new resources to our antimicrobial stewardship, diagnostics, and One Health bibliographies - have a look! <a href="https://t.co/XafujY546N">https://t.co/XafujY546N</a></p>&mdash; CIDRAP-ASP (@CIDRAP_ASP) <a href="https://twitter.com/CIDRAP_ASP/status/995020401439854592?ref_src=twsrc%5Etfw">May 11, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The use of beta-lactamase combination agents to treat ESBL-producing isolates has always been somewhat controversial. Results from the new MERINO clinical trial suggest reviving ESBL testing. Read the latest Bugs &amp; Drugs post: <a href="https://t.co/oKQJiPHfop">https://t.co/oKQJiPHfop</a> <a href="https://twitter.com/hashtag/ASMClinMicro?src=hash&amp;ref_src=twsrc%5Etfw">#ASMClinMicro</a></p>&mdash; ASM (@ASMicrobiology) <a href="https://twitter.com/ASMicrobiology/status/997182616620142593?ref_src=twsrc%5Etfw">May 17, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Chuffed that I&#39;ve been shortlisted for the Das Pillay antimicrobial stewardship award and our <a href="https://twitter.com/LeicsScouts?ref_src=twsrc%5Etfw">@LeicsScouts</a> Antibiotic Guardian scheme has also been shortlisted!<br><br>Come join me at the conference. Would be good to see some AMS tweeps there :)<a href="https://t.co/kysyNz6vQp">https://t.co/kysyNz6vQp</a></p>&mdash; Ryan Hamilton (@DrRyanHamilton) <a href="https://twitter.com/DrRyanHamilton/status/996855428507226113?ref_src=twsrc%5Etfw">May 16, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Use of Telemedicine for Penicillin Allergy Skin Testing<a href="https://t.co/NzN2YPsMK1">https://t.co/NzN2YPsMK1</a> via <a href="https://twitter.com/jacionline?ref_src=twsrc%5Etfw">@jacionline</a> <a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a></p>&mdash; Brad Langford (@BRxAD) <a href="https://twitter.com/BRxAD/status/995331426105966592?ref_src=twsrc%5Etfw">May 12, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A new RCT 💥 just published in Infection Control &amp; Hospital Epidemiology :Modified reporting of positive urine cultures resulted in a significant reduction in inappropriate antibiotic treatment without an increase in adverse events. <a href="https://twitter.com/Sara_E_Boyd?ref_src=twsrc%5Etfw">@Sara_E_Boyd</a><br><br> <a href="https://t.co/g2w4uMN6CS">https://t.co/g2w4uMN6CS</a> <a href="https://t.co/hCwCDEOD8d">pic.twitter.com/hCwCDEOD8d</a></p>&mdash; Antibiotic Steward (@ABsteward) <a href="https://twitter.com/ABsteward/status/1001442746379505664?ref_src=twsrc%5Etfw">May 29, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AntimicrobialStewardship?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialStewardship</a> recommendations less likely to be followed for patients with GI infection, febrile neutropenia, skin or soft-tissue infections, admitted for 31–90 days, and by physicians with more years of experience <a href="https://t.co/VOa4luN5iV">https://t.co/VOa4luN5iV</a></p>&mdash; Brad Langford (@BRxAD) <a href="https://twitter.com/BRxAD/status/1001185146756784128?ref_src=twsrc%5Etfw">May 28, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Using <a href="https://twitter.com/hashtag/probiotics?src=hash&amp;ref_src=twsrc%5Etfw">#probiotics</a> as a prophylaxis for <a href="https://twitter.com/hashtag/Clostridium?src=hash&amp;ref_src=twsrc%5Etfw">#Clostridium</a> difficile was safe and reduced the risk for infection among hospitalized patients by two-thirds, according to a large meta-analysis<a href="https://t.co/b8t73IuKNP">https://t.co/b8t73IuKNP</a> <a href="https://twitter.com/hashtag/CDI?src=hash&amp;ref_src=twsrc%5Etfw">#CDI</a> <a href="https://twitter.com/hashtag/probiotic?src=hash&amp;ref_src=twsrc%5Etfw">#probiotic</a> <a href="https://t.co/eg9wWWOQgF">pic.twitter.com/eg9wWWOQgF</a></p>&mdash; Microbes&amp;Infection (@MicrobesInfect) <a href="https://twitter.com/MicrobesInfect/status/992808421177999360?ref_src=twsrc%5Etfw">May 5, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A new CID article suggests Helen Keller, when she was 19 months old in 1882, likely contracted bacterial meningitis, caused by N. meningitidis or H. influenzae, both now vaccine-preventable causes of meningitis, leaving her deaf and blind. <a href="https://t.co/ttl6bYP6Lj">https://t.co/ttl6bYP6Lj</a> <a href="https://twitter.com/hashtag/ClinInfectDis?src=hash&amp;ref_src=twsrc%5Etfw">#ClinInfectDis</a> <a href="https://t.co/jq9d4aD9u0">pic.twitter.com/jq9d4aD9u0</a></p>&mdash; IDSA (@IDSAInfo) <a href="https://twitter.com/IDSAInfo/status/994675524269150208?ref_src=twsrc%5Etfw">May 10, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Effects of primary care <a href="https://twitter.com/hashtag/AntimicrobialStewardship?src=hash&amp;ref_src=twsrc%5Etfw">#AntimicrobialStewardship</a> outreach on antibiotic use by general practice staff <a href="https://twitter.com/hashtag/inJAC?src=hash&amp;ref_src=twsrc%5Etfw">#inJAC</a> <a href="https://t.co/LrQuYqo9La">https://t.co/LrQuYqo9La</a></p>&mdash; BSAC (@BSACandJAC) <a href="https://twitter.com/BSACandJAC/status/996291190382301184?ref_src=twsrc%5Etfw">May 15, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Tandan et al. reporting on risk of toxicity of FQs.<br><br>&quot;The odds of central nervous system (CNS) and gastrointestinal (GI) related AEs with FQs is nearly three times that of any other antimicrobial.&quot; <a href="https://twitter.com/hashtag/scary?src=hash&amp;ref_src=twsrc%5Etfw">#scary</a><a href="https://twitter.com/hashtag/antimicrobialstewardship?src=hash&amp;ref_src=twsrc%5Etfw">#antimicrobialstewardship</a> <a href="https://twitter.com/SIDPharm?ref_src=twsrc%5Etfw">@SIDPharm</a> <a href="https://twitter.com/accpinfdprn?ref_src=twsrc%5Etfw">@accpinfdprn</a><a href="https://t.co/7HCOcSuan5">https://t.co/7HCOcSuan5</a></p>&mdash; Travis King (@s_travis_king) <a href="https://twitter.com/s_travis_king/status/999009108757041153?ref_src=twsrc%5Etfw">May 22, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In recent years, the J. Antimicrobial Chemotherapy <a href="https://twitter.com/BSACandJAC?ref_src=twsrc%5Etfw">@BSACandJAC</a> has published a vast amount of high calibre research on the topic of antimicrobial stewardship. <a href="https://twitter.com/hashtag/JACNews?src=hash&amp;ref_src=twsrc%5Etfw">#JACNews</a> <a href="https://twitter.com/hashtag/UKCPAPINJC?src=hash&amp;ref_src=twsrc%5Etfw">#UKCPAPINJC</a> <a href="https://t.co/8hOFOW8x0U">https://t.co/8hOFOW8x0U</a> <a href="https://t.co/dCLrPj8dH2">pic.twitter.com/dCLrPj8dH2</a></p>&mdash; Diane Ashiru, PhD (@DrDianeAshiru) <a href="https://twitter.com/DrDianeAshiru/status/1001474978599055362?ref_src=twsrc%5Etfw">May 29, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In Tanzania, where antibiotics can easily be bought without a prescription, pharmacies are pioneering a new way to <a href="https://twitter.com/hashtag/StopSuperbugs?src=hash&amp;ref_src=twsrc%5Etfw">#StopSuperbugs</a>. You can find out more about their efforts to reduce AMR as well as other global innovators here: <a href="https://t.co/9NHmYX1Ygl">https://t.co/9NHmYX1Ygl</a> <a href="https://t.co/1sN86bTou2">pic.twitter.com/1sN86bTou2</a></p>&mdash; AMR at Wellcome (@Wellcome_AMR) <a href="https://twitter.com/Wellcome_AMR/status/1001756989800710144?ref_src=twsrc%5Etfw">May 30, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Cephalosporins are widely, safely, and appropriately used in individuals with confirmed or unconfirmed penicillin allergy.<br>There is no clinically significant immunologically mediated cross-reactivity between cephalosporins and penicillins.<a href="https://t.co/eQ79v2XtFG">https://t.co/eQ79v2XtFG</a> <a href="https://t.co/VdJvL5uTdI">https://t.co/VdJvL5uTdI</a></p>&mdash; Eric Macy (@EricMacyMD) <a href="https://twitter.com/EricMacyMD/status/996137404791640064?ref_src=twsrc%5Etfw">May 14, 2018</a></blockquote>
+
+        </div>
+        
+        <div class="col-md-6 col-xl-4">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Does Procalcitonin add anything to good medical care? Not in this large ED-based RCT in LRTI. Spend wisely and invest in your <a href="https://twitter.com/hashtag/AMS?src=hash&amp;ref_src=twsrc%5Etfw">#AMS</a> team over your expensive biomarkers <a href="https://twitter.com/SAPGAbx?ref_src=twsrc%5Etfw">@SAPGAbx</a> <a href="https://twitter.com/AntibioticScot?ref_src=twsrc%5Etfw">@AntibioticScot</a>  <a href="https://t.co/hK6BkPa5Da">https://t.co/hK6BkPa5Da</a></p>&mdash; andrew seaton (@raseaton66) <a href="https://twitter.com/raseaton66/status/998658149434511360?ref_src=twsrc%5Etfw">May 21, 2018</a></blockquote>
+
+        </div>
+        
+      </div>
+    </div>
+    <p
+      style="color: white; font-size: 12px; text-align:center; padding-right: 10%; padding-left: 10%; padding-top: 50px"
+    >
+      Created by Cameron Forbes. Last updated November 10, 2019 at 15:41 EST.
+    </p>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+  </body>
+</html>
